@@ -1,0 +1,149 @@
+% University of Washington thesis LaTeX document class by Jim Fox (c) 1985
+
+\documentclass [10pt, proquest] {uwthesis}[2018/11/27]
+\setcounter{tocdepth}{1}  % Print the chapter and sections to the toc
+
+% ==========   A few formatting tweaks
+\usepackage{textcomp} % copyright symbol
+\usepackage{float} % let figures and such float to the "ideal" spot
+\usepackage{graphicx} % better figure import
+\usepackage[labelfont=bf,labelsep=period,font=small]{caption} %format figure caption titles
+
+\usepackage{natbib}
+\usepackage{cite}
+\makeatletter % I have no clue what this does but things break without it
+\renewcommand{\@biblabel}[1]{\quad#1.} % remove the brackets around reference numbers
+\makeatother
+\renewcommand{\topfraction}{0.85} % help avoid orphaning figures on a page by itself
+\renewcommand{\textfraction}{0.1}
+
+\begin{document}
+
+% ==========   Preliminary pages
+\prelimpages
+% ----- copyright and title pages
+\Title{Serious sounding title here}
+\Author{Your name (gotta match UW records)}
+\Year{20XX}
+\Program{Some graduate program}
+
+\Chair{Trevor Bedford}{Dr.}{Affiliated Department}
+\Signature{Reading committee member name 1}
+\Signature{Reading committee member name 2}
+
+\titlepage
+
+\pagebreak
+\begin{center}
+\textcopyright Copyright 2018\\
+Your Name
+\end{center}
+\pagebreak
+
+
+% ----- abstract
+\setcounter{page}{-1}
+\abstract{%
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
+% ----- contents & etc.
+
+\tableofcontents
+%\listoffigures % This needs to be reformatted; by default, it puts the entire caption instead of just the title. Will update if I figure out how to fix it.
+%\listoftables  % Same here
+
+% ----- glossary
+% \chapter*{Glossary}      % starred form omits the `chapter x'
+% \addcontentsline{toc}{chapter}{Glossary}
+% \thispagestyle{plain}
+%
+% \begin{glossary}
+% \item[word] word means something or other
+% \end{glossary}
+
+% ----- acknowledgments
+
+\acknowledgments{% \vskip2pc
+  % {\narrower\noindent
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  % \par}
+}
+
+%
+% ----- dedication
+%
+\dedication{\begin{center} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{center}}
+
+%
+% end of the preliminary pages
+
+
+
+%
+% ==========      Text pages
+%
+
+\textpages
+
+% ========== Chapter format
+
+\chapter{Title}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Section title}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\begin{centering}
+\begin{verbatim}
+from pprint import pprint
+pprint("hello world")
+\end{verbatim}
+\end{centering}
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\footnote{Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum}.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{figure}
+  \begin{centering}
+  \includegraphics[width=0.7\linewidth]{./png/smartycat.jpg}
+\label{start-2}
+\caption{\textbf{Smarty cat. }Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur \citep{darwin2004origin}. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\end{centering}
+\end{figure}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{table}[h!]
+  \begin{center}
+    \label{table_label}
+    \begin{tabular}{c|l}
+      Hazel & The honorary cat \\
+      Hopps & The guard kitty \\
+      Arthur & The sassiest feline \\
+      Linus & The teensiest kitten \\
+      Ferdinand & The snuggliest kitteh \\
+    \end{tabular}
+    \caption{\textbf{Pets of the Bedford Lab} as of 2018, we are cat people.}
+  \end{center}
+\end{table}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\bibliographystyle{plain}
+\bibliography{dissertation}
+%
+% ==========   Appendices
+%
+\appendix
+\raggedbottom\sloppy
+
+% ========== Appendix A
+
+\chapter{Appendix Title}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{document}

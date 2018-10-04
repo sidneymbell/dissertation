@@ -1,8 +1,7 @@
 % University of Washington thesis LaTeX document class by Jim Fox (c) 1985
-
+% \begin{fold}
 \documentclass [10pt, proquest] {uwthesis}[2018/11/27]
 \setcounter{tocdepth}{1}  % Print the chapter and sections to the toc
-
 % ==========   A few formatting tweaks
 \usepackage{textcomp} % copyright symbol
 \usepackage{float} % let figures and such float to the "ideal" spot
@@ -16,10 +15,12 @@
 \makeatother
 \renewcommand{\topfraction}{0.85} % help avoid orphaning figures on a page by itself
 \renewcommand{\textfraction}{0.1}
+% \end{fold}
 
 \begin{document}
 
 % ==========   Preliminary pages
+% \begin{fold}
 \prelimpages
 % ----- copyright and title pages
 \Title{Serious sounding title here}
@@ -76,24 +77,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 \dedication{\begin{center} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{center}}
 
 %
+% \end{fold}
 % end of the preliminary pages
 
-
-
-%
 % ==========      Text pages
-%
-
 \textpages
-
 % ========== Chapter format
-
 \chapter{Title}
-
+% \begin{fold}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+% \end{fold}
 \section{Section title}
-
+% \begin{fold}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 \begin{centering}
 \begin{verbatim}
@@ -131,19 +126,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+% \end{fold}
+
 
 \bibliographystyle{plain}
 \bibliography{dissertation}
-%
 % ==========   Appendices
-%
 \appendix
 \raggedbottom\sloppy
 
 % ========== Appendix A
-
 \chapter{Appendix Title}
-
+% \begin{fold}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+% \end{fold}
 \end{document}

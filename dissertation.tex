@@ -192,14 +192,13 @@ We thus conclude that the majority of lentiviruses have arisen from a process of
 
 % \end{fold}
 
-
 \section{Variable host specificity of SIVs}
 % \begin{fold}
 While most SIVs are the product of ancient recombination and host switching, the distribution of these host switches is not uniform; when we assess the network centrality of each virus we find a broad range (Figs. 3, S7, S11, as node size), indicating some hosts act as sources in the SIV transmission network and other hosts act as sinks.
 From this, we infer that some viruses have either had greater opportunity or have a greater ability to cross the species barrier than others.
 
 In particular, the SIVs from the four closely related species of African green monkeys (SIVsab, SIVtan, SIVver, SIVgrv; collectively, SIVagm) appear to exchange viruses with other host species frequently (Fig. 3, 12’ o-clock).
-An example of SIVagm CST events can be seen in the tree topologies from gag, prot, reverse transcriptase (RT), and vif (Figs. 2 and S5, segments 2, 3, 4, & 6).
+An example of SIVagm CST events can be seen in the tree topologies from gag, prot, reverse transcriptase (RT), and vif (Figs. 2 and S5, segments 2, 3, 4, 6).
 Here, SIVtan isolates reported by Ayouba et al. [26] (denoted with ✝ in Fig. 2) clearly cluster with SIVsab, in a distant part of the phylogeny from the rest of the SIVagm viruses (including the majority of SIVtan isolates).
 For all other segments, however, the SIVagms cluster together.
 We thus concur with the conclusion of Ayouba et al. that these samples represent a recent spillover of SIVsab from sabaeus monkeys to tantalus monkeys, and the model appropriately identifies this transmission.
@@ -354,7 +353,7 @@ Together, our analyses move closer to a full understanding of the pattern of cro
 
 \section{Methods}
 % \begin{fold}
-\subsection*{Datasets & alignments}
+\subsection*{Datasets \& alignments}
 Lentiviral genomes are translated in multiple reading frames; we therefore utilized nucleotide sequence data for all analyses.
 
 \textbf{Recombination analysis dataset}\\
@@ -364,7 +363,7 @@ We reduced the overrepresentation of HIV in this dataset, but maintained at leas
 In total, this dataset contains 64 sequences from 24 hosts (1-10 sequences per host).
 Maximum likelihood trees for each segment—used for the rSPR analysis and displayed in Figure 1—were built with RAxML v.8.2.9 [50] with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation and were rooted to SIVcol for display.
 
-\textbf{Main & supplemental datasets}\\
+\textbf{Main \& supplemental datasets}\\
 Primate lentiviral sequences were downloaded from the comprehensive LANL HIV sequence database [18].
 Sequences from lineages known to be the result of artificial cross-species transmissions (SIVmac, -stm, -mne, and –wcm) were excluded.
 We also excluded any sequences shorter than 500 bases or that were flagged as problematic by standard LANL criteria.
@@ -382,7 +381,7 @@ Sequences that contained no bases for a given seg-ment were removed; the “prun
 
 \subsection*{Recombination analyses}
 \textbf{Topology-based analysis}\\
-Each portion of the genome was analyzed with the Genetic Algorithm for Recombination Detection (GARD), implemented in HyPhy v.2.2.0 [17], with a nucleotide model selected by HyPhy’s Nu-cModelCompare package (#012234) and general discrete distribution (3 bins) of site variation.
+Each portion of the genome was analyzed with the Genetic Algorithm for Recombination Detection (GARD), implemented in HyPhy v.2.2.0 [17], with a nucleotide model selected by HyPhy’s Nu-cModelCompare package (\#012234) and general discrete distribution (3 bins) of site variation.
 Computational intensity was eased by analyzing the recombination dataset in 3kb long portions, with 1kb overlaps on either end (e.g., bases 1:3000, 2000:5000, 4000:7000, etc.).
 To control for sites’ proximity to the ends of the genomic portion being analyzed, this was repeated with the windows offset (e.g., bases 1:2500, 1500:4500, 3500:6500, etc.).
 In total, this resulted in every site of the alignment being analyzed at least two-fold, with at least one of these replicates providing 500-1500 bases of genomic context on either side (other than at the very ends of the total alignment).
@@ -391,15 +390,15 @@ In these instances, we used the average site placement.
 
 \textbf{Sitewise linkage analysis}\\
 Biallelic sites were identified across the genome (ignoring gap characters and polymorphisms present at <5\%).
-These biallelic sites were compared pairwise to generate an observed and expected distribution of haplotypes (combinations of alleles between the two sites), and assessed with the statistic R2=χ2/(d*N), where χ2 is chi-square, d is the degrees of freedom, and N is the number of haplotypes for this pair of sites [52].
-This statistic follows the canonical interpretation of R2, i.e., if the allele at site 1 is known, how well does it predict the allele at site 2 (0 indicating no linkage between sites, and 1 indicating perfect linkage).
+These biallelic sites were compared pairwise to generate an observed and expected distribution of haplotypes (combinations of alleles between the two sites), and assessed with the statistic $R^2=\frac{\chi^2}{d*n}$, where $\chi^2$ is chi-square, d is the degrees of freedom, and N is the number of haplotypes for this pair of sites [52].
+This statistic follows the canonical interpretation of $R^2$, i.e., if the allele at site 1 is known, how well does it predict the allele at site 2 (0 indicating no linkage between sites, and 1 indicating perfect linkage).
 
 \textbf{Segment linkage analysis}\\
 Segment linkage was assessed by comparing the similarity of tree topologies between segments.
 This was done with the pairwise method in the Rooted Subtree-Prune-and-Regraft (rSPR) package [53], which measures the number of steps required to transform one topology into another.
 Segment pairs with similar topologies have lower scores than segments with less similar topologies.
 
-\subsection*{Phylogenies & discrete trait analysis}
+\subsection*{Phylogenies \& discrete trait analysis}
 \textbf{Empirical tree distributions}\\
 For each segment alignment, a posterior distribution of trees was generated with BEAST v. 1.8.2 under a general time reversible substitution model with gamma distributed rate variation and a strict molecular clock [54].
 We used a Yule birth-death speciation model tree prior [55]; all other priors were defaults.
@@ -425,7 +424,7 @@ MCMC chain parameters and ESS values were as follows.
 We thus ran 40 parallel chains of 25-35 million steps each, sampled every 20,000 states (trees sampled every 50,000 states).
 We discarded 10 million steps of each chain as burnin and concatenated the remaining states. \\
 “Resampled” dataset: 45 million steps, sampled every 5,000 steps, 20 million steps discarded as burnin. \\
-For the main and supplemental datasets, more than 97\% of the rate, indicator, and actualRate (step-wise rate*indicator values) parameters, and all other parameters, had an ESS well over 200 (most > 1000). 
+For the main and supplemental datasets, more than 97\% of the rate, indicator, and actualRate (step-wise rate*indicator values) parameters, and all other parameters, had an ESS well over 200 (most > 1000).
 The pruned dataset had a posterior ESS of 677, but the component tree likelihood ESS values ranged from 57 – 287; 91\% of the rate, indicator, and actualRate parameters had an average ESS value > 200.
 Statistical support for each transmission is summarized as a Bayes factor (BF), calculated by comparing the posterior and prior odds that a given rate is non-zero (i.e., that there has been any transmission between a given pair of hosts) [22].
 The ancestral tree likelihoods of each of the 12 tree distributions contribute equally to the inference of a shared transmission rate matrix.
@@ -947,7 +946,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=0.75\textwidth]{../figures/png/titered_strains_tree.png}
+	\includegraphics[width=0.75\textwidth]{./png/titered_strains_tree.png}
 	\caption{\textbf{Tree of DENV viruses in titer dataset}
   Maximum likelihood phylogeny of all DENV viruses that were included in the titer dataset.
 	}
@@ -956,7 +955,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=0.75\textwidth]{../figures/png/sequence_distribution.png}
+	\includegraphics[width=0.75\textwidth]{./png/sequence_distribution.png}
 	\caption{\textbf{Sequence dataset distribution}
   Temporal and geographic distribution of sequences included in our dataset after subsampling.
 	}
@@ -965,7 +964,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\textwidth]{../figures/png/titer_asymmetry.png}
+  \includegraphics[width=0.5\textwidth]{./png/titer_asymmetry.png}
   \caption{\textbf{Titer value symmetry}
   Some viruses have greater avidity overall, and some sera are more potent overall.
   We normalize for these row and column effects ($v_a$ and $p_b$, respectively) in the titer model.
@@ -976,7 +975,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{../figures/png/antigenic_tree_supplement.png}
+  \includegraphics[width=\textwidth]{./png/antigenic_tree_supplement.png}
   \caption{\textbf{Tree of dengue antigenic phenotypes (alternate view)}
 As in Figure~\ref{antigenic_tree}, the topology is inferred from a maximum likelihood phylogeny of DENV sequences.
 Branch lengths are scaled to represent the $d_b$ assigned to each branch by the `full tree' model of antigenic evolution.
@@ -986,7 +985,7 @@ Branch lengths are scaled to represent the $d_b$ assigned to each branch by the 
 
 \begin{figure}[h]
 \centering
-	\includegraphics[width=0.75\textwidth]{../figures/png/genotype_dTiter_heatmap.png}
+	\includegraphics[width=0.75\textwidth]{./png/genotype_dTiter_heatmap.png}
 	\caption{\textbf{Titer distance by genotype}
   Values represent the mean interpolated antigenic distance between canonical dengue genotypes (in standardized log$_2$ titer units).
   }

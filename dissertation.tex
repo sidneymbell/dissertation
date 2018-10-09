@@ -138,7 +138,21 @@ We thus utilized a phylogenetic model to group segments of shared ancestry separ
 For this analysis, we used a version of the SIV compendium alignment from the Los Alamos National Lab (LANL), modified slightly to reduce the overrepresentation of HIV sequences (N=64, see Methods) \citep{los2012hiv}.
 Importantly, because each virus lineage has only a few sequences present in this alignment, these inferences refer to inter-lineage recombination, and not the rampant intra-lineage recombination common among lentiviruses.
 
-GARD identified 13 locations along the genome that had strong evidence of inter-lineage recombination (Fig.1).
+\begin{figure}[h]
+  \begin{centering}
+    \includegraphics[width=\linewidth]{./png/siv_recombination.png}
+  	\caption{\textbf{Inferred interlineage recombination breakpoints and supporting tree topologies }
+The SIV LANL compendium, slightly modified to reduce overrepresentation of HIV, was analyzed with GARD to identify 13 recombination breakpoints across the genome (dashed lines in \textbf{B}; numbering according to the accepted HXB2 reference genome--accession K03455, illustrated).
+Two of these breakpoints were omitted from further analyses because they created extremely short fragments (< 500 bases; gray dashes in \textbf{B}).
+For each of the 11 remaining breakpoints used in further analyses, we split the compendium alignment along these breakpoints and built a maximum likelihood tree, displayed in \textbf{A}.
+Each viral sequence is color-coded by host species, and its phylogenetic position is traced between trees.
+Heuristically, straight, horizontal colored lines indicate congruent topological positions between trees (likely not a recombinant sequence); criss-crossing colored lines indicate incongruent topological positions between trees (likely a recombinant sequence).
+    }
+  	\label{siv_recombination}
+  \end{centering}
+\end{figure}
+
+GARD identified 13 locations along the genome that had strong evidence of inter-lineage recombination (Figure~\ref{siv_recombination}).
 Here, evidence for a particular model is assessed via Akaike Information Criterion (AIC) and differences in AIC between models indicate log probabilities, so that a delta-AIC of 10 between two models would indicate that one model is e10/2 = ~148 as likely as the other \citep{akaike1992information}.
 In our case, delta-AIC values ranged from 154 to 436 for each included breakpoint, indicating that these breakpoints are strongly supported by the underlying tree likelihoods.
 The 14 resulting segments ranged in length from 351 to 2316 bases; in order to build reliable phylogenies, we omitted two of the less supported breakpoints from downstream analyses, yielding 12 segments ranging in length from 606 – 2316 bases.
@@ -164,9 +178,25 @@ Here, we took a fully Bayesian approach and sought the posterior distribution ac
 We integrate across model parameters using Markov chain Monte Carlo (MCMC).
 The resulting model provides phylogenetic trees for each segment annotated with ancestral host states alongside inferred transition rates.
 
-Figure 2 shows reconstructed phylogenies for 3 segments along with inferred ancestral host states.
+\begin{figure}[h]
+  \begin{centering}
+    \includegraphics[width=\linewidth]{./png/siv_cpz.png}
+  	\caption{\textbf{Lentiviral phylogenies highlighting the mosaic origins of SIVcpz and examples of how CST is inferred from the phylogenies }
+\textbf{A,B,C} Bayesian maximum clade credibility (MCC) trees are displayed for segments 2 (gag - A), 6 (int and vif - B), and 9 (env – C) of the main dataset (N=423).
+Tips are color coded by known host species; internal nodes and branches are colored by inferred host species, with saturation indicating the confidence of these assignments.
+Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
+An example of likely cross-species transmission is starred in each tree, where the host state at the internal node (red / mona monkeys) is incongruent with the descendent tips' known host state (green / talapoin monkeys), providing evidence for a transmission from mona monkeys to talapoin monkeys.
+Another example of cross-species transmission of a recombinant virus among African green monkeys is marked with a dagger.
+\textbf{D} The genome map of SIVcpz, with breakpoints used for the discrete trait analysis, is color coded and labeled by the most likely ancestral host for each segment of the genome.
+}
+  	\label{siv_cpz}
+  \end{centering}
+\end{figure}
+
+
+Figure~\ref{siv_cpz} shows reconstructed phylogenies for 3 segments along with inferred ancestral host states.
 Trees are color coded by known host state at the tips, and inferred host state at internal nodes/branches; color saturation indicates the level of certainty for each ancestral host assignment.
-A visual example of how the model identifies cross-species transmissions can be seen in the SIVmon/SIVtal clade, which infect mona- and talapoin monkeys, respectively (starred in Fig. 2A-C).
+A visual example of how the model identifies cross-species transmissions can be seen in the SIVmon/SIVtal clade, which infect mona- and talapoin monkeys, respectively (starred in Figure~\ref{siv_cpz}A-C).
 Due to the phylogenetic placement of the SIVmon tips, the internal node at the base of this clade is red, indicating that the host of the ancestral virus was most likely a mona monkey.
 This contrasts with the host state of the samples isolated from talapoin monkeys (tips in green).
 These changes in the host state across the tree are what inform our estimates of the rate of transmission between host pairs.
@@ -176,7 +206,23 @@ Notably, the tree topologies are substantially different between segments, which
 In all segments’ trees, we also see frequent changes in the host state between internal nodes (illustrated as changes in color going up the tree), suggestive of frequent ancient cross-species transmissions.
 On average, primate lentiviruses switch hosts once every 6.25 substitutions per site per lineage across the SIV phylogeny.
 
-The cross-species transmission events inferred by the model are illustrated in Fig. 3, with raw rates and Bayes factors (BF) in Fig. S4.
+\begin{figure}[h]
+  \begin{centering}
+    \includegraphics[width=\linewidth]{./png/siv_cst.png}
+  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses }
+The phylogeny of the host species' mitochondrial genomes forms the outer circle.
+Arrows represent transmission events inferred by the model with Bayes' factor (BF) >= 3.0; black arrows have BF >= 10, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
+Width of the arrow indicates the rate of transmission (actual rates = rates * indicators).
+Circle sizes represent network centrality scores for each host.
+Transmissions from chimps to humans; chimps to gorillas; gorillas to humans; sooty mangabeys to humans; sabaeus to tantalus; and vervets to baboons have been previously documented.
+To our knowledge, all other transmissions illustrated are novel identifications.
+    }
+  	\label{siv_cst}
+  \end{centering}
+\end{figure}
+
+
+The cross-species transmission events inferred by the model are illustrated in Figure~\ref{siv_cst}, with raw rates and Bayes factors (BF) in Fig. S4.
 As shown, the model correctly infers nearly all pairs of hosts with previously identified (to our knowledge) CST events \citep{bailes2003hybrid,d2015origin,gao1992human,gao1999origin,jin1994infection,leitner2007sequence}, with the exception of the putative CST from sooty mangabeys to sabaeus monkeys reported by \citep{jin1994mosaic} (see discussion).
 Importantly, we also identify 14 novel cross-species transmission events with strong statistical support (cutoff of BF >= 10.0).
 Each of these transmissions is clearly and robustly supported by the tree topologies (all 12 trees are illustrated in %Fig. #).
@@ -193,18 +239,18 @@ We thus conclude that the majority of lentiviruses have arisen from a process of
 
 \section{Variable host specificity of SIVs}
 % \begin{fold}
-While most SIVs are the product of ancient recombination and host switching, the distribution of these host switches is not uniform; when we assess the network centrality of each virus we find a broad range (Figs. 3, S7, S11, as node size), indicating some hosts act as sources in the SIV transmission network and other hosts act as sinks.
+While most SIVs are the product of ancient recombination and host switching, the distribution of these host switches is not uniform; when we assess the network centrality of each virus we find a broad range (Figures~\ref{siv_cst}, S7, S11, as node size), indicating some hosts act as sources in the SIV transmission network and other hosts act as sinks.
 From this, we infer that some viruses have either had greater opportunity or have a greater ability to cross the species barrier than others.
 
-In particular, the SIVs from the four closely related species of African green monkeys (SIVsab, SIVtan, SIVver, SIVgrv; collectively, SIVagm) appear to exchange viruses with other host species frequently (Fig. 3, 12’ o-clock).
-An example of SIVagm CST events can be seen in the tree topologies from gag, prot, reverse transcriptase (RT), and vif (Figs. 2 and S5, segments 2, 3, 4, 6).
-Here, SIVtan isolates reported by Ayouba et al. \citep{ayouba2015molecular} (denoted with ✝ in Fig. 2) clearly cluster with SIVsab, in a distant part of the phylogeny from the rest of the SIVagm viruses (including the majority of SIVtan isolates).
+In particular, the SIVs from the four closely related species of African green monkeys (SIVsab, SIVtan, SIVver, SIVgrv; collectively, SIVagm) appear to exchange viruses with other host species frequently (Figure~\ref{siv_cst}, 12’ o-clock).
+An example of SIVagm CST events can be seen in the tree topologies from gag, prot, reverse transcriptase (RT), and vif (Figures~\ref{siv_cpz} and S5, segments 2, 3, 4, 6).
+Here, SIVtan isolates reported by Ayouba et al. \citep{ayouba2015molecular} (denoted with ✝ in Figure~\ref{siv_cpz}) clearly cluster with SIVsab, in a distant part of the phylogeny from the rest of the SIVagm viruses (including the majority of SIVtan isolates).
 For all other segments, however, the SIVagms cluster together.
 We thus concur with the conclusion of Ayouba et al. that these samples represent a recent spillover of SIVsab from sabaeus monkeys to tantalus monkeys, and the model appropriately identifies this transmission.
 
 Contrastingly, previous studies of the lentiviral phylogeny have noted that SIVcol is typically the outgroup to other viral lineages, and have hypothesized that this may implicate SIVcol as the “original” primate lentivirus \citep{compton2013convergence}.
 We find this hypothesis plausible, but the evidence remains inconclusive.
-For the majority of genomic segments, we also observe SIVcol as the clear outgroup (Figs. 2 and S5).
+For the majority of genomic segments, we also observe SIVcol as the clear outgroup (Figures~\ref{siv_cpz} and S5).
 In contrast, for portions of gag/pol (segments 3 and 4) and some of the accessory genes (segment 7), we find that there is not a clear outgroup.
 For these segments, many other lineages of SIV are just as closely related to SIVcol as they are to each other.
 However, with the occasional exception of single heterologous taxa with poorly supported placement, SIVcol remains a monophyletic clade (N=16), and does not intercalate within the genetic diversity of any other lineage in our dataset.
@@ -235,18 +281,18 @@ Since the time of this previous investigation many new lentiviruses have been di
 In incorporating these new data, we find clear evidence that the previous two-donor hypothesis may be incomplete.
 
 The tree topologies from env in the 3’ end of the genome (segments 8-11) support the previous hypothesis \citep{bailes2003hybrid} that this region came from a virus in the SIVmon/-mus/-gsn clade.
-These viruses form a clear sister clade to SIVcpz with high posterior support (Fig.2C,D).
+These viruses form a clear sister clade to SIVcpz with high posterior support (Figure~\ref{siv_cpz}C,D).
 We find strong evidence for transmissions from mona monkeys (SIVmon) to mustached monkeys (SIVmus), and from mustached monkeys to greater spot-nosed monkeys (SIVgsn) (see discussion of potential coevolution below).
 We also find more evidence in support of a transmission from mona monkeys to chimpanzees than from the other two potential donors, but more sampling is required to firmly resolve which of these viruses was the original donor of the 3’ end of SIVcpz.
 
-We find phylogenetic evidence to support the previous hypothesis \citep{bailes2003hybrid,etienne2013gene} that the integrase and vif genes of SIVcpz (segments 4-6) originated from SIVrcm; however, we find equally strong evidence to support the competing hypothesis that pol came from SIVmnd-2, which infects mandrils (Fig.2B,D).
+We find phylogenetic evidence to support the previous hypothesis \citep{bailes2003hybrid,etienne2013gene} that the integrase and vif genes of SIVcpz (segments 4-6) originated from SIVrcm; however, we find equally strong evidence to support the competing hypothesis that pol came from SIVmnd-2, which infects mandrils (Figure~\ref{siv_cpz}B,D).
 In these portions of the genome, SIVmnd-2 and SIVrcm together form a clear sister clade to SIVcpz.
 The vpr gene, in segment 7, is also closely related to both SIVrcm and SIVmnd-2, but this sister clade also contains SIVsmm from sooty mangabeys.
 Notably, we infer a transmission from red-capped mangabeys to mandrils, but we cannot determine whether this portion of the SIVcpz genome was acquired directly from SIVrcm or from SIVmnd-2.
 
 Interestingly, we do not find evidence to support either SIVrcm/mnd-2 or SIVmon/mus/gsn as the donor for the 5’ most end of the genome (segments 1-5), including the 5’ LTR, gag, and RT genes.
 This is also true for the 3’ LTR (segment 12).
-SIVcpz lacks a clear sister clade or ancestor in this region, and SIVrcm groups in a distant clade; we therefore find no evidence to suggest that an ancestor of an extant SIVrcm was the parental lineage of SIVcpz in the 5’ most end of the viral genome as previously believed (Fig.2A,D).
+SIVcpz lacks a clear sister clade or ancestor in this region, and SIVrcm groups in a distant clade; we therefore find no evidence to suggest that an ancestor of an extant SIVrcm was the parental lineage of SIVcpz in the 5’ most end of the viral genome as previously believed (Figure~\ref{siv_cpz}A,D).
 This may support the possibility of a third parental lineage, or a number of other plausible scenarios (discussed below).
 
 % \end{fold}
@@ -256,7 +302,7 @@ This may support the possibility of a third parental lineage, or a number of oth
 
 \subsection*{Limitations and strengths of the model}
 \textbf{Additional sampling is required to fully resolve the history of CST among lentiviruses}\\
-In addition to the 14 strongly supported novel transmissions (BF >= 10) described above, we also find substantial evidence for an additional 8 possible novel transitions, but with lower support (BF >= 3) (Fig. 3, S4).
+In addition to the 14 strongly supported novel transmissions (BF >= 10) described above, we also find substantial evidence for an additional 8 possible novel transitions, but with lower support (BF >= 3) (Figures~\ref{siv_cst}3, S4).
 These transmissions are more difficult to assess, because many of them are inferred on the basis of just a few “outlier” tips of the tree that group apart from the majority of viral samples from the same lineage.
 In each case, the tips’ phylogenetic position is strongly supported, and the primary literature associated with the collection of each of these “outlier” samples clearly specifies the host metadata.
 However, due to the limited number of lentiviral sequences available for some hosts, we are unable to control for sampling effects for some of these lower-certainty transmissions.
@@ -276,8 +322,8 @@ However, this issue does further emphasize the importance of additional sampling
 \textbf{Most lentiviruses were originally acquired by CST and have since coevolved with their hosts}\\
 Some of these “noisier” transmission inferences, particularly within the same primate clade, may be the result of coevolution, i.e. lineage tracking of viral lineages alongside host speciation.
 Within the model, viral jumps into the common ancestor of two extant primate species appear as a jump into one of the extant species, with a secondary jump between the two descendants.
-For example, the model infers a jump from mona monkeys into mustached monkeys, with a secondary jump from mustached monkeys into their sister species, red-tailed guenons (Fig. 3).
-Comparing the virus and host phylogenies, we observe that this host tree bifurcation between mustached monkeys and red-tailed guenons is mirrored in the virus tree bifurcation between SIVmus and SIVasc for most segments of the viral genome (Figs. 2, 3).
+For example, the model infers a jump from mona monkeys into mustached monkeys, with a secondary jump from mustached monkeys into their sister species, red-tailed guenons (Figure~\ref{siv_cst}).
+Comparing the virus and host phylogenies, we observe that this host tree bifurcation between mustached monkeys and red-tailed guenons is mirrored in the virus tree bifurcation between SIVmus and SIVasc for most segments of the viral genome (Figures~\ref{siv_cpz}, \ref{siv_cst}).
 This heuristically suggests that the true natural history may be an ancient viral transmission from mona monkeys into the common ancestor of mustached monkeys and red-tailed guenons, followed by host/virus coevolution during primate speciation to yield SIVmus and SIVasc.
 The possibility of virus/host coevolution means that while we also observe extensive host switching between primate clades, many of the observed jumps within a primate clade may be the result of host-virus coevolution.
 However, we also note that the species barrier is likely lower between closely related primates, making it challenging to rigorously disentangle coevolution vs. true host switches within a primate clade \citep{charleston2002preferential}.
@@ -298,12 +344,25 @@ In the context of this vast evolutionary timescale, however, we conclude that wh
 As noted above, our results illustrate that some SIVs cross the species barrier more readily than others, and some primate host species become infected with new viral lineages more commonly than others.
 This is likely governed by both ecological and biological factors.
 Ecologically, frequency and form of exposure are likely key determinants of transmission \citep{locatelli2012cross}, but these relationships can be difficult to describe statistically.
+
+\begin{figure}[h]
+  \begin{centering}
+    \includegraphics[width=\linewidth]{./png/siv_predict.png}
+  	\caption{\textbf{Logistic regressions of body mass ratios (a proxy for predation) and host genetic distance on the probability of CST }
+For each pair of host species, we \textbf{(A)} calculated the log ratio of their average body masses and \textbf{(B)} found the patristic genetic distance between them (from a maximum-likelihood tree of mtDNA).
+To investigate the association of these predictors with cross-species transmission, we treated transmis-sion as a binary variable: 0 if the Bayes factor for the transmission (as inferred by the discrete traits model) was < 3.0, and 1 for a Bayes factor >= 3.0.
+Each plot shows raw predictor data in gray; the quintiles of the predictor data in green; and the logistic regression and 95% CI in blue.
+    }
+  	\label{siv_predict}
+  \end{centering}
+\end{figure}
+
 For example, many primates are chronically exposed to many exogenous lentiviruses through predation \citep{aghokeng2010extensive,goodall1986chimpanzees,sharp2011origins}.
-Using log body mass ratios \citep{iucn2008international} as a proxy for predation, we do not see a statistically significant association between body mass ratio and non-zero transmission rate (Fig. 4A, blue; p=0.678, coef. 95\% CI (-0.311, 0.202)).
+Using log body mass ratios \citep{iucn2008international} as a proxy for predation, we do not see a statistically significant association between body mass ratio and non-zero transmission rate (Figure~\ref{siv_predict}A, blue; p=0.678, coef. 95\% CI (-0.311, 0.202)).
 We believe the lack of signal is likely due to the imperfect proxy, although it is also possible that predator-prey relationships do not strongly structure the CST network.
 It is also likely that geographic overlap and habitat similarity are ecological determinants of SIV CST, but modern primate habitats are likely very different since the time that these transmissions actually occurred.
 
-Biologically, increasing host genetic distance has a clear negative association with the probability of cross-species transmission (Fig. 4B, blue, p<0.001, coef. 95\% CI [-7.633, -2.213]).
+Biologically, increasing host genetic distance has a clear negative association with the probability of cross-species transmission (Figure~\ref{siv_predict}B, blue, p<0.001, coef. 95\% CI [-7.633, -2.213]).
 Importantly, as already discussed, the strength of this association may be inflated by instances of lineage tracking (virus/host cospeciation).
 However, it is well established that increasing host genetic distance is associated with a higher species barrier \citep{charleston2002preferential}.
 As previously documented in the literature we expect this is due to several factors, such as the divergence of host restriction factor genes, which are key components of the innate immune system (reviewed in \citep{harris2012restriction}) and differences in host cell receptor phenotypes (e.g., \citep{chen1998natural,pandrea2007paucity,riddick2010novel}).
@@ -359,7 +418,7 @@ For all recombination analyses (GARD, R2, rSPR), we used the 2015 Los Alamos Nat
 The compendium is a carefully curated alignment of high-quality, representative sequences from each known SIV lineage and each group of HIV-1 and HIV-2.
 We reduced the overrepresentation of HIV in this dataset, but maintained at least one high quality sample from each group of HIV.
 In total, this dataset contains 64 sequences from 24 hosts (1-10 sequences per host).
-Maximum likelihood trees for each segment—used for the rSPR analysis and displayed in Figure 1—were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation and were rooted to SIVcol for display.
+Maximum likelihood trees for each segment—used for the rSPR analysis and displayed in Figure~\ref{siv_recombination}—were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation and were rooted to SIVcol for display.
 
 \textbf{Main \& supplemental datasets}\\
 Primate lentiviral sequences were downloaded from the comprehensive LANL HIV sequence database \citep{los2012hiv}.
@@ -905,7 +964,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 % \end{fold}
 
 \bibliographystyle{plain}
-% \bibliography{dissertation}
+\bibliography{dissertation.bib}
 % ==========   Appendices
 \appendix
 \raggedbottom\sloppy

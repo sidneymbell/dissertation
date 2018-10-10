@@ -179,7 +179,7 @@ The resulting model provides phylogenetic trees for each segment annotated with 
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_cpz.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_cpz.png}
   	\caption{\textbf{Lentiviral phylogenies highlighting the mosaic origins of SIVcpz and examples of how CST is inferred from the phylogenies }
 \textbf{A,B,C} Bayesian maximum clade credibility (MCC) trees are displayed for segments 2 (gag - A), 6 (int and vif - B), and 9 (env – C) of the main dataset (N=423).
 Tips are color coded by known host species; internal nodes and branches are colored by inferred host species, with saturation indicating the confidence of these assignments.
@@ -191,7 +191,6 @@ Another example of cross-species transmission of a recombinant virus among Afric
   	\label{siv_cpz}
   \end{centering}
 \end{figure}
-
 
 Figure~\ref{siv_cpz} shows reconstructed phylogenies for 3 segments along with inferred ancestral host states.
 Trees are color coded by known host state at the tips, and inferred host state at internal nodes/branches; color saturation indicates the level of certainty for each ancestral host assignment.
@@ -207,7 +206,7 @@ On average, primate lentiviruses switch hosts once every 6.25 substitutions per 
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_cst.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_cst.png}
   	\caption{\textbf{Network of inferred CSTs of primate lentiviruses }
 The phylogeny of the host species' mitochondrial genomes forms the outer circle.
 Arrows represent transmission events inferred by the model with Bayes' factor (BF) >= 3.0; black arrows have BF >= 10, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
@@ -219,7 +218,6 @@ To my knowledge, all other transmissions illustrated are novel identifications.
   	\label{siv_cst}
   \end{centering}
 \end{figure}
-
 
 The cross-species transmission events inferred by the model are illustrated in Figure~\ref{siv_cst}, with raw rates and Bayes factors (BF) in Fig. S4.
 As shown, the model correctly infers nearly all pairs of hosts with previously identified (to my knowledge) CST events \citep{bailes2003hybrid,d2015origin,gao1992human,gao1999origin,jin1994infection,leitner2007sequence}, with the exception of the putative CST from sooty mangabeys to sabaeus monkeys reported by \citep{jin1994mosaic} (see discussion).
@@ -294,7 +292,7 @@ This may support the possibility of a third parental lineage, or a number of oth
 % \begin{fold}
 
 \subsection{Limitations and strengths of the model}
-\textit{Additional sampling is required to fully resolve the history of CST among lentiviruses}\\
+\subsubsection*{Additional sampling is required to fully resolve the history of CST among lentiviruses}
 In addition to the 14 strongly supported novel transmissions (BF >= 10) described above, I also find substantial evidence for an additional 8 possible novel transitions, but with lower support (BF >= 3) (Figures~\ref{siv_cst}3, S4).
 These transmissions are more difficult to assess, because many of them are inferred on the basis of just a few “outlier” tips of the tree that group apart from the majority of viral samples from the same lineage.
 In each case, the tips’ phylogenetic position is strongly supported, and the primary literature associated with the collection of each of these “outlier” samples clearly specifies the host metadata.
@@ -312,7 +310,7 @@ Notably, though, their removal does result in extensive technical challenges (th
 Given the high congruence between results from independent sampling replicates of the main dataset and from an alternative sampling scheme, I believe this to be a technical issue, rather than reflecting true differences.
 However, this issue does further emphasize the importance of additional sampling in fully resolving the natural history of SIVs.
 
-\textit{Most lentiviruses were originally acquired by CST and have since coevolved with their hosts}\\
+\subsubsection*{Most lentiviruses were originally acquired by CST and have since coevolved with their hosts}
 Some of these “noisier” transmission inferences, particularly within the same primate clade, may be the result of coevolution, i.e. lineage tracking of viral lineages alongside host speciation.
 Within the model, viral jumps into the common ancestor of two extant primate species appear as a jump into one of the extant species, with a secondary jump between the two descendants.
 For example, the model infers a jump from mona monkeys into mustached monkeys, with a secondary jump from mustached monkeys into their sister species, red-tailed guenons (Figure~\ref{siv_cst}).
@@ -321,7 +319,7 @@ This heuristically suggests that the true natural history may be an ancient vira
 The possibility of virus/host coevolution means that while I also observe extensive host switching between primate clades, many of the observed jumps within a primate clade may be the result of host-virus coevolution.
 However, I also note that the species barrier is likely lower between closely related primates, making it challenging to rigorously disentangle coevolution vs. true host switches within a primate clade \citep{charleston2002preferential}.
 
-\textit{The model propagates and accounts for residual uncertainty from the recombination analyses}\\
+\subsubsection*{The model propagates and accounts for residual uncertainty from the recombination analyses}
 The deep phylogenies and extensive sequence divergence between SIV lineages makes any assessment of recombination imperfect.
 This analysis aims to 1) place a lower bound on the number of interlineage recombination events that must have occurred to explain the observed extant viruses, and 2) use this understanding to construct a model of CST among these viruses.
 As the most well developed package currently available for topology-based recombination analysis, GARD was an appropriate choice to identify in broad strokes the extent and nature of recombination among SIVs.
@@ -329,7 +327,7 @@ Some (though not all) of the remaining uncertainty as to the exact location of b
 Most other studies of SIV evolutionary history simply split the phylogeny along gene boundaries or ignore recombination (e.g., \citep{bailes2003hybrid,charleston2002preferential,sharp2011origins}).
 Thus, while there is still some remaining uncertainty in the recombination analyses, these results still represent a major step forward in attempting to systematically assess recombination among all extant SIV lineages and to incorporate it into the phylogenetic reconstruction.
 
-\subsection{Cross-species transmission is driven by exposure and constrained by host genetic distance}
+\subsection{Constraints and drivers of cross-species transmission}
 Paleovirology, biogeography, and statistical models of lentiviral evolution estimate that primate lentiviruses share a common ancestor approximately 5-10 million years ago \citep{aiewsakun2016time,compton2013convergence,mccarthy2015evolutionary,worobey2010island}.
 This, along with the putative viral coevolution during primate speciation, suggests that many of these transmissions were ancient, and have been acted on by selection for millions of years.
 Thus, given that the observed transmissions almost exclusively represent evolutionarily successful host switches, it is remarkable that lentiviruses have been able to repeatedly adapt to so many new host species.
@@ -340,7 +338,7 @@ Ecologically, frequency and form of exposure are likely key determinants of tran
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_predict.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_predict.png}
   	\caption{\textbf{Logistic regressions of body mass ratios (a proxy for predation) and host genetic distance on the probability of CST }
 For each pair of host species, I \textbf{(A)} calculated the log ratio of their average body masses and \textbf{(B)} found the patristic genetic distance between them (from a maximum-likelihood tree of mtDNA).
 To investigate the association of these predictors with cross-species transmission, I treated transmis-sion as a binary variable: 0 if the Bayes factor for the transmission (as inferred by the discrete traits model) was < 3.0, and 1 for a Bayes factor >= 3.0.
@@ -362,7 +360,7 @@ As previously documented in the literature I expect this is due to several facto
 Functional assays of these host phenotypes against panels of SIVs, while outside the scope of this study, will be important for further identifying the molecular bases of the species barriers that have led to the transmission patterns identified here.
 
 \subsection{Origins of HIV-1 and HIV-2}
-\textit{Epidemiological factors were key to the early spread of HIV}\\
+\subsubsection*{Epidemiological factors were key to the early spread of HIV}
 Understanding the underlying dynamics of lentiviral CST provides important ecological context to the transmissions that generated the HIV pandemic.
 As discussed above, my results support a view of lentiviral cross-species transmission as a rare event.
 Notably, only two lentiviruses have crossed the high species barrier from Old World monkeys into hominids: SIVsmm and the recombinant SIVcpz.
@@ -376,7 +374,7 @@ However, these other viral exposures did not result in new endemic human pathoge
 The rapid and repeated emergence of HIV-1 and HIV-2 is on a timescale more congruent with changes in epidemiological conditions than mammalian evolution, perhaps emphasizing the importance of the concurrent changes in human population structure and urbanization in facilitating the early spread of the epidemic \citep{faria2014early}.
 Significantly, though, this also highlights the importance of careful public health surveillance and interventions to prevent future epidemics of zoonotic viruses.
 
-\textit{The exact origins of SIVcpz may not be identifiable}\\
+\subsubsection*{The exact origins of SIVcpz may not be identifiable}
 The ancestry of SIVcpz appears to be tripartite: the unknown ancestry of the 5’ end; the putatively SIVrcm or SIVmnd-2 derived int and vif genes; and the putatively SIVgsn/mon/mus derived 3’ end of the genome.
 For any of these three portions of the genome, there are multiple evolutionary histories supported by available sequence data.
 However, it is possible that further sampling of lentivirus lineages (both known and currently undiscovered) will be able to definitively resolve the ancestry of SIVcpz.
@@ -384,7 +382,7 @@ Alternatively, it may be that the ancestral virus(es) that gave rise to any of t
 In the case of the last two portions of the SIVcpz genome, it may be that the common ancestor of these putative genetic donors (SIVrcm/mnd-2 and SIVmon/mus/gsn, respectively) was the true source.
 However, it is also a distinct possibility that SIVcpz has sufficiently diverged since its acquisition by chimpanzees such that its history is obscured.
 
-\textit{Evolutionary time obscures the identity of the “original” primate lentivirus}\\
+\subsubsection*{Evolutionary time obscures the identity of the “original” primate lentivirus}
 Among primates, my results clearly illustrate that the vast majority of lentiviral lineages were originally acquired by cross-species transmission.
 It is intriguing to speculate as to which virus was the “original” source of all of these lineages.
 Because of its consistent position as the outgroup of primate lentiviral trees, it has been hypothesized \citep{compton2013convergence} that SIVcol was this original lentivirus among primates.
@@ -406,14 +404,14 @@ Together, these analyses move closer to a full understanding of the pattern of c
 \subsection*{Datasets \& alignments}
 Lentiviral genomes are translated in multiple reading frames; I therefore utilized nucleotide sequence data for all analyses.
 
-\textit{Recombination analysis dataset}\\
+\subsubsection*{Recombination analysis dataset}
 For all recombination analyses (GARD, R2, rSPR), I used the 2015 Los Alamos National Lab (LANL) HIV/SIV Compendium \citep{los2012hiv}.
 The compendium is a carefully curated alignment of high-quality, representative sequences from each known SIV lineage and each group of HIV-1 and HIV-2.
 I reduced the overrepresentation of HIV in this dataset, but maintained at least one high quality sample from each group of HIV.
 In total, this dataset contains 64 sequences from 24 hosts (1-10 sequences per host).
 Maximum likelihood trees for each segment—used for the rSPR analysis and displayed in Figure~\ref{siv_recombination}—were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation and were rooted to SIVcol for display.
 
-\textit{Main \& supplemental datasets}\\
+\subsubsection*{Main \& supplemental datasets}
 Primate lentiviral sequences were downloaded from the comprehensive LANL HIV sequence database \citep{los2012hiv}.
 Sequences from lineages known to be the result of artificial cross-species transmissions (SIVmac, -stm, -mne, and –wcm) were excluded.
 I also excluded any sequences shorter than 500 bases or that were flagged as problematic by standard LANL criteria.
@@ -423,14 +421,14 @@ For humans, mandrils and mustached monkeys, which are host to 2, 2 and 3 distinc
 The “main” dataset consists of 24 host species, with 5-31 sequences per host (total N=422).
 As an alternative dataset to control for sampling bias and data availability, I also constructed a “supplemental” dataset with just 15 hosts but with more viral sequences per host (16 – 40 sequences per lineage, N=510).
 
-\textit{Alignments}\\
+\subsubsection*{Alignments}
 Alignments were done with the L-INSI algorithm implemented in mafft v7.294b \citep{katoh2013mafft}; the Compendium alignment was held fixed, with other sequences aligned to this template.
 Insertions relative to the fixed compendium were discarded.
 This alignment was then split along the breakpoints identified by GARD to yield the segment-specific alignments.
 Sequences that contained no bases for a given seg-ment were removed; the “pruned” dataset is identical to the “main” dataset, but here I also removed sequences with fewer than 100 ungapped bases for a given segment.
 
 \subsection*{Recombination analyses}
-\textit{Topology-based analysis}\\
+\subsubsection*{Topology-based analysis}
 Each portion of the genome was analyzed with the Genetic Algorithm for Recombination Detection (GARD), implemented in HyPhy v.2.2.0 \citep{kosakovsky2006gard}, with a nucleotide model selected by HyPhy’s Nu-cModelCompare package (\#012234) and general discrete distribution (3 bins) of site variation.
 Computational intensity was eased by analyzing the recombination dataset in 3kb long portions, with 1kb overlaps on either end (e.g., bases 1:3000, 2000:5000, 4000:7000, etc.).
 To control for sites’ proximity to the ends of the genomic portion being analyzed, this was repeated with the windows offset (e.g., bases 1:2500, 1500:4500, 3500:6500, etc.).
@@ -438,18 +436,18 @@ In total, this resulted in every site of the alignment being analyzed at least t
 Disagreement between window-offset replicates for a given breakpoint were minimal and almost always agreed within a few bases, with two exceptions: offset replicates for the breakpoint between segments 7 and 8 disagreed by 529 bases, and offset replicates for the breakpoint between 8 and 9 disagreed by 263 bases.
 In these instances, I used the average site placement.
 
-\textit{Sitewise linkage analysis}\\
+\subsubsection*{Sitewise linkage analysis}
 Biallelic sites were identified across the genome (ignoring gap characters and polymorphisms present at <5\%).
 These biallelic sites were compared pairwise to generate an observed and expected distribution of haplotypes (combinations of alleles between the two sites), and assessed with the statistic $R^2=\frac{\chi^2}{d*n}$, where $\chi^2$ is chi-square, d is the degrees of freedom, and N is the number of haplotypes for this pair of sites \citep{hill1968linkage}.
 This statistic follows the canonical interpretation of $R^2$, i.e., if the allele at site 1 is known, how well does it predict the allele at site 2 (0 indicating no linkage between sites, and 1 indicating perfect linkage).
 
-\textit{Segment linkage analysis}\\
+\subsubsection*{Segment linkage analysis}
 Segment linkage was assessed by comparing the similarity of tree topologies between segments.
 This was done with the pairwise method in the Rooted Subtree-Prune-and-Regraft (rSPR) package \citep{whidden2017ricci}, which measures the number of steps required to transform one topology into another.
 Segment pairs with similar topologies have lower scores than segments with less similar topologies.
 
 \subsection*{Phylogenies \& discrete trait analysis}
-\textit{Empirical tree distributions}\\
+\subsubsection*{Empirical tree distributions}
 For each segment alignment, a posterior distribution of trees was generated with BEAST v. 1.8.2 under a general time reversible substitution model with gamma distributed rate variation and a strict molecular clock \citep{drummond2012bayesian}.
 I used a Yule birth-death speciation model tree prior \citep{gernhard2008using}; all other priors were defaults.
 Trees were estimated using a Markov chain Monte Carlo (MCMC), and convergence was determined by visually inspecting the trace in Tracer v. 1.6.0 \citep{rambaut2014tracer}.
@@ -459,7 +457,7 @@ MCMC chain parameters and ESS values were as follows.
 “Pruned” dataset: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. \\
 “Resampled” dataset: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. All ESS values except for the AG substitution rate in segment 2 (ESS=190) were well above 200.
 
-\textit{Discrete trait analysis}\\
+\subsubsection*{Discrete trait analysis}
 These tree distributions were used to estimate the transmission network.
 As in Faria et al. \citep{faria2013simultaneously}, I model hosts as states of a discrete trait, and model cross-species transmission as a stochastic diffusion process among n host states.
 I use a non-reversible state transition matrix with n × (n–1) indi-vidual transition parameters \citep{edwards2011ancient}.
@@ -488,7 +486,7 @@ Thus, I report conservative estimates of BF by dividing all BF values by 12.
 % ========== Dengue Titer Model Chapter
 \chapter{Dengue virus antigenic evolution}
 % \begin{fold}
-This chapter is adapted from a previously published manuscript, which I coauthored with Drs. Leah Katzelnick and Trevor Bedford \citep{bell2018dengue}.
+\textit{This chapter is adapted from a previously published manuscript, which I coauthored with Drs. Leah Katzelnick and Trevor Bedford}\citep{bell2018dengue}.
 
 \section{Introduction to dengue virus}
 % \begin{fold}
@@ -560,7 +558,7 @@ This suggests that treating each serotype as antigenically uniform overlooks pot
 \subsection{Mapping dengue antigenic evolution to phylogenetic divergence}
 \begin{figure}[h]
   \begin{centering}
-  \includegraphics[width=0.6\textwidth]{./png/genetic_antigenic_distance.png}
+  \includegraphics[width=0.65\textwidth]{./png/genetic_antigenic_distance.png}
   	\caption{\textbf{Normalized antigenic distance vs. genetic distance between pairs of dengue viruses.}
     Antigenic distances are the same as from Figure~\ref{titer_heatmap};
     genetic distances are the patristic distances between viral genomes on a maximum likelihood phylogeny.
@@ -716,7 +714,7 @@ I assess performance by comparing predicted to known titer values in the test da
 % ========== Dengue Population Immunity Chapter
 \chapter{Human population immunity and dengue virus clade dynamics}
 % \begin{fold}
-This chapter is adapted from a previously published manuscript, which I coauthored with Drs. Leah Katzelnick and Trevor Bedford \citep{bell2018dengue}.
+\textit{This chapter is adapted from a previously published manuscript, which I coauthored with Drs. Leah Katzelnick and Trevor Bedford}\citep{bell2018dengue}. \textit{It extends work described in Chapter 2.}
 
 \section{Introduction to antigenic fitness}
 % \begin{fold}
@@ -974,7 +972,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_linkage.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_linkage.png}
   	\caption{\textbf{Heatmap of R2, a pairwise measure of genetic linkage between sites }
 For pairs of biallelic sites (ignoring rare variants), $R^2$ was used to estimate how strongly the allele in one site predicts the allele in the second site, with values of 0 indicating no linkage and 1 indicating perfect linkage.
 The mean value of $R^2$ was 0.044, indicating very low levels of linkage overall.
@@ -985,7 +983,7 @@ The mean value of $R^2$ was 0.044, indicating very low levels of linkage overall
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_rspr.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_rspr.png}
   	\caption{\textbf{Heatmap of rSPR scores estimating topological similarity between segments of the SIV genome }
 The alignment used for GARD analyses (LANL compendium with HIV overrepresentation reduced) was split along the breakpoints identified by GARD to yield the 12 genomic segments, and a maximum likelihood tree was constructed for each.
 The number of steps required to turn one tree topology into an-other was assessed for each pair of trees with the Rooted Subtree-Prune-and-Regraft (rSPR) package. Segment pairs with similar topologies have lower scores than segments with less similar topologies.
@@ -996,7 +994,7 @@ The number of steps required to turn one tree topology into an-other was assesse
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_dataset_distrib.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_dataset_distrib.png}
   	\caption{\textbf{Distribution of the number of sequences per host included in analyses }
 \textbf{A} All available high-quality lentivirus sequences were randomly subsampled up to 25 sequences per host for the main dataset.
 I included the 24 hosts with at least 5 sequences available in this dataset.
@@ -1009,12 +1007,12 @@ For both datasets, a small number of additional sequences were permitted for the
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_maindata_transmissions.png}
+    \includegraphics[width=.6\linewidth]{./png/siv_maindata_transmissions.png}
   	\caption{\textbf{Actual rates and Bayes factors for main dataset discrete trait analyses }
 Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as rate * indicator (element-wise for each state logged).
 I report the average posterior values above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
-Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values above (and throughout the text).
+Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
         }
   	\label{siv_maindata_transmissions}
   \end{centering}
@@ -1033,12 +1031,12 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_suppdata_transmissions.png}
+    \includegraphics[width=.6\linewidth]{./png/siv_suppdata_transmissions.png}
   	\caption{\textbf{Actual rates and Bayes factors for "supplemental" dataset discrete trait analyses }
 Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as rate * indicator (element-wise for each state logged).
 I report the average posterior values above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
-Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values above (and throughout the text).
+Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
         }
   	\label{siv_suppdata_transmissions}
   \end{centering}
@@ -1046,7 +1044,7 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_suppdata_cst.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_suppdata_cst.png}
   	\caption{\textbf{Network of inferred CSTs of primate lentiviruses (supplemental dataset) }
 The phylogeny of the host species' mitochondrial genomes forms the outer circle.
 Arrows with filled arrowheads represent transmission events inferred by the model with Bayes' factor (BF) >= 3.0; black arrows have BF >= 10, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
@@ -1086,12 +1084,12 @@ The black dashed line shows y=x; the linear regression is shown in gray.
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_pruneddata_transmissions.png}
+    \includegraphics[width=.6\linewidth]{./png/siv_pruneddata_transmissions.png}
   	\caption{\textbf{Actual rates and Bayes factors for "pruned" main dataset discrete trait analyses }
 Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as rate * indicator (element-wise for each state logged).
 I report the average posterior values above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
-Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values above (and throughout the text).
+Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
         }
   	\label{siv_pruneddata_transmissions}
   \end{centering}
@@ -1099,7 +1097,7 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 
 \begin{figure}[h]
   \begin{centering}
-    \includegraphics[width=\linewidth]{./png/siv_pruneddata_cst.png}
+    \includegraphics[width=.8\linewidth]{./png/siv_pruneddata_cst.png}
   	\caption{\textbf{Network of inferred CSTs of primate lentiviruses ("main" dataset, after "pruning" [removing taxa shorter than 100 bases from each segment])}
 The phylogeny of the host species' mitochondrial genomes forms the outer circle.
 Arrows represent transmission events inferred by the model with Bayes' factor (BF) >= 3.0; black arrows have BF >= 10, with opacity of gray arrows scaled for BF between 3.0 and 10.0.

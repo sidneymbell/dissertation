@@ -973,7 +973,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_linkage.png}
-  	\caption{\textbf{Heatmap of R2, a pairwise measure of genetic linkage between sites }
+  	\caption{\textbf{Heatmap of $R^2$, a pairwise measure of genetic linkage between sites }
 For pairs of biallelic sites (ignoring rare variants), $R^2$ was used to estimate how strongly the allele in one site predicts the allele in the second site, with values of 0 indicating no linkage and 1 indicating perfect linkage.
 The mean value of $R^2$ was 0.044, indicating very low levels of linkage overall.
         }
@@ -986,7 +986,7 @@ The mean value of $R^2$ was 0.044, indicating very low levels of linkage overall
     \includegraphics[width=.8\linewidth]{./png/siv_rspr.png}
   	\caption{\textbf{Heatmap of rSPR scores estimating topological similarity between segments of the SIV genome }
 The alignment used for GARD analyses (LANL compendium with HIV overrepresentation reduced) was split along the breakpoints identified by GARD to yield the 12 genomic segments, and a maximum likelihood tree was constructed for each.
-The number of steps required to turn one tree topology into an-other was assessed for each pair of trees with the Rooted Subtree-Prune-and-Regraft (rSPR) package. Segment pairs with similar topologies have lower scores than segments with less similar topologies.
+The number of steps required to turn one tree topology into another was assessed for each pair of trees with the Rooted Subtree-Prune-and-Regraft (rSPR) package. Segment pairs with similar topologies have lower scores than segments with less similar topologies.
         }
   	\label{siv_rspr}
   \end{centering}
@@ -1009,8 +1009,8 @@ For both datasets, a small number of additional sequences were permitted for the
   \begin{centering}
     \includegraphics[width=.6\linewidth]{./png/siv_maindata_transmissions.png}
   	\caption{\textbf{Actual rates and Bayes factors for main dataset discrete trait analyses }
-Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as rate * indicator (element-wise for each state logged).
-I report the average posterior values above.
+Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as $rate * indicator$ (element-wise for each state logged).
+The average posterior values are reported above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
 Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
         }
@@ -1032,9 +1032,9 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.6\linewidth]{./png/siv_suppdata_transmissions.png}
-  	\caption{\textbf{Actual rates and Bayes factors for "supplemental" dataset discrete trait analyses }
-Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as rate * indicator (element-wise for each state logged).
-I report the average posterior values above.
+  	\caption{\textbf{Actual rates and Bayes factors for `supplemental' dataset discrete trait analyses }
+Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as $rate * indicator$ (element-wise for each state logged).
+The average posterior values are reported above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
 Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
         }
@@ -1045,14 +1045,12 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_suppdata_cst.png}
-  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses (supplemental dataset) }
-The phylogeny of the host species' mitochondrial genomes forms the outer circle.
-Arrows with filled arrowheads represent transmission events inferred by the model with Bayes' factor (BF) >= 3.0; black arrows have BF >= 10, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
-Transmissions with 2.0 <= BF < 3.0 have open arrowheads (see discussion).
-Width of the arrow indicates the rate of transmission (actual rates = rates * indicators).
-Circle sizes represent network centrality scores for each host.
-Transmissions from chimps to humans; chimps to gorillas; gorillas to humans; sooty mangabeys to humans; sabaeus to tantalus; and vervets to baboons have been previously documented.
-To my knowledge, all other transmissions illustrated are novel identifications.
+  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses (`supplemental' dataset) }
+    The phylogeny of the host species' mitochondrial genomes forms the outer circle.
+    Arrows represent transmission events inferred by the model with Bayes' factor (BF) $\geq 3.0$; black arrows have BF $\geq 10$, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
+    Transmissions with $2.0 \leq BF \leq 3.0$ have open arrowheads (see discussion).
+    Width of the arrow indicates the rate of transmission.
+    Circle sizes represent network centrality scores for each host.
         }
   	\label{siv_suppdata_cst}
   \end{centering}
@@ -1061,9 +1059,9 @@ To my knowledge, all other transmissions illustrated are novel identifications.
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_suppdata_trees.png}
-  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome ("supplemental" dataset) }
-Tips are color coded by known host state; branches and internal nodes are color coded by inferred host state, with color saturation indicating the confidence of these assignments.
-Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
+  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (`supplemental' dataset) }
+    Tips are color coded by known host state; branches and internal nodes are color coded by inferred host state, with color saturation indicating the confidence of these assignments.
+    Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
         }
   	\label{siv_suppdata_trees}
   \end{centering}
@@ -1072,10 +1070,10 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_dataset_comparison.png}
-  	\caption{\textbf{Comparison of Discrete Trait Analysis Results }
-Each datapoint represents on of the 210 possible transmissions between each pair of the 15 hosts present in the supplemental, main, and main/pruned datasets.
-The main dataset consists of 5-25 sequences from each of 24 host species; the pruned dataset is identical, but with short taxa removed from each segment.
-The supplemental dataset consists of 16-40 sequences from each of 15 host species.
+  	\caption{\textbf{Comparison of discrete trait analysis results }
+Each datapoint represents one of the 210 possible transmissions between each pair of the 15 hosts present in all three datasets.
+The `main dataset' consists of 5-25 sequences from each of 24 host species; the `pruned dataset' is identical, but with short taxa removed from each segment.
+The `supplemental' dataset consists of 16-40 sequences from each of 15 host species.
 The black dashed line shows y=x; the linear regression is shown in gray.
         }
   	\label{siv_dataset_comparison}
@@ -1085,11 +1083,11 @@ The black dashed line shows y=x; the linear regression is shown in gray.
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.6\linewidth]{./png/siv_pruneddata_transmissions.png}
-  	\caption{\textbf{Actual rates and Bayes factors for "pruned" main dataset discrete trait analyses }
-Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as rate * indicator (element-wise for each state logged).
-I report the average posterior values above.
-Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
-Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
+  	\caption{\textbf{Actual rates and Bayes factors for `pruned' main dataset discrete trait analyses }
+    Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as $rate * indicator$ (element-wise for each state logged).
+    The average posterior values are reported above.
+    Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
+    Because each of the 12 segments contributes to the likelihood, but they have not evolved independently, I divide all Bayes factors by 12 and report the adjusted values.
         }
   	\label{siv_pruneddata_transmissions}
   \end{centering}
@@ -1098,11 +1096,12 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_pruneddata_cst.png}
-  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses ("main" dataset, after removing taxa shorter than 100 bases from each segment) }
-The phylogeny of the host species' mitochondrial genomes forms the outer circle.
-Arrows represent transmission events inferred by the model with Bayes' factor (BF) >= 3.0; black arrows have BF >= 10, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
-Width of the arrow indicates the rate of transmission (actual rates = rates * indicators).
-As illustrated and discussed, pruning short taxa from the topology can introduce unusual model behavior.
+  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses (`pruned' dataset) }
+    The phylogeny of the host species' mitochondrial genomes forms the outer circle.
+    Arrows represent transmission events inferred by the model with Bayes' factor (BF) $\geq 3.0$; black arrows have BF $\geq 10$, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
+    Width of the arrow indicates the rate of transmission.
+    Circle sizes represent network centrality scores for each host.
+    As illustrated and discussed, pruning short taxa from the topology can introduce unusual model behavior.
 }
   	\label{siv_pruneddata_cst}
   \end{centering}
@@ -1111,7 +1110,7 @@ As illustrated and discussed, pruning short taxa from the topology can introduce
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_pruneddata_trees.png}
-  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome ("main" dataset, after removing taxa shorter than 100 bases from each segment) }
+  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (`pruned' dataset) }
 Tips are color coded by known host state; branches and internal nodes are color coded by inferred host state, with color saturation indicating the confidence of these assignments.
 Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
         }

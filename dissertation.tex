@@ -340,7 +340,7 @@ Ecologically, frequency and form of exposure are likely key determinants of tran
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_predict.png}
   	\caption{\textbf{Logistic regressions of body mass ratios (a proxy for predation) and host genetic distance on the probability of CST }
-\textbf{(A)} Log ratio of average body masses for each pair of hosts and \textbf{(B)} patristic genetic distance (from a maximum-likelihood tree of mtDNA) between each pair of hosts versus indicator value for transmission between them (indicator = 1 if the BF for that transmission was $>= 3.0$, otherwise indicator = 0).
+\textbf{(A)} Log ratio of average body masses for each pair of hosts and \textbf{(B)} patristic genetic distance (from a maximum-likelihood tree of mtDNA) between each pair of hosts, versus indicator value for transmission between them (indicator = 1 if the BF for that transmission was $>= 3.0$, otherwise indicator = 0).
 Each plot shows raw predictor data in gray; the quintiles of the predictor data in green; and the logistic regression and 95\% CI in blue.
     }
   	\label{siv_predict}
@@ -404,11 +404,11 @@ Together, these analyses move closer to a full understanding of the pattern of c
 Lentiviral genomes are translated in multiple reading frames; I therefore utilized nucleotide sequence data for all analyses.
 
 \subsubsection*{Recombination analysis dataset}
-For all recombination analyses (GARD, R2, rSPR), I used the 2015 Los Alamos National Lab (LANL) HIV/SIV Compendium \citep{los2012hiv}.
+For all recombination analyses, I used the 2015 Los Alamos National Lab (LANL) HIV/SIV Compendium \citep{los2012hiv}.
 The compendium is a carefully curated alignment of high-quality, representative sequences from each known SIV lineage and each group of HIV-1 and HIV-2.
 I reduced the overrepresentation of HIV in this dataset, but maintained at least one high quality sample from each group of HIV.
 In total, this dataset contains 64 sequences from 24 hosts (1-10 sequences per host).
-Maximum likelihood trees for each segment—used for the rSPR analysis and displayed in Figure~\ref{siv_recombination}—were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation and were rooted to SIV\textit{col} for display.
+Maximum likelihood trees for each segment-—used for the rSPR analysis and displayed in Figure~\ref{siv_recombination}-—were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation, and were rooted to SIV\textit{col} for display.
 
 \subsubsection*{Main \& supplemental datasets}
 Primate lentiviral sequences were downloaded from the comprehensive LANL HIV sequence database \citep{los2012hiv}.
@@ -418,27 +418,27 @@ I grouped host subspecies together except for cases where there is a known speci
 To construct datasets with a more equitable distribution of sequences per host, I preferentially subsampled sequences from the LANL Compendium, followed by samples isolated from Africa (more likely to be primary sequences), and finally supplementing with samples isolated elsewhere (excluding experimentally generated sequences).
 For humans, mandrils and mustached monkeys, which are host to 2, 2 and 3 distinct viral lineages, respectively, I allowed a few additional sequences (if available) to represent the full breadth of documented lentiviral diversity.
 The “main” dataset consists of 24 host species, with 5-31 sequences per host (total N=422).
-As an alternative dataset to control for sampling bias and data availability, I also constructed a “supplemental” dataset with just 15 hosts but with more viral sequences per host (16 – 40 sequences per lineage, N=510).
+As an alternative dataset to control for sampling bias and data availability, I also constructed a “supplemental” dataset with just 15 hosts but with more viral sequences per host (16 –- 40 sequences per lineage, N=510).
 
 \subsubsection*{Alignments}
 Alignments were done with the L-INSI algorithm implemented in mafft v7.294b \citep{katoh2013mafft}; the Compendium alignment was held fixed, with other sequences aligned to this template.
 Insertions relative to the fixed compendium were discarded.
 This alignment was then split along the breakpoints identified by GARD to yield the segment-specific alignments.
-Sequences that contained no bases for a given seg-ment were removed; the “pruned” dataset is identical to the “main” dataset, but here I also removed sequences with fewer than 100 ungapped bases for a given segment.
+Sequences that contained no bases for a given segment were removed; the `pruned' dataset is identical to the `main' dataset, but here I also removed sequences with fewer than 100 ungapped bases for a given segment.
 
 \subsection*{Recombination analyses}
 \subsubsection*{Topology-based analysis}
-Each portion of the genome was analyzed with the Genetic Algorithm for Recombination Detection (GARD), implemented in HyPhy v.2.2.0 \citep{kosakovsky2006gard}, with a nucleotide model selected by HyPhy’s Nu-cModelCompare package (\#012234) and general discrete distribution (3 bins) of site variation.
+Each portion of the genome was analyzed with the Genetic Algorithm for Recombination Detection (GARD), implemented in HyPhy v.2.2.0 \citep{kosakovsky2006gard}, with a nucleotide model selected by HyPhy’s NucModelCompare package (\#012234) and general discrete distribution (3 bins) of site variation.
 Computational intensity was eased by analyzing the recombination dataset in 3kb long portions, with 1kb overlaps on either end (e.g., bases 1:3000, 2000:5000, 4000:7000, etc.).
-To control for sites’ proximity to the ends of the genomic portion being analyzed, this was repeated with the windows offset (e.g., bases 1:2500, 1500:4500, 3500:6500, etc.).
-In total, this resulted in every site of the alignment being analyzed at least two-fold, with at least one of these replicates providing 500-1500 bases of genomic context on either side (other than at the very ends of the total alignment).
+To control for sites' proximity to the ends of the genomic portion being analyzed, this was repeated with the windows offset (e.g., bases 1:2500, 1500:4500, 3500:6500, etc.).
+In total, this resulted in every site of the alignment being analyzed at least two-fold, with at least one of these replicates providing 500--1500 bases of genomic context on either side (other than at the very ends of the total alignment).
 Disagreement between window-offset replicates for a given breakpoint were minimal and almost always agreed within a few bases, with two exceptions: offset replicates for the breakpoint between segments 7 and 8 disagreed by 529 bases, and offset replicates for the breakpoint between 8 and 9 disagreed by 263 bases.
 In these instances, I used the average site placement.
 
 \subsubsection*{Sitewise linkage analysis}
-Biallelic sites were identified across the genome (ignoring gap characters and polymorphisms present at <5\%).
-These biallelic sites were compared pairwise to generate an observed and expected distribution of haplotypes (combinations of alleles between the two sites), and assessed with the statistic $R^2=\frac{\chi^2}{d*n}$, where $\chi^2$ is chi-square, d is the degrees of freedom, and N is the number of haplotypes for this pair of sites \citep{hill1968linkage}.
-This statistic follows the canonical interpretation of $R^2$, i.e., if the allele at site 1 is known, how well does it predict the allele at site 2 (0 indicating no linkage between sites, and 1 indicating perfect linkage).
+Biallelic sites were identified across the genome (ignoring gap characters and polymorphisms present at $<5\%$).
+These biallelic sites were compared pairwise to generate an observed and expected distribution of haplotypes (combinations of alleles between the two sites), and assessed with the statistic $R^2=\frac{\chi^2}{d*n}$, where $\chi^2$ is chi-squared, $d$ is the degrees of freedom, and $N$ is the number of haplotypes for this pair of sites \citep{hill1968linkage}.
+This statistic follows the canonical interpretation of $R^2$, i.e., if the allele at site 1 is known, how well does it predict the allele at site 2 ($R^2 = 0$ indicating no linkage between sites, and $R^2 = 1$ indicating perfect linkage).
 
 \subsubsection*{Segment linkage analysis}
 Segment linkage was assessed by comparing the similarity of tree topologies between segments.
@@ -447,32 +447,33 @@ Segment pairs with similar topologies have lower scores than segments with less 
 
 \subsection*{Phylogenies \& discrete trait analysis}
 \subsubsection*{Empirical tree distributions}
-For each segment alignment, a posterior distribution of trees was generated with BEAST v. 1.8.2 under a general time reversible substitution model with gamma distributed rate variation and a strict molecular clock \citep{drummond2012bayesian}.
+For each segment alignment, a posterior distribution of trees was generated with BEAST v. 1.8.2 under a general time reversible substitution model with $\gamma$- distributed rate variation and a strict molecular clock \citep{drummond2012bayesian}.
 I used a Yule birth-death speciation model tree prior \citep{gernhard2008using}; all other priors were defaults.
 Trees were estimated using a Markov chain Monte Carlo (MCMC), and convergence was determined by visually inspecting the trace in Tracer v. 1.6.0 \citep{rambaut2014tracer}.
-MCMC chain parameters and ESS values were as follows.
-
-“Main” dataset: 25 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribu-tion of ~1600 trees per segment. All but two effective sample size (ESS) values (segment 2: AG substi-tution rate [ESS=164] and frequencies 4 [ESS=189]) were well over 200. \\
-“Pruned” dataset: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. \\
-“Resampled” dataset: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. All ESS values except for the AG substitution rate in segment 2 (ESS=190) were well above 200.
+MCMC chain parameters and ESS values were as follows.\\
+\textit{`Main' dataset}: 25 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~1600 trees per segment. All but two effective sample size (ESS) values were well over 200. \\
+\textit{`Pruned' dataset}: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. \\
+\textit{`Resampled' dataset}: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. All but one ESS value were well above 200.
 
 \subsubsection*{Discrete trait analysis}
-These tree distributions were used to estimate the transmission network.
-As in Faria \textit{et al}. \citep{faria2013simultaneously}, I model hosts as states of a discrete trait, and model cross-species transmission as a stochastic diffusion process among n host states.
-I use a non-reversible state transition matrix with n × (n–1) indi-vidual transition parameters \citep{edwards2011ancient}.
+These empirical tree distributions were used to estimate the transmission network.
+As in Faria \textit{et al}. \citep{faria2013simultaneously}, I model hosts as states of a discrete trait, and model cross-species transmission as a stochastic diffusion process among $n$ host states.
+I use a non-reversible state transition matrix with $n * (n–1)$ individual transition parameters \citep{edwards2011ancient}.
 I also utilize standard methodology in using a Bayesian stochastic search variable selection process to encourage a sparse network, implemented as in \citep{lemey2009bayesian}.
 An exponential distribution with mean=1.0 was used as a prior on each of the pairwise rate parameters (552 in total for the main and pruned datasets with 24 hosts; 210 parameters in total for the supplemental dataset with 15 hosts).
-The prior placed on the sum of the binary indicator variables corresponding to each pairwise rate parameter (i.e., the number of transitions that are non-zero) was an exponential distribution with mean=20-23.
+The prior placed on the sum of the binary indicator variables corresponding to each pairwise rate parameter (i.e., the number of transitions that are non-zero) was an exponential distribution with mean=20--23.
 Convergence was again assessed by visually inspecting the log files in Tracer.
+MCMC chain parameters and ESS values were as follows.\\
 
-MCMC chain parameters and ESS values were as follows.
-“Main” dataset: 25 million steps, sampled every 5,000 states, 5 million states discarded as burnin.\\
-“Pruned” dataset: decreased phylogenetic noise in the empirical tree distributions for this dataset led to narrow tree distributions and poor mixing (but clear convergence).
-I thus ran 40 parallel chains of 25-35 million steps each, sampled every 20,000 states (trees sampled every 50,000 states).
+\textit{`Main' dataset}: 25 million steps, sampled every 5,000 states, 5 million states discarded as burnin.\\
+\textit{`Pruned' dataset}: decreased phylogenetic noise in the empirical tree distributions for this dataset led to narrow tree distributions and poor mixing (but clear convergence).
+I thus ran 40 parallel chains of 25--35 million steps each, sampled every 20,000 states (trees sampled every 50,000 states).
 I discarded 10 million steps of each chain as burnin and concatenated the remaining states. \\
-“Resampled” dataset: 45 million steps, sampled every 5,000 steps, 20 million steps discarded as burnin. \\
-For the main and supplemental datasets, more than 97\% of the rate, indicator, and actualRate (step-wise rate*indicator values) parameters, and all other parameters, had an ESS well over 200 (most > 1000).
-The pruned dataset had a posterior ESS of 677, but the component tree likelihood ESS values ranged from 57 – 287; 91\% of the rate, indicator, and actualRate parameters had an average ESS value > 200.
+\textit{`Resampled' dataset:} 45 million steps, sampled every 5,000 steps, 20 million steps discarded as burnin. \\
+
+For the main and supplemental datasets, more than 97\% of the rate, indicator, and actualRate (step-wise $rate*indicator$ values) parameters, and all other parameters, had an ESS well over 200 (most $> 1000$).
+The pruned dataset had a posterior ESS of 677, but the component tree likelihood ESS values ranged from 57 -– 287; 91\% of the rate, indicator, and actualRate parameters had an average ESS value $> 200$.
+
 Statistical support for each transmission is summarized as a Bayes factor (BF), calculated by comparing the posterior and prior odds that a given rate is non-zero (i.e., that there has been any transmission between a given pair of hosts) \citep{lemey2009bayesian}.
 The ancestral tree likelihoods of each of the 12 tree distributions contribute equally to the inference of a shared transmission rate matrix.
 However, not every lineage has recombined along every breakpoint, which means that the tree likelihoods from each segment are not fully statistically independent.

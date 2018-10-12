@@ -726,7 +726,7 @@ The size of the viral population (i.e., prevalence, commonly analyzed using SIR 
 Contrastingly, the composition of the viral population (i.e., the relative frequency of each viral clade currently circulating) can be estimated over time by examining historical sequence data \citep{lee2018deep,neher2016prediction}, and is primarily driven by viral fitness \citep{bedford2011strength}.
 In meaningfully antigenically diverse viral populations, antigenic novelty (relative to standing population immunity) contributes to viral fitness: as a given virus $i$ circulates in a population, the proportion of the population that is susceptible to infection with $i$--and other viruses antigenically similar to $i$--decreases over time as more people acquire immunity \citep{bedford2012canalization, luksza2014predictive}.
 Antigenically novel viruses that are able to escape this population immunity are better able to infect hosts and sustain transmission chains, making them fitter than the previously circulating viruses \citep{zhang2005clade, bedford2012canalization}.
-Thus, if antigenic novelty constitutes a fitness advantage for DENV, then we would expect greater antigenic distance from recently circulating viruses to correlate with higher growth rates.
+Thus, if antigenic novelty constitutes a fitness advantage for DENV, then I would expect greater antigenic distance from recently circulating viruses to correlate with higher growth rates.
 % \end{fold}
 
 \section{Results}
@@ -741,12 +741,12 @@ I estimate the relative population frequency of each DENV serotype at three mont
     \includegraphics[width=\linewidth]{./png/serotype_fitness_model.png}
   	\caption{\textbf{Antigenic novelty predicts serotype success }
     \textbf{A} The relative frequency of each serotype, $x_i$, in Southeast Asia is estimated every three months based on available sequence data.
-    \textbf{B} I calculate antigenic fitness for each serotype over time as its frequency-weighted antigenic distance from recently circulating viruses.
-    I then add this to a time-invariant intrinsic fitness value to calculate total fitness (shown here, arbitrary units).
+    \textbf{B} Antigenic fitness for each serotype over time is estimated as its frequency-weighted antigenic distance from recently circulating viruses.
+    This is added to a time-invariant intrinsic fitness value to calculate total fitness (shown here, arbitrary units).
     \textbf{C} illustrates how the model predicts clade growth rates.
-    At each timepoint $t$, I blind the model to all empirical data from timepoints later than $t$ and predict each serotype's future trajectory based on its initial frequency, time-invariant intrinsic fitness, and antigenic fitness at time $t$ (Methods, Eq.~\ref{eq_predict_frequency}).
+    At each timepoint $t$, the model is blinded to all empirical data from timepoints later than $t$ and predict each serotype's future trajectory based on its initial frequency, time-invariant intrinsic fitness, and antigenic fitness at time $t$ (Methods, Eq.~\ref{eq_predict_frequency}).
     I predict forward in three-month increments for a total prediction period of $dt = 5$ years.
-    At each increment, I use the predicted stepwise frequency change to adjust estimates of antigenic fitness on a rolling basis (Methods, Eq.~\ref{eq_compounding_immunity}).
+    At each increment, the model uses the predicted stepwise frequency change to adjust estimates of antigenic fitness on a rolling basis (Methods, Eq.~\ref{eq_compounding_immunity}).
     Predicted growth rates are calculated as $\hat{g} = \frac{\hat{x_i}(t+dt)}{x_i(t)}$ and compared to empirically observed growth rates, $g = \frac{x_i(t+dt)}{x_i(t)}$ in \textbf{D}.
     The example illustrated in \textbf{C} is also shown in \textbf{D} as the blue point.
     Serotype growth versus decline is accurate (i.e., the predicted and actual growth rates are both $>1$ or both $<1$, all points outside the gray area) for 80\% of predictions.
@@ -757,7 +757,7 @@ I estimate the relative population frequency of each DENV serotype at three mont
 
 Fitter virus clades increase in frequency over time, such that $x_i(t+dt) > x_i(t)$.
 It follows that these clades have a growth rate---defined as the fold-change in frequency over time---greater than one: $\frac{x_i(t+dt)}{x_i(t)} > 1$.
-To isolate the extent to which antigenic fitness contributes to clade success and decline, I extend work by {\L}uksza and L\"assig* \citep{luksza2014predictive} to build a simple model that attempts to predict clade growth rates based on two variables: the antigenic fitness of the clade at time $t$, and a time-invariant free parameter representing the intrinsic fitness of the serotype the clade belongs to.
+To isolate the extent to which antigenic fitness contributes to clade success and decline, I extend work by {\L}uksza and L\"assig  \citep{luksza2014predictive} to build a simple model that attempts to predict clade growth rates based on two variables: the antigenic fitness of the clade at time $t$, and a time-invariant free parameter representing the intrinsic fitness of the serotype the clade belongs to.
 I estimate the antigenic fitness of clade $i$ at time $t$ as a function of its antigenic distance from each viral clade $j$ that has circulated in the same population over the previous two years, weighted by the relative frequency of $j$ and adjusted for waning population immunity (Figure~\ref{serotype_fitness_model}B; Methods, Eq.~\ref{eq_waning_immunity}).
 Growth rates are estimated based on a five year sliding window (Figure~\ref{serotype_fitness_model}C).
 
@@ -777,7 +777,7 @@ If within-serotype antigenic heterogeneity contributes to genotype fitness, then
 I find that antigenic fitness contributes to genotype turnover, although it explains less of the observed variation than for serotypes.
 When antigenic distance is estimated from the `interserotype model', I find that this model of antigenic fitness explains approximately 31\% of the observed variation in genotype growth rates, and correctly predicts genotype growth vs. decline 68\% of the time (Figure~\ref{genotype_fitness}C).
 Perhaps surprisingly, more precise estimates of antigenic distance between genotypes from the `full tree model' do not improve model predictions of genotype success ($R^2 = 0.28$, 70\% accuracy; Figure~\ref{genotype_fitness}D).
-This suggests that although I find strong evidence that genotypes vary in their ability to escape neutralizing antibodies (Figures~\ref{titer_model_performance}, \ref{genotype_dTiter_heatmap}), these differences are subtle enough that they do not impact broad-scale regional dynamics over time.
+This suggests that although we see strong evidence that genotypes vary in their ability to escape neutralizing antibodies (Figures~\ref{titer_model_performance}, \ref{genotype_dTiter_heatmap}, Chapter 3), these differences are subtle enough that they do not impact broad-scale regional dynamics over time.
 
 \begin{figure}[h!]
   \begin{centering}
@@ -785,9 +785,9 @@ This suggests that although I find strong evidence that genotypes vary in their 
     \caption{\textbf{Relative frequencies and fitness of dengue genotypes, 1970-2015 }
     \textbf{A} Relative frequencies of each canonical dengue genotype across Southeast Asia, estimated from available sequence data.
     \textbf{B} Antigenic fitness is calculated for each genotype as its frequency-weighted antigenic distance from recently circulating genotypes.
-    I then add this to a time-invariant, serotype-specific intrinsic fitness value to calculate total fitness (shown here, arbitrary units).
-    I assess antigenic distance using either the `full tree model' or the `interserotype model' of antigenic relationships (Figure~\ref{titer_model_performance}).
-    In this panel, I show total fitness over time, incorporating estimates of antigenic fitness derived from the `full tree' model.
+    This is added to a time-invariant, serotype-specific intrinsic fitness value to calculate total fitness (shown here, arbitrary units).
+    Antigenic distance is estimated using either the `full tree model' or the `interserotype model' of antigenic relationships (Figure~\ref{titer_model_performance}).
+    This panel shows total fitness over time, incorporating estimates of antigenic fitness derived from the `full tree' model.
     \textbf{C, D}  Fitness estimates were used to predict clade growth rates over 5 years, compounding immunity every three months based on predicted frequency changes (Methods Eq.~\ref{eq_compounding_immunity}).
     Here, I compare observed vs predicted growth rates for both formulations of the fitness model (using fitness derived from either the `interserotype' or `full tree' model estimates of antigenic distance).
     Growth versus decline was accurate (predicted and actual growth rates both $> 1$ or both $< 1$, points outside the gray shaded area) for 68\% -- 70\% of predictions, respectively.
@@ -828,7 +828,7 @@ Thus, it is possible that these sub-serotype antigenic differences impact finer-
 \section{Methods}
 % \begin{fold}
 \subsection*{Empirical Clade Frequencies}
-As discussed in Neher \textit{et al} and Lee \textit{et al}, I estimate empirical clade frequencies from 1970 to present based on observed relative abundance of each clade in the `slice' of the phylogeny corresponding to each quarterly timepoint \citep{lee2018deep,neher2016prediction}.
+As discussed in Neher \textit{et al} and Lee \textit{et al}, empirical clade frequencies are estimated from 1970 to present based on observed relative abundance of each clade in the `slice' of the phylogeny corresponding to each quarterly timepoint \citep{lee2018deep,neher2016prediction}.
 
 Briefly, the frequency trajectory of each clade in the phylogeny is modeled according to a Brownian motion diffusion process discretized to three-month intervals.
 Relative to a simple Brownian motion, the expectation includes an `inertia' term that adds velocity to the diffusion and the variance includes a term $x(1-x)$ to scale variance according to frequency following a Wright-Fisher population genetic process.
@@ -842,7 +842,7 @@ with `volatility' parameter $\sigma^2$.
 The term $dx$ is the increment in the previous timestep, so that $dx = x(t) - x(t-dt)$.
 I used $\epsilon = 0.7$ and $\sigma = 2.0$ to maximize fit to empirical trajectory behavior.
 
-I also include an Bernoulli observation model for clade presence / absence among sampled viruses at timestep $t$.
+These estimates also include an Bernoulli observation model for clade presence / absence among sampled viruses at timestep $t$.
 This observation model follows
 \begin{equation}
 f(x,t) = \Pi_{v \in V} x(t) \; \Pi_{v \notin V} (1-x(t))
@@ -878,14 +878,14 @@ f_i(t) = f_0-\beta P_i(t)
 where $\beta$ and $f_0$ are fit parameters representing the slope of the linear relationship between immunity and fitness, and the intrinsic relative fitness of each serotype, respectively.
 
 \subsection*{Frequency Predictions}
-Similar to the model implemented in {\L}uksza and L\"assig*, I estimate predicted clade frequencies at time $t + dt$ as
+Similar to the model implemented in {\L}uksza and L\"assig, I estimate predicted clade frequencies at time $t + dt$ as
 \begin{equation}
   \label{eq_predict_frequency}
 \hat{x_i}(t+dt) = \frac{x_i(t) e^{f_i(t) dt}}{\sum_{i}x_i(t) e^{f_i(t) dt}}
 \end{equation}
 for short-term predictions (where $dt < 1$ year).
 
-For long-term predictions, I must account for immunity accrued at each intermediate timepoint between $t$ and $dt$.
+For long-term predictions, we must account for immunity accrued at each intermediate timepoint between $t$ and $dt$.
 I divide the interval between $t$ and $dt$ into a total of $U$ 3 month timepoints, $[t+u, t+2u, ... t+U]$, such that $t+U=dt$.
 I then compound immunity based on predicted clade frequencies at each intermediate timepoint:
 \begin{equation}
@@ -910,7 +910,7 @@ I then calculate clade growth rates, defined as the fold-change in relative clad
 \end{equation}
 
 \subsection*{Null model and model performance}
-To quantify the impact of antigenic fitness on DENV clade success, I compare the antigenically-informed model to a null model wherein all viruses have equal antigenic fitness at all timepoints:
+To quantify the impact of antigenic fitness on DENV clade success, we can compare the antigenically-informed model to a null model wherein all viruses have equal antigenic fitness at all timepoints:
 \begin{equation}
   \label{eq_null}
 f_i^{null}(t) = 0
@@ -919,19 +919,19 @@ f_i^{null}(t) = 0
 \hat{x_i}^{null}(t+dt) = x_i(t) e^0 = x_i(t)
 \end{equation}
 
-For both the null model and the antigenically-informed model, I can assess predictive power as the sum of squared error between predicted and empirical clade growth rates:
+For both the null model and the antigenically-informed model, we can assess predictive power as the sum of squared error between predicted and empirical clade frequencies:
 \begin{equation}
   \label{eq_sse}
-SSE = \sum_{i,t} \left( \frac{\hat{x_i}(t+dt)}{x_i(t)} - \frac{\hat{x_i}^{null}(t+dt)}{x_i(t)} \right)^2
+SSE = \sum_{i,t} \left( \hat{x_i}(t+dt) - x_{i}(t+dt) \right)^2
 \end{equation}
 
-I can then estimate how much more error is present in the null model than the antigenically-informed model:
+We can then estimate how much more error is present in the null model than the antigenically-informed model:
 \begin{equation}
   \label{eq_delta_sse}
 \Delta SSE = SSE^{null} - SSE^{model}
 \end{equation}
 
-The frequency prediction model has a total of 8 free parameters:
+Our frequency prediction model has a total of 8 free parameters:
 \begin{table}[h!]
   \begin{center}
     \label{parameter_definition}
@@ -946,7 +946,9 @@ The frequency prediction model has a total of 8 free parameters:
   \end{center}
 \end{table}
 
-For each dataset, I jointly fit these parameters to maximize $\Delta SSE$ (Table ??).
+For each dataset, these parameters are jointly fit to maximize $\Delta SSE$ (Table B1) via a sweep through parameter space.
+Optimization was confirmed by inspecting the profile likelihoods of each parameter.
+
 % \end{fold}
 
 % \end{fold}

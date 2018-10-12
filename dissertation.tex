@@ -539,8 +539,8 @@ I then define antigenic distance between autologous virus-sera pairs (i.e., viru
 Normalized antigenic distance between $i$ and $j$ are thus calculated as $D_{ij} = \mathrm{log}_2(T_{ii}) - \mathrm{log}_2(T_{ij})$, such that a higher value of $D_{ij}$ indicates that serum $i$ is less effective at neutralizing virus $j$, implying greater antigenic distance between viruses $i$ and $j$.
 
 The full dataset of standardized titer values is shown in Figure~\ref{titer_heatmap}.
-Here, I see that homotypic virus-serum pairs are more closely related antigenically than heterotypic pairs.
-However, I also observe large variance around this trend, both within and between serotypes.
+Here, we see that homotypic virus-serum pairs are more closely related antigenically than heterotypic pairs.
+However, we also observe large variance around this trend, both within and between serotypes.
 This suggests that treating each serotype as antigenically uniform overlooks potentially important antigenic heterogeneity across viruses within each serotype.
 
 \begin{figure}[h!]
@@ -619,7 +619,7 @@ Importantly, all reported error metrics refer to performance on test data, so th
 The full tree model performance is comparable to the model error from a cartography-based characterization of the same dataset (RMSE 0.65---0.8 log$_2$ titer units), and to the error observed when this model was used to characterize an influenza dataset (RMSE of 0.5 log$_2$ titer units) \citep{katzelnick2015dengue,neher2016prediction}.
 From this, I conclude that there is antigenic evolution within each serotype of DENV, and that this is driven by underlying genetic divergence.
 
-Collapsing putatively antigenically uniform clades, I observe at least 12 distinct antigenic phenotypes of DENV (Figure~\ref{antigenic_tree}) and reject the null hypothesis that all DENV viruses within a serotype are antigenically uniform.
+Collapsing putatively antigenically uniform clades, we observe at least 12 distinct antigenic phenotypes of DENV (Figure~\ref{antigenic_tree}) and reject the null hypothesis that all DENV viruses within a serotype are antigenically uniform.
 The titer dataset spans the breadth of canonical DENV genotypes, but in most cases lacks the resolution to detect within-genotype antigenic diversity.
 I thus expect that these results represent a lower-bound on the true extent of DENV intraserotype antigenic diversity.
 
@@ -644,7 +644,7 @@ I show that mapping antigenic change to individual branches and interpolating ac
 This demonstrates that DENV antigenic divergence is closely coupled to genetic divergence.
 I also find that accounting for within-serotype antigenic evolution is necessary to explain the observed variation in antigenic phenotypes.
 This supports and expands upon previous reports \citep{katzelnick2015dengue} that the null hypothesis of antigenically uniform serotypes is inconsistent with observed patterns of cross-protection and susceptibility.
-I observe at least 12 distinct antigenic phenotypes that are both genetically and antigenically distinct.
+We observe at least 12 distinct antigenic phenotypes that are both genetically and antigenically distinct.
 Analysis of the recent CYD-TDV vaccine trial shows different vaccine efficacy against genotypes I and II of DENV4 \citep{juraska2018viral}; the antigenic distance between these two genotypes is comparable to the antigenic distance separating each of the 12 antigenic phenotypes I report (Figures~\ref{antigenic_tree}, \ref{genotype_dTiter_heatmap}).
 This suggests that these phenotypes may be sufficiently distinct to have important impacts on secondary case outcomes and vaccine efficacy.
 

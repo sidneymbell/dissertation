@@ -23,7 +23,7 @@
 % \begin{fold}
 \prelimpages
 % ----- copyright and title pages
-\Title{Serious sounding title here}
+\Title{Viral phylodynamics of host adaptation}
 \Author{Sidney M. Bell}
 \Year{2018}
 \Program{Molecular and Cell Biology}
@@ -82,13 +82,70 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \textpages
 % ========== Introduction
-\chapter{Introduction}
+\chapter{Introduction to virus evolution and phylodynamics}
 % \begin{fold}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Virus evolution is shaped by host/virus relationships}
+As obligate parasites, viruses are intimately dependent upon their hosts for survival.
+The unique nature of the host/virus relationship has a profound impact on viral fitness and evolutionary dynamics.
+Broadly, viral fitness is comprised of its ability to replicate within a host and transmit between hosts.
+Evolutionary conflict between the virus and the host immune system influences both of these dynamics: immunologically evasive viruses are able to replicate more extensively within a host, and are able to access a greater number of susceptible hosts.
+These viral evolutionary imperatives to replciate, transmit, and evade are interrelated, and may either compete or complement each other.
+For example, influenza virus evolution is largely driven by antigenic fitness.
+Influenza strains that are antigenically distinct from previously circulating strains are better able to infect susceptible hosts.
+This generally favors rapid diversification of external influenza proteins, although receptor binding must be maintained to preserve replicative fitness.
+Contrastingly, dengue virus evolution is primarily driven by replicative fitness.
+Dengue infects primates (including humans), but is spread via mosquitos.
+Thus, in order to maintain an unbroken chain of transmission, dengue virions must be able to infect and replicate within two vastly different host environments.
+Maintaining this delicate balance generally favors conservation of most dengue proteins.
+As I show in Chapters 3 and 4, dengue does evolve antigenically, but much more slowly than influenza.
+This may be due to the dual replicative constraints placed on dengue viral evolution.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\subsection{Viral phylodynamics provides a framework for investigating host adaptation}
+For viruses with RNA genomes (e.g., influenza, dengue, and HIV), their high intrinsic mutation rate typically results in the accumulation of at least one  substitution per infection.
+This puts viral evolution and spread on comparable timescales, embedding the selective pressures exerted by the host environment within the viral phylogeny.
+These viral phylogenies then become powerful tools for reconstructing patterns of viral population dynamics and spread via statistical methods collectively referred to as `phylodynamics.'
+Phylodynamic methods rely upon phylogenies of virus evolution, which model how sampled viruses are related to one another by constructing a phylogenetic tree.
+In phylogenetic trees, leaves represent sampled viruses; internal nodes represent hypothesized ancestral viruses; and branches are typically scaled to represent the extent of genetic divergence between them.
+The topology --- or `shape' --- of the phylogeny reflects the order of `relatedness' and sequential divergence between viruses on the phylogeny.
+
+% stick a figure in here
+Returning to our previous example, the contrasting selective pressures presented by the host environments of dengue and influenza viruses are evident in the corresponding viral phylogenies.
+Influenza must rapidly diversify antigenically to evade the host's immune system.
+As a result, viruses that are phenotypically similar to ancestral strains tend to have fewer progeny, while antigenically divergent strains are more likely to seed future viral diversity.
+This results in a spindly, `ladder-like' tree topology.
+In contrast, dengue virus does antigenically evolve, but is much more strongly constrained by the dual host system in which it replicates.
+Here, we see that within each serotype, ancestral phenotypes persist in circulation for much longer.
+This gives the dengue phylogeny a `bushier' tree topology.
+
+Phylodynamic methods provide a more formalized view of how different selective pressures have shaped viral evolution over time by leveraging well-established models of how traits change over time under varying selective pressures.
+The methods presented in subsequent chapters treat each branch in the phylogeny as essentially one step in the course of viral evolution, and map how viral traits have changed at each of these steps.
+
+\subsection{Summary of presented analyses}
+In the studies reported here, I leverage phylodynamic methods to analyze how viruses infect new host species, evade host immunity, and spread through host populations.
+I characterize two host/virus systems: simian immunodeficiency viruses in primates, and dengue virus in a hyperendemic human population.
+
+\subsubsection{Uncovering the natural history of viral cross-species transmission}
+Cross-species transmission has led to many devastating epidemics, but is still a poorly understood phenomenon.
+HIV-1 and HIV-2 (human immunodeficiency virus 1 and 2), which have collectively caused over 35 million deaths, are the result of multiple CSTs from chimpanzees, gorillas, and sooty mangabeys.
+While the immediate history of HIV is known, there are over 45 lentiviruses that infect specific species of primates, and patterns of host switching are not well characterized.
+In Chapter 2, I take a phylogenetic approach to better understand the natural history of SIV recombination and CST.
+To infer historical host switches and the pairwise transmission rates between each pair of 24 primate hosts, I model host species as a discrete character trait on the viral phylogeny.
+I identify 14 novel, well-supported, ancient cross-species transmission events.
+Interestingly, I find that lentiviral lineages vary widely in their ability to infect new host species: SIVcol (from colobus monkeys) is evolutionarily isolated, while SIVagms (from African green monkeys) frequently move between host subspecies.
+I also examine the origins of SIVcpz (the predecessor of HIV-1) in greater detail than previous studies, and find that there are still large portions of the genome with unknown origins.
+Observed patterns of CST are likely driven by a combination of ecological circumstance and innate immune factors.
+
+\subsubsection{Quantifying the extent and impact of antigenic evolution}
+Dengue virus exists as four genetically distinct serotypes, each of which is also antigenically distinct: the immune response to primary infection can be either cross-protective or associated with severe disease upon heterotypic secondary infection.
+Each serotype is historically assumed to be antigenically uniform.
+Recent analyses suggest that antigenic heterogeneity may exist within each serotype, but its source, extent and impact remain unclear.
+In Chapter 3, I construct a phylogeny-based model to directly map antigenic change to underlying genetic divergence.
+I find moderate antigenic diversity within each serotype, and identify 12 antigenically distinct clades.
+In Chapter 4, I quantify the impact of this antigenic heterogeneity on real-world DENV population dynamics.
+I find that antigenic fitness mediates fluctuations in DENV clade frequencies, although this appears to be driven by coarser serotype-level antigenic differences.
+These results provide a more nuanced understanding of dengue antigenic evolution, with important ramifications for vaccine design and epidemic preparedness.
+
 % \end{fold}
-
 
 % ========== SIV Chapter
 \chapter{Evolution and cross-species transmission\\of simian immunodeficiency viruses}

@@ -27,9 +27,9 @@
 \Title{Viral phylodynamics of host adaptation}
 \Author{Sidney M. Bell}
 \Year{2018}
-\Program{Molecular and Cell Biology}
+\Program{Molecular and Cellular Biology}
 
-\Chair{Trevor Bedford}{Dr.}{Molecular and Cell Biology}
+\Chair{Trevor Bedford}{Dr.}{Molecular and Cellular Biology}
 \Signature{Julie Overbaugh}
 \Signature{Jesse Bloom}
 
@@ -109,8 +109,21 @@ Phylodynamic methods rely upon phylogenies of virus evolution, which model how s
 In phylogenetic trees, leaves represent sampled viruses; internal nodes represent hypothesized ancestral viruses; and branches are typically scaled to represent the extent of genetic divergence between them.
 The topology --- or `shape' --- of the phylogeny reflects the order of `relatedness' and sequential divergence between viruses on the phylogeny.
 
-% stick a figure in here
-Returning to our previous example, the contrasting selective pressures presented by the host environments of dengue and influenza viruses are evident in the corresponding viral phylogenies.
+\begin{figure}[h!]
+  \begin{centering}
+    \includegraphics[width=\linewidth]{./png/dengue_vs_influenza.png}
+  	\caption{
+\textbf{Comparison of dengue and influenza phylogenies. }
+\textbf{A} shows a phylogeny of dengue virus sequences.
+\textbf{B} shows a phylogeny of seasonal influenza virus sequences.
+The strikingly different topologies of these two trees reflects the different selective pressures that have shaped the evolution of these two viruses.
+Both trees were generated via Nextstrain \citep{hadfield2017nextstrain}.
+}
+  	\label{dengue_vs_influenza}
+  \end{centering}
+\end{figure}
+
+Returning to our previous example, the contrasting selective pressures presented by the host environments of dengue and influenza viruses are evident in the corresponding viral phylogenies (Figure~\ref{dengue_vs_influenza}).
 Influenza must rapidly diversify antigenically to evade the host's immune system.
 As a result, viruses that are phenotypically similar to ancestral strains tend to have fewer progeny, while antigenically divergent strains are more likely to seed future viral diversity.
 This results in a spindly, `ladder-like' tree topology.

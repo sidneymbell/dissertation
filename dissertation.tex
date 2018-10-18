@@ -75,7 +75,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 %
 % ----- dedication
 %
-\dedication{\begin{center} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{center}}
+% \dedication{\begin{center} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{center}}
 
 %
 % \end{fold}
@@ -112,8 +112,7 @@ The topology --- or `shape' --- of the phylogeny reflects the order of `relatedn
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/dengue_vs_influenza.png}
-  	\caption{
-\textbf{Comparison of dengue and influenza phylogenies. }
+  	\caption[Comparison of dengue and influenza phylogenies]{\textbf{Comparison of dengue and influenza phylogenies }
 \textbf{A} shows a phylogeny of dengue virus sequences.
 \textbf{B} shows a phylogeny of seasonal influenza virus sequences.
 The strikingly different topologies of these two trees reflects the different selective pressures that have shaped the evolution of these two viruses.
@@ -214,8 +213,7 @@ Importantly, because each virus lineage has only a few sequences present in this
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_recombination.png}
-  	\caption{
-\textbf{Inferred interlineage recombination breakpoints and supporting tree topologies. }
+  	\caption[Inferred interlineage recombination breakpoints and supporting tree topologies]{\textbf{Inferred interlineage recombination breakpoints and supporting tree topologies }
 The SIV LANL compendium, slightly modified to reduce overrepresentation of HIV, was analyzed with GARD to identify 13 recombination breakpoints across the genome (dashed lines in \textbf{B}; numbering according to the accepted HXB2 reference genome---accession K03455, illustrated).
 Two of these breakpoints were omitted from further analyses because they created extremely short fragments ($<500$ bases; gray dashes in \textbf{B}).
 For each of the 11 remaining breakpoints used in further analyses, the compendium alignment was split along these breakpoints and used to build a maximum likelihood tree, displayed in \textbf{A}.
@@ -251,7 +249,7 @@ The model integrates over parameter values using Markov chain Monte Carlo (MCMC)
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_cpz.png}
-  	\caption{\textbf{Lentiviral phylogenies highlighting the mosaic origins of SIV\textit{cpz} and examples of how CST is inferred from the phylogenies. }
+  	\caption[Lentiviral phylogenies highlighting the mosaic origins of SIV\textit{cpz}]{\textbf{Lentiviral phylogenies highlighting the mosaic origins of SIV\textit{cpz} and examples of how CST is inferred from the phylogenies }
 \textbf{A,B,C} Bayesian maximum clade credibility (MCC) trees are displayed for segments 2 (\textit{gag} - A), 6 (\textit{int} and \textit{vif} - B), and 9 (\textit{env} – C) of the main dataset (N=423).
 Tips are color coded by known host species; internal nodes and branches are colored by inferred host species, with saturation indicating the confidence of these assignments.
 Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
@@ -278,7 +276,7 @@ On average, primate lentiviruses switch hosts once every 6.25 substitutions per 
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.7\linewidth]{./png/siv_cst.png}
-  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses }
+  	\caption[Network of inferred CSTs of primate lentiviruses]{\textbf{Network of inferred CSTs of primate lentiviruses }
 The phylogeny of the host species' mitochondrial genomes forms the outer circle.
 Arrows represent transmission events inferred by the model with Bayes' factor (BF) $\geq 3.0$; black arrows have BF $\geq 10$, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
 Width of the arrow indicates the rate of transmission.
@@ -410,7 +408,7 @@ Ecologically, frequency and form of exposure are likely key determinants of tran
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_predict.png}
-  	\caption{\textbf{Logistic regressions of body mass ratios (a proxy for predation) and host genetic distance on the probability of CST }
+  	\caption[Logistic regressions of predictors on the probability of CST]{\textbf{Logistic regressions of body mass ratios (a proxy for predation) and host genetic distance on the probability of CST }
 \textbf{(A)} Log ratio of average body masses for each pair of hosts and \textbf{(B)} patristic genetic distance (from a maximum-likelihood tree of mtDNA) between each pair of hosts, versus indicator value for transmission between them (indicator = 1 if the BF for that transmission was $\geq 3.0$, otherwise indicator = 0).
 Each plot shows raw predictor data in gray; the quintiles of the predictor data in green; and the logistic regression and 95\% CI in blue.
     }
@@ -581,7 +579,7 @@ On a population scale, the DENV1-immune population of Iquitos, Peru, experienced
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/genotype_tree.png}
-  	\caption{\textbf{Phylogeny of dengue viral sequences }
+  	\caption[Phylogeny of dengue viral sequences]{\textbf{Phylogeny of dengue viral sequences }
     Maximum likelihood phylogeny of dengue virus genomes, colored by canonical genotype assignment.
     }
   	\label{genotype_tree}
@@ -617,7 +615,7 @@ This suggests that treating each serotype as antigenically uniform overlooks pot
 \begin{figure}[h!]
 \begin{centering}
 \includegraphics[width=0.65\textwidth]{./png/titer_heatmap.png}
-    \caption{\textbf{Normalized antigenic distance between pairs of dengue viruses and sera }
+    \caption[Normalized antigenic distance between pairs of dengue viruses and sera]{\textbf{Normalized antigenic distance between pairs of dengue viruses and sera }
     Aggregated neutralization titers from Katzelnick \textit{et al}. are standardized such that the distance between autologous virus-serum pairs is 0, and each titer unit corresponds to one, two-fold change in PRNT50 value.
     Light gray areas represent missing data.
     Higher values correspond to greater antigenic distance.
@@ -632,7 +630,7 @@ If the antigenic heterogeneity observed in the raw data is truly the result of a
 \begin{figure}[h!]
   \begin{centering}
   \includegraphics[width=0.6\textwidth]{./png/genetic_antigenic_distance.png}
-  	\caption{\textbf{Normalized antigenic distance vs. genetic distance between pairs of dengue viruses }
+  	\caption[Normalized antigenic distance vs. genetic distance between pairs of dengue viruses]{\textbf{Normalized antigenic distance vs. genetic distance between pairs of dengue viruses }
     Antigenic distances are the same as from Figure~\ref{titer_heatmap};
     genetic distances are the patristic distances between viral genomes on a maximum likelihood phylogeny.
     }
@@ -662,7 +660,7 @@ The model uses convex optimization to learn the values of $d_b$ that minimize th
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=0.8\textwidth]{./png/titer_model_performance.png}
-        \caption{\textbf{Titer model formulations and performance }
+        \caption[Titer model formulations and performance]{\textbf{Titer model formulations and performance }
         \textbf{A} The `interserotype model' only allows branches that lie between serotypes to contribute to antigenic evolution.
         All other branches are assigned $d_b = 0$.
         \textbf{B} The `full tree model' allows any branch in the phylogeny to contribute to antigenic evolution ($d_b \geq 0$).
@@ -692,7 +690,7 @@ From this, I conclude that there is antigenic evolution within each serotype of 
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/antigenic_tree.png}
-    \caption{\textbf{Tree of dengue antigenic phenotypes }
+    \caption[Tree of dengue antigenic phenotypes]{\textbf{Tree of dengue antigenic phenotypes }
     I infer the topology from a maximum likelihood phylogeny of DENV genomes.
     Branch lengths are scaled to reflect $d_b$, the relative contributions of each branch to antigenic divergence, as inferred by the `full tree' model of DENV evolution.
     Antigenically uniform clades are collapsed, and node diameter reflects the size of the collapsed clade.
@@ -809,7 +807,7 @@ I estimate the relative population frequency of each DENV serotype at three mont
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/serotype_fitness_model.png}
-  	\caption{\textbf{Antigenic novelty predicts serotype success }
+  	\caption[Antigenic novelty predicts serotype success]{\textbf{Antigenic novelty predicts serotype success }
     \textbf{A} The relative frequency of each serotype, $x_i$, in Southeast Asia is estimated every three months based on available sequence data.
     \textbf{B} Antigenic fitness for each serotype over time is estimated as its frequency-weighted antigenic distance from recently circulating viruses.
     This is added to a time-invariant intrinsic fitness value to calculate total fitness (shown here, arbitrary units).
@@ -852,7 +850,7 @@ This suggests that although we see strong evidence that genotypes vary in their 
 \begin{figure}[h!]
   \begin{centering}
 \includegraphics[width=\linewidth]{./png/genotype-fitness.png}
-    \caption{\textbf{Relative frequencies and fitness of dengue genotypes, 1970-2015 }
+    \caption[Antigenic novelty partially predicts genotype success]{\textbf{Antigenic novelty partially predicts genotype success }
     \textbf{A} Relative frequencies of each canonical dengue genotype across Southeast Asia, estimated from available sequence data.
     \textbf{B} Antigenic fitness is calculated for each genotype as its frequency-weighted antigenic distance from recently circulating genotypes.
     This is added to a time-invariant, serotype-specific intrinsic fitness value to calculate total fitness (shown here, arbitrary units).
@@ -1001,10 +999,10 @@ We can then estimate how much more error is present in the null model than the a
 \Delta SSE = SSE^{null} - SSE^{model}
 \end{equation}
 
-Our frequency prediction model has a total of 8 free parameters:
+The frequency prediction model has a total of 8 free parameters:
+\begin{centering}
 \begin{table}[h!]
-  \begin{center}
-    \label{parameter_definition}
+    \caption[Fitness model parameter definitions]{\textbf{Fitness model parameter definitions}}
     \begin{tabular}{c|l}
       $\beta$ & Slope of linear relationship between population immunity and viral fitness\\
       $\gamma$ & Slope of linear relationship between titers and probability of protection\\
@@ -1013,23 +1011,15 @@ Our frequency prediction model has a total of 8 free parameters:
       $N$ & Number of years of previous immunity that contribute to antigenic fitness\\
       $dt$ & Number of years in the future to predict clade frequencies\\
     \end{tabular}
-  \end{center}
+    \label{parameter_definition}
 \end{table}
+\end{centering}
 
-For each dataset, these parameters are jointly fit to maximize $\Delta SSE$ (Table B1) via a sweep through parameter space.
+For each dataset, these parameters are jointly fit to maximize $\Delta SSE$ (Table~\ref{parameter_values}) via a sweep through parameter space.
 Optimization was confirmed by inspecting the profile likelihoods of each parameter.
 
 % \end{fold}
 
-% \end{fold}
-
-
-% ========== Conclusions
-\chapter{Conclusions}
-% \begin{fold}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 % \end{fold}
 
 \bibliographystyle{plain}
@@ -1045,7 +1035,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_linkage.png}
-  	\caption{\textbf{Heatmap of $R^2$, a pairwise measure of genetic linkage between sites }
+  	\caption[Heatmap of $R^2$, a pairwise measure of genetic linkage between sites]{\textbf{Heatmap of $R^2$, a pairwise measure of genetic linkage between sites }
 For pairs of biallelic sites (ignoring rare variants), $R^2$ was used to estimate how strongly the allele in one site predicts the allele in the second site, with values of 0 indicating no linkage and 1 indicating perfect linkage.
 The mean value of $R^2$ was 0.044, indicating very low levels of linkage overall.
         }
@@ -1056,7 +1046,7 @@ The mean value of $R^2$ was 0.044, indicating very low levels of linkage overall
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_rspr.png}
-  	\caption{\textbf{Heatmap of rSPR scores estimating topological similarity between segments of the SIV genome }
+  	\caption[Topological similarity between segments of the SIV genome]{\textbf{Heatmap of rSPR scores estimating topological similarity between segments of the SIV genome }
 The alignment used for GARD analyses (LANL compendium with HIV overrepresentation reduced) was split along the breakpoints identified by GARD to yield the 12 genomic segments, and a maximum likelihood tree was constructed for each.
 The number of steps required to turn one tree topology into another was assessed for each pair of trees with the Rooted Subtree-Prune-and-Regraft (rSPR) package. Segment pairs with similar topologies have lower scores than segments with less similar topologies.
         }
@@ -1067,7 +1057,7 @@ The number of steps required to turn one tree topology into another was assessed
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_dataset_distrib.png}
-  	\caption{\textbf{Distribution of the number of sequences per host included in analyses }
+  	\caption[Distribution of the number of sequences per host included in analyses]{\textbf{Distribution of the number of sequences per host included in analyses }
 \textbf{A} All available high-quality lentivirus sequences were randomly subsampled up to 25 sequences per host for the main dataset.
 I included the 24 hosts with at least 5 sequences available in this dataset.
 \textbf{B} For the supplemental dataset, I randomly subsampled up to 40 sequences per host, and included the 15 hosts with at least 16 sequences available in this dataset.
@@ -1080,7 +1070,7 @@ For both datasets, a small number of additional sequences were permitted for the
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.6\linewidth]{./png/siv_maindata_transmissions.png}
-  	\caption{\textbf{Actual rates and Bayes factors for main dataset discrete trait analyses }
+  	\caption[Actual rates and Bayes factors for main dataset discrete trait analyses]{\textbf{Actual rates and Bayes factors for main dataset discrete trait analyses }
 Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as $rate * indicator$ (element-wise for each state logged).
 The average posterior values are reported above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
@@ -1093,7 +1083,7 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_maindata_trees.png}
-  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (main dataset) }
+  	\caption[Phylogenetic trees for each segment of the lentiviral genome (main dataset)]{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (main dataset) }
 Tips are color coded by known host state; branches and internal nodes are color coded by inferred host state, with color saturation indicating the confidence of these assignments.
 Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
         }
@@ -1104,7 +1094,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.6\linewidth]{./png/siv_suppdata_transmissions.png}
-  	\caption{\textbf{Actual rates and Bayes factors for `supplemental' dataset discrete trait analyses }
+  	\caption[Actual rates and Bayes factors for `supplemental' dataset discrete trait analyses]{\textbf{Actual rates and Bayes factors for `supplemental' dataset discrete trait analyses }
 Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as $rate * indicator$ (element-wise for each state logged).
 The average posterior values are reported above.
 Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
@@ -1117,7 +1107,7 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_suppdata_cst.png}
-  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses (`supplemental' dataset) }
+  	\caption[Network of inferred CSTs of primate lentiviruses (`supplemental' dataset)]{\textbf{Network of inferred CSTs of primate lentiviruses (`supplemental' dataset) }
     The phylogeny of the host species' mitochondrial genomes forms the outer circle.
     Arrows represent transmission events inferred by the model with Bayes' factor (BF) $\geq 3.0$; black arrows have BF $\geq 10$, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
     Transmissions with $2.0 \leq BF \leq 3.0$ have open arrowheads (see discussion).
@@ -1131,7 +1121,7 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_suppdata_trees.png}
-  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (`supplemental' dataset) }
+  	\caption[Phylogenetic trees for each segment of the lentiviral genome (`supplemental' dataset)]{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (`supplemental' dataset) }
     Tips are color coded by known host state; branches and internal nodes are color coded by inferred host state, with color saturation indicating the confidence of these assignments.
     Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
         }
@@ -1142,7 +1132,7 @@ Because each of the 12 segments contributes to the likelihood, but they have not
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_dataset_comparison.png}
-  	\caption{\textbf{Comparison of discrete trait analysis results }
+  	\caption[Comparison of discrete trait analysis results]{\textbf{Comparison of discrete trait analysis results }
 Each datapoint represents one of the 210 possible transmissions between each pair of the 15 hosts present in all three datasets.
 The `main dataset' consists of 5-25 sequences from each of 24 host species; the `pruned dataset' is identical, but with short taxa removed from each segment.
 The `supplemental' dataset consists of 16-40 sequences from each of 15 host species.
@@ -1155,7 +1145,7 @@ The black dashed line shows y=x; the linear regression is shown in gray.
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.6\linewidth]{./png/siv_pruneddata_transmissions.png}
-  	\caption{\textbf{Actual rates and Bayes factors for `pruned' main dataset discrete trait analyses }
+  	\caption[Actual rates and Bayes factors for `pruned' main dataset discrete trait analyses]{\textbf{Actual rates and Bayes factors for `pruned' main dataset discrete trait analyses }
     Values for the asymmetric transition rates between hosts, as estimated by the CTMC, were calculated as $rate * indicator$ (element-wise for each state logged).
     The average posterior values are reported above.
     Bayes factors represent a ratio of the posterior odds / prior odds that a given actual rate is non-zero.
@@ -1168,7 +1158,7 @@ The black dashed line shows y=x; the linear regression is shown in gray.
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_pruneddata_cst.png}
-  	\caption{\textbf{Network of inferred CSTs of primate lentiviruses (`pruned' dataset) }
+  	\caption[Network of inferred CSTs of primate lentiviruses (`pruned' dataset)]{\textbf{Network of inferred CSTs of primate lentiviruses (`pruned' dataset) }
     The phylogeny of the host species' mitochondrial genomes forms the outer circle.
     Arrows represent transmission events inferred by the model with Bayes' factor (BF) $\geq 3.0$; black arrows have BF $\geq 10$, with opacity of gray arrows scaled for BF between 3.0 and 10.0.
     Width of the arrow indicates the rate of transmission.
@@ -1182,7 +1172,7 @@ The black dashed line shows y=x; the linear regression is shown in gray.
 \begin{figure}[h!]
   \begin{centering}
     \includegraphics[width=\linewidth]{./png/siv_pruneddata_trees.png}
-  	\caption{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (`pruned' dataset) }
+  	\caption[Phylogenetic trees for each segment of the lentiviral genome (`pruned' dataset)]{\textbf{Maximum clade credibility trees for each of the 12 GARD-identified genomic segments of the lentiviral genome (`pruned' dataset) }
 Tips are color coded by known host state; branches and internal nodes are color coded by inferred host state, with color saturation indicating the confidence of these assignments.
 Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
         }
@@ -1197,7 +1187,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 % \begin{fold}
 \begin{centering}
   \begin{table}[h!]
-    \caption{\textbf{Fit parameter values for fitness model} }
+    \caption[Fit parameter values for fitness model]{\textbf{Fit parameter values for fitness model} }
     \resizebox{\textwidth}{!}{
     \begin{tabular}[ht]{ l | l | l | r | r | r | r | r | r | r | r }
       \hline
@@ -1221,7 +1211,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
 \centering
 	\includegraphics[width=0.75\textwidth]{./png/titered_strains_tree.png}
-	\caption{\textbf{Tree of DENV viruses in titer dataset }
+	\caption[Tree of DENV viruses in titer dataset]{\textbf{Tree of DENV viruses in titer dataset }
   Maximum likelihood phylogeny of all DENV viruses that were included in the titer dataset.
 	}
 	\label{titered_strains_tree}
@@ -1230,7 +1220,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
 \centering
 	\includegraphics[width=0.75\textwidth]{./png/sequence_distribution.png}
-	\caption{\textbf{Sequence dataset distribution }
+	\caption[Sequence dataset distribution]{\textbf{Sequence dataset distribution }
   Temporal and geographic distribution of sequences included in the dataset after subsampling.
 	}
 	\label{sequence_distribution}
@@ -1239,7 +1229,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.5\textwidth]{./png/titer_asymmetry.png}
-  \caption{\textbf{Titer value symmetry }
+  \caption[Titer value symmetry]{\textbf{Titer value symmetry }
   Some viruses have greater avidity overall, and some sera are more potent overall.
   I normalize for these row and column effects ($v_a$ and $p_b$, respectively) in the titer model.
   Once overall virus avidity and serum potency are accounted for, titers are roughly symmetric (i.e., $D_{ij} \approx D_{ji}$).
@@ -1250,7 +1240,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{./png/antigenic_tree_supplement.png}
-  \caption{\textbf{Tree of dengue antigenic phenotypes (alternate view) }
+  \caption[Tree of dengue antigenic phenotypes (alternate view)]{\textbf{Tree of dengue antigenic phenotypes (alternate view) }
 As in Figure~\ref{antigenic_tree}, the topology is inferred from a maximum likelihood phylogeny of DENV sequences.
 Branch lengths are scaled to represent the $d_b$ assigned to each branch by the `full tree' model of antigenic evolution.
   }
@@ -1260,7 +1250,7 @@ Branch lengths are scaled to represent the $d_b$ assigned to each branch by the 
 \begin{figure}[h!]
 \centering
 	\includegraphics[width=0.75\textwidth]{./png/genotype_dTiter_heatmap.png}
-	\caption{\textbf{Titer distance by genotype }
+	\caption[Titer distance by genotype]{\textbf{Titer distance by genotype }
   Values represent the mean interpolated antigenic distance between canonical dengue genotypes (in standardized log$_2$ titer units).
   }
 	\label{genotype_dTiter_heatmap}

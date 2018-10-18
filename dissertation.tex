@@ -1,8 +1,7 @@
 % University of Washington thesis LaTeX document class by Jim Fox (c) 1985
 % \begin{fold}
 \documentclass [10pt, proquest] {uwthesis}[2018/11/27]
-\setcounter{tocdepth}{2}  % Print the chapter, sections and subsections to the toc (change value to include more/fewer levels)
-
+\setcounter{tocdepth}{2}  % Print the chapter and sections to the toc
 % ==========   A few formatting tweaks
 \usepackage{textcomp} % copyright symbol
 \usepackage{float} % let figures and such float to the "ideal" spot
@@ -101,7 +100,7 @@ Maintaining this delicate balance generally favors conservation of most dengue p
 As I show in Chapters 3 and 4, dengue does evolve antigenically, but much more slowly than influenza.
 This may be due to the dual replicative constraints placed on dengue viral evolution.
 
-\subsection{Viral phylodynamics provides a framework for investigating host adaptation}
+\subsection{A framework for investigating host adaptation}
 For viruses with RNA genomes (e.g., influenza, dengue, and HIV), their high intrinsic mutation rate typically results in the accumulation of at least one  substitution per infection.
 This puts viral evolution and spread on comparable timescales, embedding the selective pressures exerted by the host environment within the viral phylogeny.
 These viral phylogenies then become powerful tools for reconstructing patterns of viral population dynamics and spread via statistical methods collectively referred to as `phylodynamics.'
@@ -161,7 +160,7 @@ These results provide a more nuanced understanding of dengue antigenic evolution
 % \end{fold}
 
 % ========== SIV Chapter
-\chapter{Evolution and cross-species transmission\\of simian immunodeficiency viruses}
+\chapter{Evolution and cross-species transmission of SIVs}
 % \begin{fold}
 \textit{This chapter is adapted from a previously published manuscript, which I coauthored with Dr. Trevor Bedford} \citep{bell2017modern,bell2017thesis}.
 
@@ -800,7 +799,7 @@ Thus, if antigenic novelty constitutes a fitness advantage for DENV, then I woul
 \section{Results}
 % \begin{fold}
 
-\subsection{Antigenic fitness and dengue serotype turnover}
+\subsection{Antigenic novelty and dengue serotype turnover}
 To test this hypothesis, I examine the composition of the dengue virus population in Southeast Asia from 1970 to 2015.
 I estimate the relative population frequency of each DENV serotype at three month intervals, $x_i(t)$ (Figure~\ref{serotype_fitness_model}A), based on available sequence data (Methods, Eq.~\ref{eq_estimate_frequency}).
 
@@ -836,7 +835,7 @@ The fitness model includes eight free parameters that are optimized such that th
 I find that serotype fluctuations are most consistent with a model wherein population immunity wanes linearly over time, with the probability of protection dropping by about 48\% per year for the first two years after primary infection.
 I also find that these dynamics are best explained by intrinsic fitness that moderately varies by by serotype (Table~\ref{parameter_values}).
 
-\subsection{Antigenic novelty and genotype dynamics}
+\subsection{Antigenic fitness and genotype dynamics}
 To estimate how well antigenic fitness predicts genotype dynamics, I used the same model to predict genotype success and decline.
 As before, fitness of genotype $i$ is based on the intrinsic fitness of the serotype $i$ belongs to, and the antigenic distance between $i$ and each other genotype, $j$, that has recently circulated (Figure~\ref{genotype_fitness}B).
 Importantly, I can calculate antigenic distance between $i$ and $j$ at the serotype level (i.e., the antigenic distances computed from the `interserotype model' as illustrated in Figure~\ref{titer_model_performance}A) or at the genotype level (i.e., the antigenic distances computed by the `full tree model' as illustrated in Figure~\ref{titer_model_performance}B, which incorporates the observed within-serotype heterogeneity).

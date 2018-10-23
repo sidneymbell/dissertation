@@ -8,9 +8,7 @@ Molecular and Cellular Biology<br>
 Universtiy of Washington<br>
 2018<br>
 
-<p align="center">
-<b>Abstract</b>
-
+#### Abstract
 RNA viruses evolve quickly, on a comparable timescale to viral spread.
 Thus, each sampled case of an outbreak often carries a unique viral genomic signature.
 By comparing these genomes, phylogenies can reconstruct the course of viral evolution.
@@ -25,7 +23,24 @@ I also find that antigenic novelty is a strong driver of dengue population turno
 Together, these findings demonstrate the power of phylodynamics to broaden our understanding of how viruses evolve and move through populations.
 
 
+#### See Also
+This dissertation is a compilation of the work presented in two manuscripts. 
+See the following links for the original manuscripts, datasets, analyses, etc.  
 
 
+<img src="./png/siv_cst.png" width="350" align="left"/><br><br><br>
+
+##### SIV cross-species transmission
+[paper](https://bedford.io/papers/bell-siv-cst/) | [repository](https://github.com/blab/siv-cst) | [blog](https://bedford.io/blog/siv-transmission/)
+
+<br><br><br><br>
+<img src="./png/antigenic_tree.png" width="350" align="left"/>
+<br><br><br>
+
+##### Dengue antigenic evolution  
+[paper](https://bedford.io/papers/bell-dengue-antigenic-dynamics/) | [repository](https://github.com/blab/dengue-antigenic-dynamics) | [blog](https://bedford.io/blog/dengue-antigenic-dynamics/)
+
+
+<br><br><br><br><br>
 <p align="center">
-&copy; <i>Sidney M. Bell 2018<br><a href="https://staff.washington.edu/fox/tex/uwthesis.shtml">Dissertation LaTeX template courtesy of Jim Fox</a></i>
+&copy; <i><a href="https://twitter.com/sidneymbell">Sidney M. Bell</a> 2018<br> LaTeX <a href="https://github.com/sidneymbell/dissertation/tree/1505ee6b5fd50b3a1e0c9ada5f97a273f261a63d">template</a> adapted from <a href="https://staff.washington.edu/fox/tex/uwthesis.shtml">Jim Fox's</a></i>

@@ -113,11 +113,11 @@ As I show in Chapter 3, dengue does evolve antigenically, but much more slowly t
 This may be due to the dual replicative constraints placed on dengue viral evolution.
 
 \section{A framework for investigating host adaptation}
-For viruses with RNA genomes (e.g., influenza, dengue, and HIV), their high intrinsic mutation rate typically results in the accumulation of at least one  substitution per infection.
+For viruses with RNA genomes (\textit{e.g.}, influenza, dengue, and HIV), their high intrinsic mutation rate typically results in the accumulation of at least one  substitution per infection.
 This puts viral evolution and spread on comparable timescales, embedding the selective pressures exerted by the host environment within the viral phylogeny \citep{bedford2011strength}.
 These viral phylogenies then become powerful tools for reconstructing patterns of viral population dynamics and spread via statistical methods collectively referred to as `phylodynamics' \citep{grenfell2004unifying}.
-Phylodynamic methods rely upon phylogenies of virus evolution, which model how sampled viruses are related to one another by constructing a phylogenetic tree.
-In phylogenetic trees, leaves represent sampled viruses; internal nodes represent hypothesized ancestral viruses; and branches are typically scaled to represent the extent of genetic divergence between them.
+Phylodynamic methods rely upon phylogenies of virus evolution, which describe how sampled viruses are related to one another.
+In phylogenetic trees, leaves represent sampled viruses; internal nodes represent hypothesized ancestral viruses; and branches are typically scaled to genetic divergence.
 The topology --- or `shape' --- of the phylogeny reflects the order of `relatedness' and sequential divergence between viruses on the phylogeny.
 
 \begin{figure}[ht!]
@@ -137,26 +137,26 @@ Returning to our previous example, the contrasting selective pressures presented
 Influenza must rapidly diversify antigenically to evade the host's immune system.
 As a result, viruses that are phenotypically similar to ancestral strains tend to have fewer progeny, while antigenically divergent strains are more likely to seed future viral diversity.
 This results in a spindly, `ladder-like' tree topology.
-In contrast, dengue virus does antigenically evolve, but is much more strongly constrained by the dual host system in which it replicates.
+In contrast, dengue virus does antigenically evolve, but is much more tightly constrained by the dual host system in which it replicates.
 Here, we see that within each serotype, ancestral phenotypes persist in circulation for much longer.
 This gives the dengue phylogeny a `bushier' tree topology.
 
-Phylodynamic methods provide a more formalized view of how different selective pressures have shaped viral evolution over time by leveraging well-established models of how traits change over time under varying selective pressures.
+Phylodynamic methods provide a more formalized view of how different selective pressures have shaped viral evolution over time by applying well-established statistical models of how traits evolve over time.
 The methods presented in subsequent chapters treat each branch in the phylogeny as essentially one step in the course of viral evolution, and map how viral traits have changed at each of these steps.
 
 \section{Summary of presented analyses}
 In the studies reported here, I leverage phylodynamic methods to analyze how viruses infect new host species, evade host immunity, and spread through host populations.
 I characterize two host/virus systems: simian immunodeficiency viruses in primates, and dengue virus in a hyperendemic human population.
 
-\subsection{Uncovering the natural history of viral cross-species transmission}
+\subsection{Characterizing the natural history of viral cross-species transmission}
 Cross-species transmission has led to many devastating epidemics, but is still a poorly understood phenomenon \citep{parrish2008cross}.
 HIV-1 and HIV-2 (human immunodeficiency virus 1 and 2), which have collectively caused over 35 million deaths, are the result of multiple CSTs from chimpanzees, gorillas, and sooty mangabeys \citep{sharp2011origins}.
 While the immediate history of HIV is known, there are over 45 lentiviruses that infect specific species of primates, and patterns of host switching are not well characterized.
 In Chapter 2, I take a phylogenetic approach to better understand the natural history of SIV recombination and CST.
 To infer historical host switches and the pairwise transmission rates between each pair of 24 primate hosts, I model host species as a discrete character trait on the viral phylogeny.
 I identify 14 novel, well-supported, ancient cross-species transmission events.
-Interestingly, I find that lentiviral lineages vary widely in their ability to infect new host species: SIVcol (from colobus monkeys) is evolutionarily isolated, while SIVagms (from African green monkeys) frequently move between host subspecies.
-I also examine the origins of SIVcpz (the predecessor of HIV-1) in greater detail than previous studies, and find that there are still large portions of the genome with unknown origins.
+Interestingly, I find that lentiviral lineages vary widely in their ability to infect new host species: SIV\textit{col} (from colobus monkeys) is evolutionarily isolated, while SIV\textit{agm}s (from African green monkeys) frequently move between host subspecies.
+I also examine the origins of SIV\textit{cpz} (the predecessor of HIV-1) in greater detail than previous studies, and find that there are still large portions of the genome with unknown origins.
 Observed patterns of CST are likely driven by a combination of ecological circumstance and innate immune factors.
 
 \subsection{Quantifying the extent and impact of antigenic evolution}
@@ -172,7 +172,7 @@ These results provide a more nuanced understanding of dengue antigenic evolution
 % \end{fold}
 
 % ========== SIV Chapter
-\chapter{Evolution and cross-species transmission of SIVs}
+\chapter{SIV evolution and\\cross-species transmission}
 % \begin{fold}
 \textit{This chapter is adapted from a previously published manuscript, which I coauthored with Dr. Trevor Bedford} \citep{bell2017modern,bell2017thesis}.
 
@@ -180,7 +180,7 @@ These results provide a more nuanced understanding of dengue antigenic evolution
 % \begin{fold}
 As demonstrated by the recent epidemics of EBOV and MERS, and by the global HIV pandemic, viral cross-species transmissions (CST) can be devastating \citep{morens2008emerging,parrish2008cross}.
 As such, understanding the propensity and ability of viral pathogens to cross the species barrier is of vital public health importance.
-Of particular interest are transmissions that not only “spillover” into a single individual of a new host species, but that result in a virus actually establishing a sustained chain of transmission and becoming endemic in the new host population (“host switching”) \citep{locatelli2012cross}.
+Of particular interest are transmissions that not only `spillover' into a single individual of a new host species, but that result in a virus actually establishing a sustained chain of transmission and becoming endemic in the new host population (`host switching') \citep{locatelli2012cross}.
 
 HIV is the product of not just one successful host switch, but a long chain of host switch events \citep{apetrei2004history,sharp2011origins}.
 There are two human immunodeficiency viruses, HIV-2 and HIV-1.
@@ -211,7 +211,7 @@ Finally, I also examined the origins of each region of the SIV\textit{cpz} genom
 \subsection{SIV interlineage recombination}
 In order to reconstruct the lentiviral phylogeny, we must first address the issue of recombination, which is frequent among lentiviruses \citep{chen2006high}.
 In the context of studying cross-species transmission, this is both a challenge and a valuable tool.
-Evidence of recombination between viral lineages endemic to different hosts is also evidence that at one point in time, viruses from those two lineages were in the same animal (i.e., a cross-species transmission event must have occurred in order to generate the observed recombinant virus).
+Evidence of recombination between viral lineages endemic to different hosts is also evidence that at one point in time, viruses from those two lineages were in the same animal (\textit{i.e.}, a cross-species transmission event must have occurred in order to generate the observed recombinant virus).
 However, this process also results in portions of the viral genome having independent evolutionary---and phylogenetic-—histories.
 
 To address the reticulate evolutionary history of SIVs, I endeavored to identify the extent and nature of recombination between lentiviral lineages.
@@ -229,18 +229,18 @@ The SIV LANL compendium, slightly modified to reduce overrepresentation of HIV, 
 Two of these breakpoints were omitted from further analyses because they created extremely short fragments ($<500$ bases; gray dashes in \textbf{B}).
 For each of the 11 remaining breakpoints used in further analyses, the compendium alignment was split along these breakpoints and used to build a maximum likelihood tree, displayed in \textbf{A}.
 Each viral sequence is color-coded by host species, and its phylogenetic position is traced between trees.
-Heuristically, straight, horizontal colored lines indicate congruent topological positions between trees (likely not a recombinant sequence); criss-crossing colored lines indicate incongruent topological positions between trees (likely a recombinant sequence).
+Heuristically, straight, horizontal colored lines indicate congruent topological positions between trees (more likely not a recombinant sequence); criss-crossing colored lines indicate incongruent topological positions between trees (likely a recombinant sequence).
 }
   	\label{siv_recombination}
   \end{centering}
 \end{figure}
 
 GARD identified 13 locations along the genome that had strong evidence of inter-lineage recombination (Figure~\ref{siv_recombination}).
-Here, evidence for a particular model is assessed via Akaike Information Criterion (AIC) and differences in AIC between models indicate log probabilities, so that a $\Delta$AIC of 10 between two models would indicate that one model is $e^{(10/2)} \approx 148$ as likely as the other \citep{akaike1992information}.
+Here, evidence for a particular model is assessed via Akaike Information Criterion (AIC) and differences in AIC between models indicate log probabilities, so that a $\Delta$AIC of 10 between two models would indicate that one model is $e^{(10/2)} \approx 148$ times as likely as the other \citep{akaike1992information}.
 In this case, $\Delta$AIC values ranged from 154 to 436 for each included breakpoint, indicating that these breakpoints are strongly supported by the underlying tree likelihoods.
 The 14 resulting segments ranged in length from 351 to 2316 bases; in order to build reliable phylogenies, I omitted two of the less supported breakpoints from downstream analyses, yielding 12 segments ranging in length from 606 to 2316 bases.
 I found no evidence to suggest linkage between non-neighboring segments (Figure~\ref{siv_rspr}).
-While it has been previously appreciated that several lineages of SIV are recombinant products (e.g., \citep{bailes2003hybrid,jin1994mosaic}), the 13 breakpoints identified here provide evidence that there have been at least 13 inter-lineage recombination events during the evolution of SIVs.
+While it has been previously appreciated that several lineages of SIV are recombinant products (\textit{e.g.}, \citep{bailes2003hybrid,jin1994mosaic}), the 13 breakpoints identified here provide evidence that there have been at least 13 inter-lineage recombination events during the evolution of SIVs.
 Identifying these recombination breakpoints allowed us to construct a putatively valid phylogeny for each segment of the genome that shares an internally cohesive evolutionary history.
 
 \subsection{Phylogenetic evidence of SIV cross-species transmission}
@@ -261,12 +261,12 @@ The model integrates over parameter values using Markov chain Monte Carlo (MCMC)
   \begin{centering}
     \includegraphics[width=.8\linewidth]{./png/siv_cpz.png}
   	\caption[Lentiviral phylogenies highlighting the mosaic origins of SIV\textit{cpz}]{\textbf{Lentiviral phylogenies highlighting the mosaic origins of SIV\textit{cpz} and examples of how CST is inferred from the phylogenies }
-\textbf{A,B,C} Bayesian maximum clade credibility (MCC) trees are displayed for segments 2 (\textit{gag} - A), 6 (\textit{int} and \textit{vif} - B), and 9 (\textit{env} – C) of the main dataset (N=423).
+\textbf{A,B,C} Bayesian maximum clade credibility (MCC) trees are displayed for segments 2 (\textit{gag} - \textbf{A}), 6 (\textit{int} and \textit{vif} - \textbf{B}), and 9 (\textit{env} – \textbf{C}) of the main dataset (N=423).
 Tips are color coded by known host species; internal nodes and branches are colored by inferred host species, with saturation indicating the confidence of these assignments.
 Monophyletic clades of viruses from the same lineage are collapsed, with the triangle width proportional to the number of represented sequences.
 An example of likely cross-species transmission is starred in each tree, where the host state at the internal node (red / mona monkeys) is incongruent with the descendent tips' known host state (green / talapoin monkeys), providing evidence for a transmission from mona monkeys to talapoin monkeys.
 Another example of cross-species transmission of a recombinant virus among African green monkeys is marked with $\dagger$.
-\textbf{D} The genome map of SIV\textit{cpz}, with breakpoints used for the discrete trait analysis, is color coded and labeled by the most likely ancestral host for each segment of the genome.
+\textbf{D} The genome map of SIV\textit{cpz}, with breakpoints used for the discrete trait analysis, is colored by the most likely ancestral host for each segment of the genome.
 }
   	\label{siv_cpz}
   \end{centering}
@@ -324,12 +324,12 @@ I thus concur with the conclusion of Ayouba \textit{et al}. that these samples r
 
 Contrastingly, previous studies of the lentiviral phylogeny have noted that SIV\textit{col} is typically the outgroup to other viral lineages, and have hypothesized that this may implicate SIV\textit{col} as the “original” primate lentivirus \citep{compton2013convergence}.
 I find this hypothesis plausible, but the evidence remains inconclusive.
-For the majority of genomic segments, I also observe SIV\textit{col} as the clear outgroup (Figures~\ref{siv_cpz} and~\ref{siv_maindata_trees}).
-In contrast, for portions of gag/pol (segments 3 and 4) and some of the accessory genes (segment 7), I find that there is not a clear outgroup.
+For the majority of genomic segments, we also observe SIV\textit{col} as the clear outgroup (Figures~\ref{siv_cpz} and~\ref{siv_maindata_trees}).
+In contrast, for portions of \textit{gag}/\textit{pol} (segments 3 and 4) and some of the accessory genes (segment 7), I find that there is not a clear outgroup.
 For these segments, many other lineages of SIV are just as closely related to SIV\textit{col} as they are to each other.
 However, with the occasional exception of single heterologous taxa with poorly supported placement, SIV\textit{col} remains a monophyletic clade (N=16), and does not intercalate within the genetic diversity of any other lineage in this dataset.
 Based on these collective tree topologies, this model does not identify strong evidence for any specific transmissions out of colobus monkeys, and identifies only a single, weakly supported inbound transmission (likely noise in the model caused by the fact that red-capped mangabeys are the marginally supported root host state; see below).
-This is consistent with previous findings that the colobinae—-in a different genus than most of the \textit{Cercopithecus} primates in the dataset—-have a unique variant of the APOBEC3G gene, which is known to restrict lentiviral infection and speculated to be a barrier to cross-species transmission \citep{compton2013convergence}.
+This is consistent with previous findings that the colobinae --- in a different genus than most of the \textit{Cercopithecus} primates in the datase --- have a unique variant of the \textit{APOBEC3G} gene, which is known to restrict lentiviral infection and speculated to be a barrier to cross-species transmission \citep{compton2013convergence}.
 These observations generally support the idea of SIV\textit{col} as having maintained a specific relationship with its host over evolutionary time.
 
 Additionally, while most host species carry only one lineage of SIV, mandrils and mustached monkeys carry 2 and 3 lineages of SIV, respectively \citep{aghokeng2007full,courgnaud2003identification,liegeois2012new,souquiere2001wild}.
@@ -362,7 +362,7 @@ The \textit{vpr} gene, in segment 7, is also closely related to both SIV\textit{
 Notably, the model infers a transmission from red-capped mangabeys to mandrils, but cannot determine whether this portion of the SIV\textit{cpz} genome was acquired directly from SIV\textit{rcm} or from SIV\textit{mnd}-2.
 
 Interestingly, I do not find evidence to support either SIV\textit{rcm}/\textit{mnd}-2 or SIV\textit{mon}/\textit{-mus}/\textit{-gsn} as the donor for the 5' most end of the genome (segments 1-5), including the 5' \textit{LTR}, \textit{gag}, and \textit{RT} genes.
-This is also true for the 3' LTR (segment 12).
+This is also true for the 3' \textit{LTR} (segment 12).
 SIV\textit{cpz} lacks a clear sister clade or ancestor in this region, and SIV\textit{rcm} groups in a distant clade; I therefore find no evidence to suggest that an ancestor of an extant SIV\textit{rcm} was the parental lineage of SIV\textit{cpz} in the 5' most end of the viral genome as previously believed (Figure~\ref{siv_cpz}A,D).
 This may support the possibility of a third parental lineage, or a number of other plausible scenarios (discussed below).
 
@@ -380,9 +380,9 @@ However, due to the limited number of lentiviral sequences available for some ho
 I report them here because it is unclear whether these outliers are the result of unidentified separate endemic lineages, one-time spillovers from other hosts, or species misidentification during sample collection.
 It is also important to note that while some of these less-supported transmissions are potentially sampling artifacts, many of them may be real, and may be less supported simply because they lack the requisite available data for some genome segments.
 
-Ultimately, far more extensive sampling—-specifically, obtaining more full-length sequences from undersampled lineages—-of primate lentiviruses is required in order to resolve these instances.
-I included only sequences at least 500 bases long; each taxon may contribute more informative sites to some segments than to others.
-When splitting the master alignment along breakpoints, I removed from each segment any taxon that had no informative bases.
+Ultimately, far more extensive sampling -—- specifically, obtaining more full-length sequences from undersampled lineages -—- of primate lentiviruses is required in order to resolve these instances.
+The dataset included only sequences at least 500 bases long; each taxon may contribute more informative sites to some segments than to others.
+When splitting the master alignment along breakpoints, any taxon that had no informative bases was removed from each segment.
 However, for each segment, there were between 0 and 13 (mean: 3.6) taxa that had some informative sites, but were very short ($<100$ informative sites).
 Statistically, these short taxa contribute little information, and their placement in the topology for each segment has high uncertainty.
 This phylogenetic uncertainty is then propagated forward to the discrete traits model, meaning that these short taxa should not statistically influence these results in any meaningful way.
@@ -391,7 +391,7 @@ Given the high congruence between results from independent sampling replicates o
 However, this issue does further emphasize the importance of additional sampling in fully resolving the natural history of SIVs.
 
 \subsubsection*{Most lentiviruses were originally acquired by CST and have since coevolved with their hosts}
-Some of these noisier transmission inferences, particularly within the same primate clade, may be the result of coevolution, i.e. lineage tracking of viral lineages alongside host speciation.
+Some of these noisier transmission inferences, particularly within the same primate clade, may be the result of coevolution, \textit{i.e.} lineage tracking of viral lineages alongside host speciation.
 Within the model, viral jumps into the common ancestor of two extant primate species appear as a jump into one of the extant species, with a secondary jump between the two descendants.
 For example, the model infers a jump from mona monkeys into mustached monkeys, with a secondary jump from mustached monkeys into their sister species, red-tailed guenons (Figure~\ref{siv_cst}).
 Comparing the virus and host phylogenies, we observe that this host tree bifurcation between mustached monkeys and red-tailed guenons is mirrored in the virus tree bifurcation between SIV\textit{mus} and SIV\textit{asc} for most segments of the viral genome (Figures~\ref{siv_cpz}, \ref{siv_cst}).
@@ -404,7 +404,7 @@ The deep phylogenies and extensive sequence divergence between SIV lineages make
 This analysis aims to 1) place a lower bound on the number of interlineage recombination events that must have occurred to explain the observed extant viruses, and 2) use this understanding to construct a model of CST among these viruses.
 As the most well developed package currently available for topology-based recombination analysis, GARD was an appropriate choice to identify in broad strokes the extent and nature of recombination among SIVs.
 Some (though not all) of the remaining uncertainty as to the exact location of breakpoints is represented within the posterior distribution of trees for each segment, and is thus propagated and accounted for in the discrete traits model (inferences of CST).
-Most other studies of SIV evolutionary history simply split the phylogeny along gene boundaries or ignore recombination (e.g., \citep{bailes2003hybrid,charleston2002preferential,sharp2011origins}).
+Most other studies of SIV evolutionary history simply split the phylogeny along gene boundaries or ignore recombination (\textit{e.g.}, \citep{bailes2003hybrid,charleston2002preferential,sharp2011origins}).
 Thus, while there is still some remaining uncertainty in the recombination analyses, these results still represent a major step forward in attempting to systematically assess recombination among all extant SIV lineages and to incorporate it into the phylogenetic reconstruction.
 
 \subsection{Constraints and drivers of cross-species transmission}
@@ -432,10 +432,10 @@ Using log body mass ratios \citep{iucn2008international} as a proxy for predatio
 I believe the lack of signal is likely due to the imperfect proxy, although it is also possible that predator-prey relationships do not strongly structure the CST network.
 It is also likely that geographic overlap and habitat similarity are ecological determinants of SIV CST, but modern primate habitats are likely very different since the time that these transmissions actually occurred.
 
-Biologically, increasing host genetic distance has a clear negative association with the probability of cross-species transmission (Figure~\ref{siv_predict}B, blue, $p<0.001$, coef. 95\% CI [-7.633, -2.213]).
+Biologically, increasing host genetic distance has a clear negative association with the probability of cross-species transmission (Figure~\ref{siv_predict}B, blue, $p<0.001$, coef. 95\% CI (-7.633, -2.213)).
 Importantly, as already discussed, the strength of this association may be inflated by instances of lineage tracking (virus/host cospeciation).
 However, it is well established that increasing host genetic distance is associated with a higher species barrier \citep{charleston2002preferential}.
-As previously documented in the literature, I expect this is due to several factors, such as the divergence of host restriction factor genes, which are key components of the innate immune system (reviewed in \citep{harris2012restriction}) and differences in host cell receptor phenotypes (e.g., \citep{chen1998natural,pandrea2007paucity,riddick2010novel}).
+As previously documented in the literature, I expect this is due to several factors, such as the divergence of host restriction factor genes, which are key components of the innate immune system (reviewed in \citep{harris2012restriction}) and differences in host cell receptor phenotypes (\textit{e.g.}, \citep{chen1998natural,pandrea2007paucity,riddick2010novel}).
 Functional assays of these host phenotypes against panels of SIVs, while outside the scope of this study, will be important for further identifying the molecular bases of the species barriers that have led to the transmission patterns identified here.
 
 \subsection{Origins of HIV-1 and HIV-2}
@@ -444,7 +444,7 @@ Understanding the underlying dynamics of lentiviral CST provides important ecolo
 As discussed above, these results support a view of lentiviral cross-species transmission as a rare event.
 Notably, only two lentiviruses have crossed the high species barrier from Old World monkeys into hominids: SIV\textit{smm} and the recombinant SIV\textit{cpz}.
 Both HIV-1 and HIV-2 have arisen in human populations in the last century \citep{faria2014early,sharp2011origins}.
-While it is possible that this has occurred by chance, even without increased primate exposure or other risk factors, I nevertheless find it striking that humans would acquire two exogenous viruses within such a short evolutionary timespan.
+While it is possible that this has occurred by chance, even without increased primate exposure or other risk factors, it is striking that humans would acquire two exogenous viruses within such a short evolutionary timespan.
 Examining this phenomenon more closely, the history of HIV-2 is enlightening.
 HIV-2 has been acquired through at least 8 independent spillover events from sooty mangabeys \citep{sharp2011origins}.
 Notably, 6 of these transmissions have resulted in only a single observed infection (spillovers) \citep{chen1996genetic,chen1997human,gao1992human}; only 2 of these events have established sustained transmission chains and successfully switched hosts to become endemic human pathogens \citep{damond2001quantification,ishikawa2001genetic,pieniazek1999predominance}.
@@ -480,7 +480,7 @@ Together, these analyses move closer to a full understanding of the pattern of c
 \clearpage
 \section{Methods}
 % \begin{fold}
-\subsection*{Datasets \& alignments}
+\subsection*{Datasets antibody alignments}
 Lentiviral genomes are translated in multiple reading frames; I therefore utilized nucleotide sequence data for all analyses.
 
 \subsubsection*{Recombination analysis dataset}
@@ -488,9 +488,9 @@ For all recombination analyses, I used the 2015 Los Alamos National Lab (LANL) H
 The compendium is a carefully curated alignment of high-quality, representative sequences from each known SIV lineage and each group of HIV-1 and HIV-2.
 I reduced the overrepresentation of HIV in this dataset, but maintained at least one high quality sample from each group of HIV.
 In total, this dataset contains 64 sequences from 24 hosts (1-10 sequences per host).
-Maximum likelihood trees for each segment-—used for the rSPR analysis and displayed in Figure~\ref{siv_recombination}-—were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation, and were rooted to SIV\textit{col} for display.
+Maximum likelihood trees for each segment --— used for the rSPR analysis and displayed in Figure~\ref{siv_recombination} --- were built with RAxML v.8.2.9 \citep{stamatakis2014raxml} with the rapid bootstrapping algorithm under a GTR model with 25 discrete bins of site to site rate variation, and were rooted to SIV\textit{col} for display.
 
-\subsubsection*{Main \& supplemental datasets}
+\subsubsection*{Main and supplemental datasets}
 Primate lentiviral sequences were downloaded from the comprehensive LANL HIV sequence database \citep{los2012hiv}.
 Sequences from lineages known to be the result of artificial cross-species transmissions (SIV\textit{mac}, \textit{-stm}, \textit{-mne}, and \textit{–wcm}) were excluded.
 I also excluded any sequences shorter than 500 bases or that were flagged as problematic by standard LANL criteria.
@@ -501,7 +501,7 @@ The “main” dataset consists of 24 host species, with 5-31 sequences per host
 As an alternative dataset to control for sampling bias and data availability, I also constructed a “supplemental” dataset with just 15 hosts but with more viral sequences per host (16 –- 40 sequences per lineage, N=510).
 
 \subsubsection*{Alignments}
-Alignments were done with the L-INSI algorithm implemented in mafft v7.294b \citep{katoh2013mafft}; the Compendium alignment was held fixed, with other sequences aligned to this template.
+Alignments were done with the L-INSI algorithm implemented in mafft v7.294b \citep{katoh2013mafft}; the compendium alignment was held fixed, with other sequences aligned to this template.
 Insertions relative to the fixed compendium were discarded.
 This alignment was then split along the breakpoints identified by GARD to yield the segment-specific alignments.
 Sequences that contained no bases for a given segment were removed; the `pruned' dataset is identical to the `main' dataset, but here I also removed sequences with fewer than 100 ungapped bases for a given segment.
@@ -509,8 +509,8 @@ Sequences that contained no bases for a given segment were removed; the `pruned'
 \subsection*{Recombination analyses}
 \subsubsection*{Topology-based analysis}
 Each portion of the genome was analyzed with the Genetic Algorithm for Recombination Detection (GARD), implemented in HyPhy v.2.2.0 \citep{kosakovsky2006gard}, with a nucleotide model selected by HyPhy’s NucModelCompare package (\#012234) and general discrete distribution (3 bins) of site variation.
-Computational intensity was eased by analyzing the recombination dataset in 3kb long portions, with 1kb overlaps on either end (e.g., bases 1:3000, 2000:5000, 4000:7000, etc.).
-To control for sites' proximity to the ends of the genomic portion being analyzed, this was repeated with the windows offset (e.g., bases 1:2500, 1500:4500, 3500:6500, etc.).
+Computational intensity was eased by analyzing the recombination dataset in 3kb long portions, with 1kb overlaps on either end (\textit{e.g.}, bases 1:3000, 2000:5000, 4000:7000, etc.).
+To control for sites' proximity to the ends of the genomic portion being analyzed, this was repeated with the windows offset (\textit{e.g.}, bases 1:2500, 1500:4500, 3500:6500, etc.).
 In total, this resulted in every site of the alignment being analyzed at least two-fold, with at least one of these replicates providing 500---1500 bases of genomic context on either side (other than at the very ends of the total alignment).
 Disagreement between window-offset replicates for a given breakpoint were minimal and almost always agreed within a few bases, with two exceptions: offset replicates for the breakpoint between segments 7 and 8 disagreed by 529 bases, and offset replicates for the breakpoint between 8 and 9 disagreed by 263 bases.
 In these instances, I used the average site placement.
@@ -518,22 +518,23 @@ In these instances, I used the average site placement.
 \subsubsection*{Sitewise linkage analysis}
 Biallelic sites were identified across the genome (ignoring gap characters and polymorphisms present at $<5\%$).
 These biallelic sites were compared pairwise to generate an observed and expected distribution of haplotypes (combinations of alleles between the two sites), and assessed with the statistic $R^2=\frac{\chi^2}{d*n}$, where $\chi^2$ is chi-squared, $d$ is the degrees of freedom, and $N$ is the number of haplotypes for this pair of sites \citep{hill1968linkage}.
-This statistic follows the canonical interpretation of $R^2$, i.e., if the allele at site 1 is known, how well does it predict the allele at site 2 ($R^2 = 0$ indicating no linkage between sites, and $R^2 = 1$ indicating perfect linkage).
+This statistic follows the canonical interpretation of $R^2$, \textit{i.e.}, if the allele at site 1 is known, how well does it predict the allele at site 2 ($R^2 = 0$ indicating no linkage between sites, and $R^2 = 1$ indicating perfect linkage).
 
 \subsubsection*{Segment linkage analysis}
 Segment linkage was assessed by comparing the similarity of tree topologies between segments.
 This was done with the pairwise method in the Rooted Subtree-Prune-and-Regraft (rSPR) package \citep{whidden2017ricci}, which measures the number of steps required to transform one topology into another.
 Segment pairs with similar topologies have lower scores than segments with less similar topologies.
 
-\subsection*{Phylogenies \& discrete trait analysis}
+\subsection*{Phylogenies and discrete trait analysis}
 \subsubsection*{Empirical tree distributions}
 For each segment alignment, a posterior distribution of trees was generated with BEAST v. 1.8.2 under a general time reversible substitution model with $\gamma$- distributed rate variation and a strict molecular clock \citep{drummond2012bayesian}.
 I used a Yule birth-death speciation model tree prior \citep{gernhard2008using}; all other priors were defaults.
 Trees were estimated using a Markov chain Monte Carlo (MCMC), and convergence was determined by visually inspecting the trace in Tracer v. 1.6.0 \citep{rambaut2014tracer}.\\
 MCMC chain parameters and ESS values were as follows.\\
-\textit{`Main' dataset}: 25 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~1600 trees per segment. All but two effective sample size (ESS) values were well over 200. \\
-\textit{`Pruned' dataset}: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. \\
-\textit{`Resampled' dataset}: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of ~3900 trees per segment. All but one ESS value were well above 200.
+\noindent
+\textit{`Main' dataset}: 25 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of $\approx$1600 trees per segment. All but two effective sample size (ESS) values were well over 200. \\
+\textit{`Pruned' dataset}: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of $\approx$3900 trees per segment. \\
+\textit{`Resampled' dataset}: 65 million steps, sampled every 15,000 states, 10\% burnin removed. Posterior distribution of $\approx$3900 trees per segment. All but one ESS value were well above 200.
 
 \subsubsection*{Discrete trait analysis}
 These empirical tree distributions were used to estimate the transmission network.
@@ -541,10 +542,10 @@ As in Faria \textit{et al}. \citep{faria2013simultaneously}, I model hosts as st
 I use a non-reversible state transition matrix with $n * (n–1)$ individual transition parameters \citep{edwards2011ancient}.
 I also utilize standard methodology in using a Bayesian stochastic search variable selection process to encourage a sparse network, implemented as in \citep{lemey2009bayesian}.
 An exponential distribution with mean=1.0 was used as a prior on each of the pairwise rate parameters (552 in total for the main and pruned datasets with 24 hosts; 210 parameters in total for the supplemental dataset with 15 hosts).
-The prior placed on the sum of the binary indicator variables corresponding to each pairwise rate parameter (i.e., the number of transitions that are non-zero) was an exponential distribution with mean=20--23.
+The prior placed on the sum of the binary indicator variables corresponding to each pairwise rate parameter (\textit{i.e.}, the number of transitions that are non-zero) was an exponential distribution with mean=20--23.
 Convergence was again assessed by visually inspecting the log files in Tracer.\\
 MCMC chain parameters and ESS values were as follows.\\
-
+\noindent
 \textit{`Main' dataset}: 25 million steps, sampled every 5,000 states, 5 million states discarded as burnin.\\
 \textit{`Pruned' dataset}: decreased phylogenetic noise in the empirical tree distributions for this dataset led to narrow tree distributions and poor mixing (but clear convergence).
 I thus ran 40 parallel chains of 25---35 million steps each, sampled every 20,000 states (trees sampled every 50,000 states).
@@ -554,7 +555,7 @@ I discarded 10 million steps of each chain as burnin and concatenated the remain
 For the main and supplemental datasets, more than 97\% of the rate, indicator, and actualRate (step-wise $rate*indicator$ values) parameters, and all other parameters, had an ESS well over 200 (most $> 1000$).
 The pruned dataset had a posterior ESS of 677, but the component tree likelihood ESS values ranged from 57 -– 287; 91\% of the rate, indicator, and actualRate parameters had an average ESS value $> 200$.
 
-Statistical support for each transmission is summarized as a Bayes factor (BF), calculated by comparing the posterior and prior odds that a given rate is non-zero (i.e., that there has been any transmission between a given pair of hosts) \citep{lemey2009bayesian}.
+Statistical support for each transmission is summarized as a Bayes factor (BF), calculated by comparing the posterior and prior odds that a given rate is non-zero (\textit{i.e.}, that there has been any transmission between a given pair of hosts) \citep{lemey2009bayesian}.
 The ancestral tree likelihoods of each of the 12 tree distributions contribute equally to the inference of a shared transmission rate matrix.
 However, not every lineage has recombined along every breakpoint, which means that the tree likelihoods from each segment are not fully statistically independent.
 Thus, I report conservative estimates of BF by dividing all BF values by 12.
@@ -615,7 +616,7 @@ As originally reported, I find generally consistent patterns of neutralization b
 In total, this dataset consists of 454 NHP sera titrations spanning the breadth of DENV diversity, and 728 human sera titrations providing deep coverage of a small subset of viruses.
 
 To standardize these measurements, I first take the log$_2$ of each value, such that one titer unit corresponds to one, two-fold drop in neutralization.
-I then define antigenic distance between autologous virus-sera pairs (i.e., virus $i$ and serum $i$) as zero.
+I then define antigenic distance between autologous virus-sera pairs (\textit{i.e.}, virus $i$ and serum $i$) as zero.
 Normalized antigenic distance between $i$ and $j$ are thus calculated as $D_{ij} = \mathrm{log}_2(T_{ii}) - \mathrm{log}_2(T_{ij})$, such that a higher value of $D_{ij}$ indicates that serum $i$ is less effective at neutralizing virus $j$, implying greater antigenic distance between viruses $i$ and $j$.
 
 The full dataset of standardized titer values is shown in Figure~\ref{titer_heatmap}.
@@ -801,8 +802,8 @@ Based on the results from Chapter 3, we observe strong evidence that homotypic g
 However, antibody neutralization is only one of many factors that shape epidemic patterns.
 Thus, I next investigated whether this observed antigenic diversity influences dengue population dynamics in the real world.
 
-The size of the viral population (i.e., prevalence, commonly analyzed using SIR models as reviewed in \citep{lourencco2018challenges}) is determined by many complex factors, and reliable values for population prevalence are largely unavailable.
-Contrastingly, the composition of the viral population (i.e., the relative frequency of each viral clade currently circulating) can be estimated over time by examining historical sequence data \citep{lee2018deep,neher2016prediction}, and is primarily driven by viral fitness \citep{bedford2011strength}.
+The size of the viral population (\textit{i.e.}, prevalence, commonly analyzed using SIR models as reviewed in \citep{lourencco2018challenges}) is determined by many complex factors, and reliable values for population prevalence are largely unavailable.
+Contrastingly, the composition of the viral population (\textit{i.e.}, the relative frequency of each viral clade currently circulating) can be estimated over time by examining historical sequence data \citep{lee2018deep,neher2016prediction}, and is primarily driven by viral fitness \citep{bedford2011strength}.
 In meaningfully antigenically diverse viral populations, antigenic novelty (relative to standing population immunity) contributes to viral fitness: as a given virus $i$ circulates in a population, the proportion of the population that is susceptible to infection with $i$--and other viruses antigenically similar to $i$--decreases over time as more people acquire immunity \citep{bedford2012canalization, luksza2014predictive}.
 Antigenically novel viruses that are able to escape this population immunity are better able to infect hosts and sustain transmission chains, making them fitter than the previously circulating viruses \citep{zhang2005clade, bedford2012canalization}.
 Thus, if antigenic novelty constitutes a fitness advantage for DENV, then I would expect greater antigenic distance from recently circulating viruses to correlate with higher growth rates.
@@ -828,7 +829,7 @@ I estimate the relative population frequency of each DENV serotype at three mont
     At each increment, the model uses the predicted stepwise frequency change to adjust estimates of antigenic fitness on a rolling basis (Methods, Eq.~\ref{eq_compounding_immunity}).
     Predicted growth rates are calculated as $\hat{g} = \frac{\hat{x_i}(t+dt)}{x_i(t)}$ and compared to empirically observed growth rates, $g = \frac{x_i(t+dt)}{x_i(t)}$ in \textbf{D}.
     The example illustrated in \textbf{C} is also shown in \textbf{D} as the blue point.
-    Serotype growth versus decline is accurate (i.e., the predicted and actual growth rates are both $>1$ or both $<1$, all points outside the gray area) for 80\% of predictions.
+    Serotype growth versus decline is accurate (\textit{i.e.}, the predicted and actual growth rates are both $>1$ or both $<1$, all points outside the gray area) for 80\% of predictions.
     }
   	\label{serotype_fitness_model}
   \end{centering}
@@ -850,7 +851,7 @@ I also find that these dynamics are best explained by intrinsic fitness that mod
 \subsection{Antigenic fitness and genotype dynamics}
 To estimate how well antigenic fitness predicts genotype dynamics, I used the same model to predict genotype success and decline.
 As before, fitness of genotype $i$ is based on the intrinsic fitness of the serotype $i$ belongs to, and the antigenic distance between $i$ and each other genotype, $j$, that has recently circulated (Figure~\ref{genotype_fitness}B).
-Importantly, I can calculate antigenic distance between $i$ and $j$ at the serotype level (i.e., the antigenic distances computed from the `interserotype model' as illustrated in Figure~\ref{titer_model_performance}A) or at the genotype level (i.e., the antigenic distances computed by the `full tree model' as illustrated in Figure~\ref{titer_model_performance}B, which incorporates the observed within-serotype heterogeneity).
+Importantly, I can calculate antigenic distance between $i$ and $j$ at the serotype level (\textit{i.e.}, the antigenic distances computed from the `interserotype model' as illustrated in Figure~\ref{titer_model_performance}A) or at the genotype level (\textit{i.e.}, the antigenic distances computed by the `full tree model' as illustrated in Figure~\ref{titer_model_performance}B, which incorporates the observed within-serotype heterogeneity).
 If within-serotype antigenic heterogeneity contributes to genotype fitness, then I would expect estimates of antigenic fitness based on the `full tree model' to better predict genotype growth rates.
 
 I find that antigenic fitness contributes to genotype turnover, although it explains less of the observed variation than for serotypes.
@@ -1243,7 +1244,7 @@ Monophyletic clades of viruses from the same lineage are collapsed, with the tri
   \caption[Titer value symmetry]{\textbf{Titer value symmetry }
   Some viruses have greater avidity overall, and some sera are more potent overall.
   I normalize for these row and column effects ($v_a$ and $p_b$, respectively) in the titer model.
-  Once overall virus avidity and serum potency are accounted for, titers are roughly symmetric (i.e., $D_{ij} \approx D_{ji}$).
+  Once overall virus avidity and serum potency are accounted for, titers are roughly symmetric (\textit{i.e.}, $D_{ij} \approx D_{ji}$).
   }
 \label{titer_asymmetry}
 \end{figure}

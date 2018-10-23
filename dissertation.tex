@@ -1,7 +1,7 @@
 % University of Washington thesis LaTeX document class by Jim Fox (c) 1985
 
 \documentclass [10pt, proquest] {uwthesis}[2018/11/27]
-\setcounter{tocdepth}{1}  % Print the chapter and sections to the toc
+\setcounter{tocdepth}{2}  % Print the chapter, sections and subsections to the toc (change value to include more/fewer levels)
 
 % ==========   A few formatting tweaks
 \usepackage{textcomp} % copyright symbol
@@ -50,8 +50,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 % ----- contents & etc.
 
 \tableofcontents
-%\listoffigures % This needs to be reformatted; by default, it puts the entire caption instead of just the title. Will update if I figure out how to fix it.
-%\listoftables  % Same here
+\listoffigures
+\listoftables
 
 % ----- glossary
 % \chapter*{Glossary}      % starred form omits the `chapter x'
@@ -104,11 +104,11 @@ pprint("hello world")
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\footnote{Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum}.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\begin{figure}
+\begin{figure}[ht!]
   \begin{centering}
   \includegraphics[width=0.7\linewidth]{./png/smartycat.jpg}
 \label{start-2}
-\caption{\textbf{Smarty cat. }Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur \citep{darwin2004origin}. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\caption[Title for `list of figures' in preliminary pages]{\textbf{Smarty cat. }Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur \citep{darwin2004origin}. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
 \end{centering}
 \end{figure}
 
@@ -124,7 +124,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
       Linus & The teensiest kitten \\
       Ferdinand & The snuggliest kitteh \\
     \end{tabular}
-    \caption{\textbf{Pets of the Bedford Lab} as of 2018, we are cat people.}
+    \caption[Title for `list of tables' in preliminary pages]{\textbf{Pets of the Bedford Lab} as of 2018, we are cat people.}
   \end{center}
 \end{table}
 

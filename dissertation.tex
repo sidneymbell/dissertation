@@ -9,6 +9,7 @@
 \usepackage[labelfont=bf,labelsep=period,font=small]{caption} %format figure caption titles
 
 \usepackage{natbib}
+\def\bibpreamble{\protect\addcontentsline{toc}{chapter}{Bibliography}}
 \usepackage{cite}
 \makeatletter % I have no clue what this does but things break without it
 \renewcommand{\@biblabel}[1]{\quad#1.} % remove the brackets around reference numbers

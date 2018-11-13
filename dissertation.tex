@@ -114,8 +114,8 @@ As I show in Chapter 3, dengue does evolve antigenically, but much more slowly t
 This may be due to the dual replicative constraints placed on dengue viral evolution.
 
 \section{A framework for investigating host adaptation}
-For viruses with RNA genomes (\textit{e.g.}, influenza, dengue, and HIV), their high intrinsic mutation rate typically results in the accumulation of at least one  substitution per infection.
-This puts viral evolution and spread on comparable timescales, embedding the selective pressures exerted by the host environment within the viral phylogeny \citep{bedford2011strength}.
+For viruses with RNA genomes (\textit{e.g.}, influenza, dengue, and HIV), their high intrinsic mutation rate puts viral evolution and spread on comparable timescales.
+This embeds the selective pressures exerted by the host environment within the viral phylogeny \citep{bedford2011strength}.
 These viral phylogenies then become powerful tools for reconstructing patterns of viral population dynamics and spread via statistical methods collectively referred to as `phylodynamics' \citep{grenfell2004unifying}.
 Phylodynamic methods rely upon phylogenies of virus evolution, which describe how sampled viruses are related to one another.
 In phylogenetic trees, leaves represent sampled viruses; internal nodes represent hypothesized ancestral viruses; and branches are typically scaled to genetic divergence.
@@ -142,33 +142,66 @@ In contrast, dengue virus does antigenically evolve, but is much more tightly co
 Here, we see that within each serotype, ancestral phenotypes persist in circulation for much longer.
 This gives the dengue phylogeny a `bushier' tree topology.
 
-Phylodynamic methods provide a more formalized view of how different selective pressures have shaped viral evolution over time by applying well-established statistical models of how traits evolve over time.
-The methods presented in subsequent chapters treat each branch in the phylogeny as essentially one step in the course of viral evolution, and map how viral traits have changed at each of these steps.
-
 \section{Summary of presented analyses}
+Phylodynamic methods provide a more formalized view of how different selective pressures have shaped viral evolution by applying well-established statistical models of how traits evolve over time.
+In doing so, they can provide crucial evolutionary, ecological and epidemiological context to viral outbreaks through descriptive and/or explanatory analyses.
 In the studies reported here, I leverage phylodynamic methods to analyze how viruses infect new host species, evade host immunity, and spread through host populations.
 I characterize two host/virus systems: simian immunodeficiency viruses in primates, and dengue virus in a hyperendemic human population.
 
 \subsection{Characterizing the natural history of viral cross-species transmission}
-Cross-species transmission has led to many devastating epidemics, but is still a poorly understood phenomenon \citep{parrish2008cross}.
-HIV-1 and HIV-2 (human immunodeficiency virus 1 and 2), which have collectively caused over 35 million deaths, are the result of multiple CSTs from chimpanzees, gorillas, and sooty mangabeys \citep{sharp2011origins}.
-While the immediate history of HIV is known, there are over 45 lentiviruses that infect specific species of primates, and patterns of host switching are not well characterized.
-In Chapter 2, I take a phylogenetic approach to better understand the natural history of SIV recombination and CST.
-To infer historical host switches and the pairwise transmission rates between each pair of 24 primate hosts, I model host species as a discrete character trait on the viral phylogeny.
+In Chapter 2, I present a descriptive analysis contextualizing the HIV pandemic within the broader scope of viral cross-species transmission.
+HIV's origins and evolution have been shaped by unique evolutionary forces and epidemiological dynamics.
+While influenza and dengue cause relatively short infections and transmit rapidly, HIV's extraordinary ability to evade the immune system results in chronic infection, enabling much slower transmission (as a function of time).
+This presents an interesting evolutionary strategy, wherein high antigenic fitness is used to compensate for lower transmissability.
+And yet, despite this relatively low transmission rate, HIV has been acquired from primates via at least twelve independent cross-species tranmissions (CSTs).
+This is particularly remarkable when one considers the many inherent challenges to viral replication in an entirely foreign host evironment (collectively referred to as the `species barrier').
+
+The immediate history of HIV is well-established.
+HIV is comprised of two different viruses, HIV-1 and HIV-2; HIV-1, the cause of the global pandemic, was acquired via four independent transmissions from apes, and HIV-2 was acquired via many transmissions from old world primates.
+However, HIV-1 and -2 represent only two of over 45 distinct immunodeficiency viruses known to infect primates.
+Although we understand the most immediate origins that generated the global pandemic, we lack crucial ecological context around how often these viruses switch hosts and what enabels a lentiviral cross-species transmission to take hold in a population.
+
+Here, I take a phylodynamics-based approach to characterize the extent and patterns of cross-species transmission that have shaped primate lentiviral evolution and seeded the HIV pandemic.
+To do so, I curated a dataset of publicly available lentiviral sequences, isolated from 24 primate host species; identified breakpoints of interlineage recombination across the viral genome; and reconstructed the evolutionary history of each genomic segment.
+I then modeled the host state of each sampled and ancestral virus (tip and internal node, respectively) as a discrete trait and inferred pairwise transmission rates within a Bayesian framework.
+
 I identify 14 novel, well-supported, ancient cross-species transmission events.
-Interestingly, I find that lentiviral lineages vary widely in their ability to infect new host species: SIV\textit{col} (from colobus monkeys) is evolutionarily isolated, while SIV\textit{agm}s (from African green monkeys) frequently move between host subspecies.
 I also examine the origins of SIV\textit{cpz} (the predecessor of HIV-1) in greater detail than previous studies, and find that there are still large portions of the genome with unknown origins.
-Observed patterns of CST are likely driven by a combination of ecological circumstance and innate immune factors.
+This places the HIV outbreak into ecological context, alongside many other cross-species transmission events (for a detailed discussion, see Chapter 2.3.2 --- 2.3.3).
+Interestingly, we observe that lentiviral lineages vary widely in their ability to infect new host species: SIV\textit{col} (from colobus monkeys) is evolutionarily isolated, while SIV\textit{agm}s (from African green monkeys) frequently move between host subspecies.
+Although the vast timescale limits direct causal inference across the phylogeny, these cross-species transmissions are more common among pairs of closely related host species, which is likely a result of ecological circumstance and biological differences in innate immune factors.
+Overall, using phylodynamics to frame the HIV pandemic in this way helps us understand the broader context in which it arose and more accurately evaluate risk of future cross-species transmission.
 
 \subsection{Quantifying the extent and impact of antigenic evolution}
-Dengue virus exists as four genetically distinct serotypes, each of which is also antigenically distinct: the immune response to primary infection can be either cross-protective or associated with severe disease upon heterotypic secondary infection.
-Each serotype is historically assumed to be antigenically uniform \citep{twiddy2003inferring}.
-Recent analyses suggest that antigenic heterogeneity may exist within each serotype, but its source, extent and impact remain unclear \citep{katzelnick2015dengue}.
-In Chapter 3, I construct a phylogeny-based model to directly map antigenic change to underlying genetic divergence.
+As illustrated in Chapter 2, phylodynamics is a effective tool for retrospective, descriptive analyses; however, these methods are also powerful tools for explanatory, prospective analyses.
+In Chapters 3 and 4, I apply phylodynamics to understand how dengue virus that adapts to evade human immunity and spread through populations.
+
+Dengue virus exists as four genetically distinct clades canonically termed `serotypes'.
+As discussed above, dengue evolution is relatively slow and putatively driven by replicative fitness.
+However, antigenic relationships between dengue virus clades dictate case outcomes and epidemic severity.
+This is mediated by antibody-dependent enhancement (ADE), wherein circulating cross-reactive, nonneutralizing antibodies augment heterotypic secondary infection severity.
+Because the serotypes are so clearly distinct, and because dengue evolves so slowly overall, it has long been assumed that all viruses within a serotype are antigenically uniform (\textit{i.e.}, they look about the same to the host immune system).
+Interestingly, recent analyses suggest that antigenic heterogeneity may exist within each serotype, but its source, extent and impact remain unclear \citep{katzelnick2015dengue}.
+
+In Chapter 3, I leverage both genomic and functional assay data to quantify and characterize the extent of dengue antigenic evolution.
+To do so, I adapt a statistical model (originally developed for analyzing influenza's rapid antigenic evolution) to characterize dengue's slower, subtler antigenic dynamics.
+In this model, each branch in the dengue phylogeny is treated as essentially one `step' in the overall evolutionary history.
+I then map antigenic change to underlying genetic divergence by quanitfying how much antigenic change has occurred along each branch of the phylogeny.
+This provides a granular view of the evolutionary paths that have shaped dengue antigenic phenotypes over time.
 I find moderate antigenic diversity within each serotype, and identify 12 antigenically distinct clades.
-In Chapter 4, I quantify the impact of this antigenic heterogeneity on real-world DENV population dynamics.
-I find that antigenic fitness mediates fluctuations in DENV clade frequencies, although this appears to be driven by coarser serotype-level antigenic differences.
+This represents a major departure from the null hypothesis that there are only four extant antigenic phenotypes of dengue.
+
+However, when compared to pathogens that antigenically evolve very rapidly (such as influenza), the breadth of dengue antigenic diversity is very modest.
+In Chapter 4, I investigate the impact of antigenic heterogeneity on real-world DENV population dynamics.
+To do so, I hypothesize that antigenic distance from standing population immunity (`antigenic novelty') results in higher viral fitness and thus drives clade growth.
+To test this hypothesis, I analyze dengue population dynamics across Southeast Asia over a thirty year time period.
+At each quarterly timepoint, I quantify standing population immunity across the region, and compare this to which dengue clades are most successful over a subsequent five-year window.
+I find that antigenic novelty is able to explain most of the observed variation in the dengue population composition, although this appears to be driven by coarser serotype-level antigenic differences.
+
+This strongly suggests that although dengue evolution is tightly constrained by replicative fitness, antigenic fitness ultimately drives dengue population dynamics.
+Furthermore, the existance of large, ancient antigenic divergence between serotypes and smaller, recent antigenic divergence between sub-serotype clades suggests that dengue antigenic evolution is gradual but ongoing.
 These results provide a more nuanced understanding of dengue antigenic evolution, with important ramifications for vaccine design and epidemic preparedness.
+More broadly, this also carries significant implications for our view of antigenic evolution in even slowly-evolving pathogens.
 
 % \end{fold}
 
@@ -916,11 +949,12 @@ As richer datasets become available, future studies that similarly combine viral
 
 % \end{fold}
 \clearpage
-\section{Datasets}
-See section 3.4 for a description of the titer and sequence datasets.
 
 \section{Methods}
 % \begin{fold}
+\subsection*{Datasets}
+See section 3.4 for a description of the titer and sequence datasets.
+
 \subsection*{Empirical Clade Frequencies}
 As discussed in Neher \textit{et al} and Lee \textit{et al}, empirical clade frequencies are estimated from 1970 to present based on observed relative abundance of each clade in the `slice' of the phylogeny corresponding to each quarterly timepoint \citep{lee2018deep,neher2016prediction}.
 
@@ -1047,6 +1081,100 @@ Optimization was confirmed by inspecting the profile likelihoods of each paramet
 % \end{fold}
 
 % \end{fold}
+
+% ========== Conclusions
+\chapter{Conclusion}
+The above chapters provide examples of how phylodynamics can help us understand how viruses enter populations, adapt to their hosts, and move through populations.
+Many phylodynamic studies, such as the work presented in Chapter 2, are broad and descriptive in nature.
+These observational analyses can help lay the necessary foundation for hypothesis generation and subsequent mechanistic studies.
+As the field progresses, integrative studies that combine genomic and functional data, such as Chapters 3 and 4, hold particular promise for moving toward a more mechanistic understanding of viral evolution and spread.
+Below, I outline the broad barriers and opportunities for moving phylodynamics towards actionable inferences, as well as several specific questions that would benefit from further investigation.
+
+\section{Current methodological limitations and opportunities}
+
+\subsection{Data availability and sampling density}
+Phylodynamics excels at revealing underlying structure and patterns present in viral genomic data.
+However, phylodynamics' Achilles' heel lies in sampling.
+As discussed above, the methods used in each of these studies all operate under the assumption that sampling is unbiased and equitable across time and space.
+Although the generation of viral genomic data has rapidly increased in recent years, genomic surveillance is not yet standard practice, and most pathogens remain chronically under-sampled, especially in low-resource settings.
+Additionally, pre-publication data hoarding remains a common practice, limiting the usefulness of these data in real-time.
+Here, I subsample to curate available data to assemble datasets that more closely satisfy the assumption of even sampling, but this is an approximation.
+There are several methods under development to statistically compensate for uneven or incomplete sampling%cite structured coalescent and cherry paper.
+These methods are able to statistically adjust for some of the uncertainty introduced by sampling bias and undersampling, largely by incorporating more nuanced model assumptions about the generative processes that gave rise to the observed data.
+However, these methods are still unable to replace uncaptured information.
+More complete datasets, and a commitment to open data sharing, are required in order to provide necessary ecological and epidemiological context to phylodynamic studies.
+
+\subsection{Temporal resolution}
+% Moving forward, consistent surveillance also stands to alleviate the uncertainty introduced by largely unsampled historical periods.
+In addition to missing samples, time also introduces significant uncertainty into evolutionary reconstructions.
+Because RNA viruses evolve so quickly, they eventually accumulate multiple mutations in the same site, effectively `overwriting' the epidemiological signal in their genomes.
+As discussed in Chapter 2, this introduces significant uncertainty that must be carefully accounted for in statistical models and scientific interpretations.
+
+Similarly, caution must be exercised when extrapolating beyond the temporal edge of the data.
+In Chapter 4, I show that antigenic novelty relative the standing population immunity predicts dengue clade dynamics.
+These kinds of prospective analyses can help to establish drivers of viral population dynamics, and in some cases where there is a clear biological mechanism, may be used to help inform public health decision making (as discussed below).
+However, it is important to note that all prospective predictions carry substantial uncertainty.
+
+For example, as discussed extensively in Chapter 4, antigenic novelty predicts serotype growth and decline correctly $X\%$ of the time, but this comes with several caveats.
+Most obviously, this means the model predictions are simply incorrect for $Y\%$ of predictions.
+Furthermore, these predictions describe broad regional dynamics over a five year timespan, and are much more accurate for coarse serotype fluctuations than for finer genotype dynamics.
+Thus, although these results provide strong evidence that antigenic novelty is a strong driver of dengue population dynamics, these inferences are not yet specific enough to be actionable.
+
+\section{Towards actionable inferences}
+Phylodynamics has already become a powerful tool for augmenting our understanding of basic virology and evolutionary biology.
+As the field progresses, phylodynamic inference is also poised to become a vital tool for public health and infectious disease epidemiology.
+Phylodynamic studies are more actionable when they are prospective and specific.
+In particular, dengue population dynamics has several open questions that would benefit from further study.
+
+\subsection{Improving forecast accuracy}
+In Chapter 4, I show that antigenic novelty explains X\% of the variation in genotype growth rates, and correctly predicts genotype growth/decline X\% of the time.
+While this substantially improves our understanding of the selective pressures shaping dengue evolution, these predictions must be more accurate before they are actionable.
+I expect that error is introduced by two primary sources.
+
+First, although dengue is a seasonal pathogen, all timepoints are treated equally in the current model.
+Previous work has shown that this seasonal fluctuation in viral population size results in stochastic population bottlenecking.
+While it would be possible to incorporate this via stochastic simulations or other complex approaches, this is very difficult to capture accurately.
+However, past modeling work provides a useful heuristic: Recker \textit{et al.} show that because of this seasonal bottlenecking, fit variants that are introduced during periods of low population size are more successful than equally fit variants introduced during periods of high population size.
+Thus, one way to incorporate this seasonal effect into the current model would be to simply increase the value of $\beta$ (which scales how strongly antigenic fitness influences frequency change) during timepoints from the off-season, when the dengue population is expected to be lower.
+
+Secondly, the current model formulation assumes that the entire region of Southeast Asia is a homogeneously mixed, closed population with no viral importation.
+However, the vast majority of dengue transmissions occur hyperlocally \citep{salje2017dengue}.
+I expect that the influence of antigenic fitness on regional dynamics reflects an aggregation of these hyperlocal dynamics; as such, I hypothesize that  hyperlocal transmission dynamics are driven by a combination of antigenic distance from local population immunity and occasional viral importation from neighboring areas.
+This could be incorporated by modeling the viral population on a finer geographic scale (e.g., each state / province across the region) and allowing for occasional spillover between provinces (\textit{e.g.}, the highest frequency variant occasionally gets seeded at low frequency into the viral population of neighboring provinces).
+In order for this to be effective, however, we must also make our predictions more precise.
+
+\subsection{Improving forecast specificity}
+Public health agencies typically have a geographically narrow remit and a small time window for actionable inference to be made.
+Thus, in order to provide actionable forecasts, we must also make these inferences in a timely manner, and on a finer geographic scale.
+To do so requires significantly increased genomic surveillance with a much finer spatial resolution (\textit{e.g.}, monthly sampling and sequencing from each state / province across Southeast Asia).
+
+This data would enable far more geographically specific (and precise, as described above) predictions of which clades will dominate an upcoming epidemic season.
+Over time, this would also provide a more spatially precise estimate of standing population immunity.
+Given the antigenic distance between standing population immunity and expected dominant clades, we could feasibly estimate the proportion of infections that are expected to be severe in an upcoming epidemic season.
+
+\subsection{Improving antigenic characterizations}
+However, to forecast epidemic severity accurately, we also need to more precisely quantify the breadth and magnitude of dengue antigenic variation.
+As extensively discussed in Chapter 3, the 12 antigenic phenotypes identified here are likely a significant underestimate of dengue antigenic diversity.
+Generating larger datasets of standardized, pairwise titer measurements would enable a more comprehensive view of dengue antigenic diversity.
+In conjunction with the above advancements, greater antigenic characterization would enable more accurate risk assessments for upcoming dengue seasons, given a precise estimation of local population immunity and incoming clades.
+
+Throrough antigenic characterization would also enable two additional, major advances.
+First, additional titer data would provide sufficient statistical power to identify which specific mutations the dengue genome are associated with antigenic change; Neher \textit{et al.} provide a methodological starting point in their `substitution model' detailed in \citep{neher2016prediction}.
+This would greatly improve our understanding of how dengue antigenic change arises, as well as enable the identification of antigenically drifted strains based on genomic surveillance.
+
+Additionally, a more nuanced understanding of dengue antigenic diversity would greatly facilitate vaccine strain selection.
+Katzelnick \textit{et al.} quantitatively define the relationship between human titers and the probability of protection from severe secondary infection \citep{katzelnick2016neutralizing}.
+Together, this could enable the selection of vaccine strains that collectively maximize coverage of antigenic space while minimizing the probability of severe subsequent infection.
+
+\section{Conclusions}
+% order of ideas; flesh out tomorrow
+Phylodynamics is powerful.
+It's currently hobbled by lack of data (sharing).
+In order to become actionable, must be prospective, accurate, and specific.
+This requires models to be firmly grounded in an understanding of basic biology, must collaborate with experimental biologists.
+Also requires close collaboration with public health officials for sampling and for timely and effective commmunication.
+
+
 
 \bibliographystyle{plain}
 \bibliography{dissertation.bib}

@@ -1086,7 +1086,6 @@ Optimization was confirmed by inspecting the profile likelihoods of each paramet
 \chapter{Conclusions}
 
 The above chapters provide examples of how phylodynamics can help us understand how viruses enter populations, adapt to their hosts, and move through populations.
-
 Phylodynamic methods were initially developed for descriptive studies of genomic data.
 In Chapter 2, I present a retrospective analysis that contextualizes the HIV pandemic within the broader dynamics of lentiviral cross-species transmission (CST).
 While the direct origins of HIV are well-established, general patterns of lentiviral CST were not previously understood.
@@ -1094,69 +1093,66 @@ I apply discrete-trait analysis to quantify the pairwise rate of lentiviral tran
 In doing so, I identify 14 novel, ancient CST events, placing the HIV pandemic into context alongside many other CSTs.
 The observed transmission patterns also highlight that lentiviruses vary widely in their ability and propensity to cross the species barrier.
 From this, I conclude that lentiviral CST is far more prevalent among primates than previously believed; however, given the vast evolutionary timescale, these events remain rare overall.
-This supports previous suggestions that the early spread of HIV was primarily driven by shifting epidemiological conditions.
+This supports previous suggestions that the early spread of HIV was primarily driven by shifting epidemiological conditions \citep{faria2014early}.
 
 More recent methodological advances have enabled explanatory studies that combine genomic and functional data.
-In Chapters 3 and 4, I present two complementary analyses of dengue antigenic diversity and population dynamics; here, I summarize this work and outline several promising areas for future investigation.
+In preceding chapters, I present two complementary analyses of dengue antigenic diversity and population dynamics; here, I summarize this work and outline several promising areas for future investigation.
 In Chapter 3, I quantify the extent and nature of dengue antigenic evolution and diversity.
-Dengue evolution is primarily constrained by replicative fitness due to its two-host transmission cycle.
 Although it has been well-established that antigenic interactions determine dengue case outcomes and epidemic severity, it has long been assumed that each serotype of dengue is antigenically uniform.
 Here, I adapt a phylogeny-based model of antigenic change to map dengue antigenic variation to genetic divergence.
-I identify a minimum of 12 distinct antigenic phenotypes of dengue, in stark contrast to the null hypothesis that only four antigenic variants exist.
+I identify a minimum of 12 distinct antigenic phenotypes of dengue, rejecting the null hypothesis that only four antigenic variants exist.
 This suggests that within-serotype antigenic diversity may mediate severity of heterotypic secondary infection, and has major implications for the selection of vaccine strains.
 
 However, as extensively discussed in Chapter 3, the 12 antigenic phenotypes identified here are likely a significant underestimate of dengue antigenic diversity.
 The titer dataset used in this study spans the breadth of dengue genotypes, but does not capture within-genotype variation due to small sample size.
-Additionally, these titers are from non-human primates; although we see generally comparable patterns between NHP and human immune responses, there are likely important differences that are not captured in this dataset.
+Additionally, these titers are from non-human primates; although we see generally comparable patterns between NHP and human immune responses, there are likely important differences that are not captured in this dataset \citep{katzelnick2015dengue}.
 Future work is needed to generate a more comprehensive account of dengue antigenic phenotypes.
-I would suggest a rarefaction based approach, wherein batches of dengue strains are randomly sampled until the number of new, unique phenotypes observed per batch levels off toward the true number of distinct, circulating phenotypes.
-A richer catalog of dengue antigenic diversity would yield two major impacts.
+To capture the full breadth of circulating antigenic diversity, I would suggest a rarefaction based approach, wherein batches of dengue strains are randomly sampled until the number of new, distinct antigenic phenotypes observed per batch levels off.
+Such a richer catalog of dengue antigenic diversity would yield two major impacts.
 
 First, a more nuanced understanding of dengue antigenic diversity would greatly facilitate vaccine strain selection.
 Similar analysis of a more comprehensive dataset (as proposed above) would yield a thorough accounting of antigenic distance (in titer units) between all pairs of dengue strains.
-Katzelnick \textit{et al.} quantitatively define the relationship between titers and the probability of protection from severe secondary infection \citep{katzelnick2016neutralizing}.
+Katzelnick \textit{et al.} quantitatively define the relationship between titers and the probability of protection from severe secondary infection \citep{katzelnick2016neutralizing} and the risk of antibody-dependent enhancement \citep{katzelnick2017antibody}.
 Together, this could enable the selection of vaccine strains that collectively maximize coverage of antigenic space while minimizing the probability of severe subsequent infection.
 
-Secondly, additional titer data would provide sufficient statistical power to identify which specific mutations the dengue genome are associated with antigenic change; Neher \textit{et al.} provide a methodological starting point in their `substitution model' detailed in \citep{neher2016prediction}.
-This would greatly improve our understanding of how dengue antigenic change arises, as well as enable the identification of antigenically drifted strains based on genomic surveillance.
+Secondly, additional titer data would provide sufficient statistical power to identify which specific mutations in the dengue genome are associated with antigenic change; Neher \textit{et al.} provide a methodological starting point in their `substitution model' detailed in \citep{neher2016prediction}.
+This would greatly improve our understanding of how dengue antigenic change arises and enable the identification of antigenically drifted strains based on genomic surveillance.
 
 Building upon the work presented in Chapter 3, in Chapter 4 I investigate the impact of antigenic novelty on dengue population turnover.
-For many antigenically variable pathogens, such as influenza, antigenic novelty relative to standing population immunity is a strong determinant of viral fitness and population turnover.
+For many antigenically variable pathogens, such as influenza, antigenic novelty --- relative to standing population immunity --- is a strong determinant of viral fitness, thereby driving population turnover \citep{bedford2012canalization, zhang2005clade}.
 While the results from Chapter 3 demonstrate that dengue contains far more antigenic diversity than previously believed, the breadth and magnitude of this variation is far more modest than typically seen for pathogens like influenza.
 Dengue evolution and population turnover is also much slower than influenza evolutionary dynamics; thus, it was unclear whether the antigenic diversity identified in Chapter 3 impacted real-world dengue population dynamics.
-I implemented a simple, deterministic model to directly probe whether antigenic novelty contributes to dengue viral fitness.
-At each quarterly timepoint over a thirty year period, this model quantifies antigenic fitness of each viral clade as its frequency-weighted antigenic distance from recently circulating clades.
+I implemented a simple, deterministic model to directly quantify the extent to which antigenic novelty contributes to dengue viral fitness.
+Looking at quarterly timepoints spanning thirty years of dengue circulation in Southeast Asia, this model quantifies antigenic fitness of each viral clade as its frequency-weighted antigenic distance from recently circulating clades.
 The model then combines this time-variable antigenic fitness value with a time-invariant, serotype-specific intrinsic fitness value to predict the growth rate of each clade over the subsequent five year period.
-I demonstrate that although dengue antigenic dynamics are far more subtle than seen in influenza, serotype-level antigenic differences still drive dengue poulation turnover.
+I demonstrate that although dengue antigenic dynamics are far more subtle than seen in influenza, serotype-level antigenic differences still drive dengue poulation turnover (Pearson $R^2$ = 0.62, accuracy = 80\% for serotype growth and decline).
 
 This has significant implications for dengue surveillance and epidemic preparedness.
 However, these predictions must be more accurate before they are actionable.
-I expect that error is primarily due to limited temporal geographic, and antigenic resolution.
+I expect that error is primarily due to limited temporal, geographic, and antigenic resolution.
 
 First, although dengue is a seasonal pathogen, all timepoints are treated equally in the current model.
 Previous work has shown that this seasonal fluctuation in viral population size results in stochastic population bottlenecking.
 While it would be possible to incorporate this via stochastic simulations or other complex approaches, this is very difficult to capture accurately.
-However, past modeling work provides a useful heuristic: Recker \textit{et al.} show that because of this seasonal bottlenecking, fit variants that are introduced during periods of low population size are more successful than equally fit variants introduced during periods of high population size.
-Thus, one way to incorporate this seasonal effect into the current model would be to simply increase the value of $\beta$ (which scales how strongly antigenic fitness influences frequency change) during timepoints from the off-season, when the dengue population is expected to be lower.
+However, past modeling work provides a useful heuristic: Lourencco \textit{et al.} show that because of this seasonal bottlenecking, highly fit variants are most likely to rise to high frequency if they are introduced when the viral population size is lower \citep{lourencco2010viral}.
+Thus, one way to incorporate seasonal bottlenecking into the current model would be to simply increase the value of $\beta$ (which scales how strongly antigenic fitness influences predicted frequency change) for timepoints when the dengue population is expected to be lower.
 
 Additionally, the current model formulation assumes that the entire region of Southeast Asia is a homogeneously mixed, closed population with no viral importation.
 However, the vast majority of dengue transmissions occur hyperlocally \citep{salje2017dengue}.
 I expect that the influence of antigenic fitness on regional dynamics reflects an aggregation of these hyperlocal dynamics; as such, I hypothesize that  hyperlocal transmission dynamics are driven by a combination of antigenic distance from local population immunity and occasional viral importation from neighboring areas.
-This could be incorporated by modeling the viral population on a finer geographic scale (e.g., each state / province across the region) and allowing for occasional spillover between provinces (\textit{e.g.}, the highest frequency variant occasionally gets seeded at low frequency into the viral population of neighboring provinces).
+This could be incorporated by modeling the viral population on a finer geographic scale (e.g., each state / province across the region) and allowing for occasional spillover between demes (\textit{e.g.}, the highest frequency variant of a given deme is introduced to neighboring demes at a set rate).
 To do so requires significantly increased genomic surveillance with a much finer spatial resolution (\textit{e.g.}, monthly sampling and sequencing from each state / province across Southeast Asia).
 
 Finally, dengue forecasting will also benefit from the richer catalog of antigenic diversity proposed above.
 Forecasts are based on antigenic fitness, estimated as the frequency-weighted antigenic distance from recently circulating strains.
 More accurate assessments of antigenic distance will also contribute to more accurate forecasts.
-Importantly, while the predictive power demonstrated in Chapter 4 suggests that these genomic surveillance-based estimates are surprisingly effective.
-However, to generate actionable forecasts, these estimates should also be benchmarked against cross-sectional estimates of human titers for each population of interest (and model parameters re-fit as described to reflect these benchmarks).
+Importantly, while the predictive power demonstrated in Chapter 4 suggests that these genomic surveillance-based estimates are surprisingly effective, these estimates should also be benchmarked against cross-sectional, representative human titers for each population of interest (and model parameters re-fit accordingly).
 
-Public health agencies typically have a geographically narrow remit and a small time window for actionable inference to be made.
 The advances proposed above would yield geographically specific predictions of which clades will dominate an upcoming epidemic season, alongside more precise estimates of standing population immunity against these incoming strains.
 Together, this could provide realistic estimates of the proportion of cases expected to be severe in an upcoming dengue season.
+Public health agencies typically have a geographically narrow remit and a small time window for actionable inference to be made.
 Currently, dengue public health interventions are limited to vector control and symptom management; accurate, actionable predictions of epidemic severity would facilitate efficient resource allocation in low-resource settings.
 
-% I hate this hand-wavey last paragraph a lot, but it felt sudden to end without zooming back out.
 Collectively, the studies presented here use phylodynamics to augment our understanding of how viruses switch hosts, evolve to evade human immunity, and spread through populations.
 Clearly, phylodynamics has already become a powerful tool for investigating questions in basic virology and evolutionary biology; as the field progresses, it is also poised to become a vital tool for infectious disease epidemiology and public health.
 

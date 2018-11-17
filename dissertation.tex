@@ -153,40 +153,40 @@ In Chapter 2, I present a descriptive analysis contextualizing the HIV pandemic 
 HIV's origins and evolution have been shaped by unique evolutionary forces and epidemiological dynamics.
 While influenza and dengue cause relatively short infections and transmit rapidly, HIV's extraordinary ability to evade the immune system results in chronic infection, enabling much slower transmission (as a function of time).
 This presents an interesting evolutionary strategy, wherein high antigenic fitness is used to compensate for lower transmissability.
-And yet, despite this relatively low transmission rate, HIV has been acquired from primates via at least twelve independent cross-species tranmissions (CSTs).
-This is particularly remarkable when one considers the many inherent challenges to viral replication in an entirely foreign host evironment (collectively referred to as the `species barrier').
+And yet, despite this relatively low transmission rate, HIV has been acquired from primates via at least sixteen independent cross-species tranmissions (CSTs).
+This is particularly remarkable when one considers the many challenges inherent to viral replication in an entirely foreign host evironment (collectively referred to as the `species barrier').
 
-The immediate history of HIV is well-established.
-HIV is comprised of two different viruses, HIV-1 and HIV-2; HIV-1, the cause of the global pandemic, was acquired via four independent transmissions from apes, and HIV-2 was acquired via many transmissions from old world primates.
-However, HIV-1 and -2 represent only two of over 45 distinct immunodeficiency viruses known to infect primates.
-Although we understand the most immediate origins that generated the global pandemic, we lack crucial ecological context around how often these viruses switch hosts and what enabels a lentiviral cross-species transmission to take hold in a population.
+The immediate history of HIV is well-established \citep{sharp2011origins}.
+HIV is comprised of two different viruses, HIV-1 and HIV-2; HIV-1, the cause of the global pandemic, was acquired via four independent transmissions from apes, and HIV-2 was acquired via many transmissions from Old World primates.
+However, HIV-1 and -2 represent only two of over 45 distinct immunodeficiency viruses (SIVs) known to infect primates.
+Although we understand the most immediate origins that generated the global pandemic, we lack crucial ecological context around how often these viruses switch hosts and what enables a lentiviral cross-species transmission to take hold in a population.
 
 Here, I take a phylodynamics-based approach to characterize the extent and patterns of cross-species transmission that have shaped primate lentiviral evolution and seeded the HIV pandemic.
-To do so, I curated a dataset of publicly available lentiviral sequences, isolated from 24 primate host species; identified breakpoints of interlineage recombination across the viral genome; and reconstructed the evolutionary history of each genomic segment.
+To do so, I curated a dataset of publicly available SIV sequences, isolated from 24 primate host species; identified breakpoints of interlineage recombination across the viral genome; and reconstructed the evolutionary history of each genomic segment.
 I then modeled the host state of each sampled and ancestral virus (tip and internal node, respectively) as a discrete trait and inferred pairwise transmission rates within a Bayesian framework.
 
 I identify 14 novel, well-supported, ancient cross-species transmission events.
 I also examine the origins of SIV\textit{cpz} (the predecessor of HIV-1) in greater detail than previous studies, and find that there are still large portions of the genome with unknown origins.
 This places the HIV outbreak into ecological context, alongside many other cross-species transmission events (for a detailed discussion, see Chapter 2.3.2 --- 2.3.3).
 Interestingly, we observe that lentiviral lineages vary widely in their ability to infect new host species: SIV\textit{col} (from colobus monkeys) is evolutionarily isolated, while SIV\textit{agm}s (from African green monkeys) frequently move between host subspecies.
-Although the vast timescale limits direct causal inference across the phylogeny, these cross-species transmissions are more common among pairs of closely related host species, which is likely a result of ecological circumstance and biological differences in innate immune factors.
+Although the vast timescale limits direct causal inference across the phylogeny, these cross-species transmissions are more common among pairs of closely related host species, which is likely a result of ecological circumstance and differences in innate immune factors.
 Overall, using phylodynamics to frame the HIV pandemic in this way helps us understand the broader context in which it arose and more accurately evaluate risk of future cross-species transmission.
 
 \subsection{Quantifying the extent and impact of antigenic evolution}
-As illustrated in Chapter 2, phylodynamics is a effective tool for retrospective, descriptive analyses; however, these methods are also powerful tools for explanatory, prospective analyses.
-In Chapters 3 and 4, I apply phylodynamics to understand how dengue virus that adapts to evade human immunity and spread through populations.
+As illustrated in Chapter 2, phylodynamics is an effective tool for retrospective, descriptive analyses; however, these methods are also powerful tools for explanatory, prospective analyses.
+In Chapters 3 and 4, I apply phylodynamics to understand how dengue virus adapts to evade human immunity and spread through populations.
 
 Dengue virus exists as four genetically distinct clades canonically termed `serotypes'.
 As discussed above, dengue evolution is relatively slow and putatively driven by replicative fitness.
 However, antigenic relationships between dengue virus clades dictate case outcomes and epidemic severity.
 This is mediated by antibody-dependent enhancement (ADE), wherein circulating cross-reactive, nonneutralizing antibodies augment heterotypic secondary infection severity.
-Because the serotypes are so clearly distinct, and because dengue evolves so slowly overall, it has long been assumed that all viruses within a serotype are antigenically uniform (\textit{i.e.}, they look about the same to the host immune system).
+Because the serotypes are so clearly distinct, and because dengue evolves so slowly overall, it has long been assumed that all viruses within a serotype are antigenically uniform (\textit{i.e.}, they look about the same to the host immune system) \citep{twiddy2003inferring}.
 Interestingly, recent analyses suggest that antigenic heterogeneity may exist within each serotype, but its source, extent and impact remain unclear \citep{katzelnick2015dengue}.
 
 In Chapter 3, I leverage both genomic and functional assay data to quantify and characterize the extent of dengue antigenic evolution.
-To do so, I adapt a statistical model (originally developed for analyzing influenza's rapid antigenic evolution) to characterize dengue's slower, subtler antigenic dynamics.
-In this model, each branch in the dengue phylogeny is treated as essentially one `step' in the overall evolutionary history.
-I then map antigenic change to underlying genetic divergence by quanitfying how much antigenic change has occurred along each branch of the phylogeny.
+To do so, I adapt a statistical model (originally developed for analyzing influenza's rapid antigenic evolution \citep{neher2016prediction}) to characterize dengue's slower, subtler antigenic dynamics.
+In this model, each branch in the dengue phylogeny is treated as essentially one `step' in the overall course of evolution.
+The model then maps antigenic divergence to underlying genetic evolution by quanitfying how much antigenic change has occurred along each branch of the phylogeny.
 This provides a granular view of the evolutionary paths that have shaped dengue antigenic phenotypes over time.
 I find moderate antigenic diversity within each serotype, and identify 12 antigenically distinct clades.
 This represents a major departure from the null hypothesis that there are only four extant antigenic phenotypes of dengue.
@@ -194,15 +194,14 @@ This represents a major departure from the null hypothesis that there are only f
 However, when compared to pathogens that antigenically evolve very rapidly (such as influenza), the breadth of dengue antigenic diversity is very modest.
 In Chapter 4, I investigate the impact of antigenic heterogeneity on real-world DENV population dynamics.
 To do so, I hypothesize that antigenic distance from standing population immunity (`antigenic novelty') results in higher viral fitness and thus drives clade growth.
-To test this hypothesis, I analyze dengue population dynamics across Southeast Asia over a thirty year time period.
+To test this hypothesis, I analyze dengue population dynamics across Southeast Asia over a thirty year time period using a model adapted from \citep{luksza2014predictive}.
 At each quarterly timepoint, I quantify standing population immunity across the region, and compare this to which dengue clades are most successful over a subsequent five-year window.
 I find that antigenic novelty is able to explain most of the observed variation in the dengue population composition, although this appears to be driven by coarser serotype-level antigenic differences.
 
 This strongly suggests that although dengue evolution is tightly constrained by replicative fitness, antigenic fitness ultimately drives dengue population dynamics.
-Furthermore, the existance of large, ancient antigenic divergence between serotypes and smaller, recent antigenic divergence between sub-serotype clades suggests that dengue antigenic evolution is gradual but ongoing.
+Furthermore, the existance of large, ancient antigenic divergence between serotypes and smaller, more recent antigenic divergence between sub-serotype clades suggests that dengue antigenic evolution is gradual but ongoing.
 These results provide a more nuanced understanding of dengue antigenic evolution, with important ramifications for vaccine design and epidemic preparedness.
 More broadly, this also carries significant implications for our view of antigenic evolution in even slowly-evolving pathogens.
-
 % \end{fold}
 
 % ========== SIV Chapter
